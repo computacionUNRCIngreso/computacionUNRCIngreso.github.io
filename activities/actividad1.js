@@ -9,8 +9,7 @@
 	var azul = '#271af4';
 	var amarillo ='#ffff0e';
 	var violeta ='#7f1aa0';
-	var rosa ='#ec1aa0';
-	var naranja ='#ef7700';
+
 
 
 	/********************/
@@ -21,7 +20,7 @@
 	function main(){
 
 
-	    var prog = getprogram();
+	    var prog = getProgram();
 	    
 	    try {
 
@@ -42,7 +41,6 @@
 	function marcarOrigen(x, y) {
 		context.beginPath();
 		context.moveTo(x, y);
-
 	}
 
 	function marcarDestino(x, y) {

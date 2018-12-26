@@ -25,8 +25,24 @@
 <script type="text/javascript">
 var editor = null,
 context =null,
+canvas =null,
 currentActivity = -1,
 db;
+
+
+function writeConsole(message){
+
+    document.getElementById('textconsole').innerHTML =message;
+}
+
+
+function getProgram() {
+    var prog = editor.doc.getValue();
+    return prog;
+}
+
+
+
 
 function getStore() {
     return db.transaction('actividades', 'readwrite').objectStore('actividades');
@@ -178,16 +194,13 @@ function setActivity(n) {
         console.log('Error cargando actividad desde la BD');
     };
 
-    //TO DO mas mejor- esta horrible. console ejmeplo. mouseposicion. limpiar (correr a la derecha)
+    //TO DO mas mejor- esta horrible. console ejmeplo. limpiar (correr a la derecha)
     // to do: cargar documentación, etc
 
 }
 
 
-function getprogram() {
-    var prog = editor.doc.getValue();
-    return prog;
-}
+
 
 
 function limpiar(){
@@ -208,15 +221,29 @@ function runProgram() {
         }
 }
 
+    /*****Canvas Mouse Position************/
+        function getMousePos(canvas, evt) {
+            var rect = canvas.getBoundingClientRect();
+            return {
+                  x: evt.clientX - rect.left,
+                  y: evt.clientY - rect.top
+            };
+
+           
+        }
+
+
+// On document ready...
+
 $(function () {
     var pstyle = 'background-color: #F5F6F7; border: 1px solid #dfdfdf; padding: 5px;',
         display = '<div id="tabshdr"></div><div id="tab-content" style="position: relative;">' +
                   '<div id="textconsole" width="100%" height="100%" ' +
                   'style="position: absolute; top:0; left:0; display: none">Bienvenido</div>' +
-                  '<canvas id="canvas" width="100%" height="100%" ' +
-                  'style="position: absolute; top:0; left:0;"></canvas></div>' + 
-                  '<div style="position: relative; margin-top:430px;"><button id="clear" class="w2ui-btn" onclick=limpiar()' +
-                  '>limpiar</button></div>';
+                  '<canvas id="canvas"  ' +
+                  'style="position: inline;"></canvas></div>';  
+                  //'<div><button id="clear" class="w2ui-btn" onclick=limpiar()' +
+                  //'>limpiar</button></div>';
                   
               
 
@@ -230,7 +257,7 @@ $(function () {
             { type: 'preview', size: '25%', resizable: true, style: pstyle, content: '' },
   
             { type: 'right', size: '50%', resizable: true, style: pstyle, content: display },
-            { type: 'bottom', size: 50, resizable: true, style: pstyle, content: 'bottom' }
+            { type: 'bottom', size: 50, resizable: true, style: pstyle, content: '' }
         ]
     });
 
@@ -261,7 +288,12 @@ $(function () {
                       },
                       { type: 'button', text: 'Ejecutar', img: 'icon-reload',
                         onClick: function() {runProgram();}
-                      }
+                      },
+                      { type: 'button', text: 'Limpiar Canvas', img: 'icon-reload',
+                        onClick: function() {limpiar();}
+                      }  
+
+
                   ]
               })},
             { type: 'main', name: 'editormain', size: '100%',
@@ -290,19 +322,46 @@ $(function () {
                 case 'lienzo':
                     $('#textconsole').hide();
                     $('#canvas').show();
-                    $('#clear').show();
                     break;
                 case 'consola':
                     $('#canvas').hide();
                     $('#textconsole').show();
-                    $('#clear').hide();
                     break;
             }
     	}, 
-        onRefresh: function(){
-            var canvas = document.getElementById("canvas");
-            context = canvas.getContext("2d");
-          }
+        onRefresh: function(event){
+
+            if(event.target == 'lienzo'){
+
+                canvas = document.getElementById("canvas");
+                context = canvas.getContext("2d");
+
+                //context.fillStyle = "blue";
+                //context.fillRect(0, 0, canvas.width, canvas.height);
+                
+
+                canvas.width = $("#tab-content").width();
+                canvas.height = $("#tab-content").height();
+
+
+                var rect = canvas.getBoundingClientRect();
+
+                canvas.addEventListener('mousemove', function(evt) {
+                var mousePos = getMousePos(canvas, evt);
+                var message = 'Mouse position: (x:' + mousePos.x + ', y:' + mousePos.y + ')';
+
+
+                w2ui.layout.content('bottom',message);
+
+                }, false);
+
+            }
+            else{
+                w2ui.layout.content('bottom','');
+
+            }    
+
+        }
 
 
     });

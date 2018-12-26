@@ -1,29 +1,29 @@
 var actividades=[
     {
         actividad: "Actividad1",
-        descripcion: "descripcion actividad 1",
+        descripcion: "En esta actividad se proveen instrucciones que utilizadas en secuenciamente permite dibujar líneas en el lienzo y con ellas figuras",
         file: "actividad1.js",
         main: "main()",
         apidoc: [
             {
                 funcion: "marcarOrigen(x, y)",
-                descripcion: "hace nada"
+                descripcion: "Marca en el lienzo el punto: (x,y) como punto de origen."
             },
             {
                 funcion: "marcarDestino(x,y)",
-                descripcion: "hace nada. x es la coord. columna...."
+                descripcion: "Marca en el lienzo el punto: (x,y) como punto de destino."
             },
             {
                 funcion: "dibujar()",
-                descripcion: "hace nada. x es la coord. columna...."
+                descripcion: "Dibuja una linea entre el punto de orgen y el punto des previamente marcados."
             },
             {
                 funcion: "cambiarAnchoLapiz(nro)",
-                descripcion: "hace nada. x es la coord. columna...."
+                descripcion: "Cambia el ancho del lápiz de dibujo al ancho dado como argumento."
             },
             {
-                funcion: "cambiarColorLapiz(color)",
-                descripcion: "hace nada. x es la coord. columna...."
+                funcion: "cambiarColorLapiz(c)",
+                descripcion: "Cambia el color del lápiz de dibujo al color  dado como argumento. colores disponibles: verde, rojo, blanco, negro, azul, amarillo y violeta."
             }
 
         ],
