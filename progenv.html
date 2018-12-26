@@ -97,11 +97,10 @@ function addEditor() {
 }
 
 function addJavascript(jsname) {
-    var s = $('#actividad');
+    var s = document.getElementById('actividad');
     if(s){
         document.getElementsByTagName('body')[0].removeChild(s);
     }
-    //var th = document.getElementsByTagName('head')[0];
     s = document.createElement('script');
     s.setAttribute('type','text/javascript');
     s.setAttribute('id', 'actividad');
@@ -119,8 +118,7 @@ function addActivities() {
             }
         });
 
-    }
-    
+    } 
     w2ui['actsidebar'].remove('dummy');
 }
 
@@ -167,8 +165,6 @@ function setActivity(n) {
             //carga programa inicial
              editor.getDoc().setValue(actividades[n].initialprog);
         }
-       
-
     };
     request.onerror = function(event) {
         console.log('Error cargando actividad desde la BD');
