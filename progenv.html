@@ -18,10 +18,10 @@
     <script src="activities/activitylist.js"></script>
     <script src="activities/api.js"></script>
 </head>
-<body>
+<body style="width: 100%; height: 100%;">
 
 
-<div id="mainLayout" style="width: 100%; height: 600px;"></div>
+<div id="mainLayout" style="position: relative; width: 100%; height: 100vh"></div>
 
 <script type="text/javascript">
 var editor = null,
@@ -193,7 +193,7 @@ $(function () {
                   '<div id="textconsole" width="100%" height="100%" ' +
                   'style="position: absolute; top:0; left:0; display: none;">Bienvenido</div>' +
                   '<canvas id="canvas"  ' +
-                  'style="position: absolute; top:0; left:0;"></canvas></div>';  
+                  'style="position: absolute; top:0; left:0; width: 100%; height: 100%;"></canvas></div>';  
                   
     $('#mainLayout').w2layout({
         name: 'layout',
@@ -239,9 +239,7 @@ $(function () {
                       },
                       { type: 'button', text: 'Limpiar Canvas', img: 'icon-reload',
                         onClick: function() {limpiar();}
-                      }  
-
-
+                      }
                   ]
               })},
             { type: 'main', name: 'editormain', size: '100%',
@@ -250,12 +248,6 @@ $(function () {
             }
         ]
     }));
-
-
-
-
-
-
 
     // display (tabs for canvas and text console)
     $('#tabshdr').w2tabs({
@@ -287,34 +279,29 @@ $(function () {
                 //context.fillStyle = "blue";
                 //context.fillRect(0, 0, canvas.width, canvas.height);
                 
+                $('#canvas').css('width', $('#tab-content').width());
+                $('#canvas').css('height', $('#tab-content').width());
 
-                canvas.width = $("#tab-content").width();
-                canvas.height = $("#tab-content").height();
-
+                console.log('canvas size: ' + canvas.width + $("#tab-content").height());
 
                 var rect = canvas.getBoundingClientRect();
 
                 canvas.addEventListener('mousemove', function(evt) {
-                var mousePos = getMousePos(canvas, evt);
-                var message = 'Mouse position: (x:' + mousePos.x + ', y:' + mousePos.y + ')';
+                    var mousePos = getMousePos(canvas, evt);
+                    var message = 'Mouse position: (x:' + mousePos.x + ', y:' + mousePos.y + ')';
 
-
-                w2ui.layout.content('bottom',message);
-
+                    w2ui.layout.content('bottom',message);
                 }, false);
-
             }
             else{
                 w2ui.layout.content('bottom','');
-
-            }    
-
+            }
         }
 
 
     });
 
-
+    // $('#mainlayout').height(window.height);
 });
 </script>
 
