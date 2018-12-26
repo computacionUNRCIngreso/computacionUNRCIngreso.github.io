@@ -14,17 +14,19 @@
     <link rel="stylesheet" href="lib/CodeMirror/lib/codemirror.css">
     <script src="lib/CodeMirror/lib/codemirror.js"></script>
     <script src="lib/CodeMirror/mode/javascript/javascript.js"></script>
-
-    <script src="actividades.js"></script>
+   
+    <script src="activities/activitylist.js"></script>
 </head>
 <body>
+
 
 <div id="mainLayout" style="width: 100%; height: 600px;"></div>
 
 <script type="text/javascript">
 var editor = null,
-    currentActivity = -1,
-    db;
+context =null,
+currentActivity = -1,
+db;
 
 function getStore() {
     return db.transaction('actividades', 'readwrite').objectStore('actividades');
@@ -92,11 +94,70 @@ function addEditor() {
     });
 }
 
-function setActividad(n) {
-    currentActivity = n;
+
+
+function addJavascript(jsname) {
+            var s = document.getElementById('actividad');
+            if(s){
+                document.getElementsByTagName('body')[0].removeChild(s);
+            }
+            //var th = document.getElementsByTagName('head')[0];
+            s = document.createElement('script');
+            s.setAttribute('type','text/javascript');
+            s.setAttribute('id', 'actividad');
+            s.setAttribute('src',jsname);
+            document.getElementsByTagName('body')[0].appendChild(s);
+}
+
+
+function addActivities() {
+    for(var i =0; i<actividades.length; i++){
+       
+        w2ui['actsidebar'].add('act', {id: i, text: actividades[i].actividad, img: 'icon-page', 
+            onClick: function(event){
+                setActivity(event.target);
+            }
+        });
+
+    }
+     w2ui['actsidebar'].remove('dummy');
+
+}
+
+function addEditor() {
+    editor = CodeMirror($('#editor')[0], {
+        value: '// Editar su código aquí',
+        mode: 'javascript',
+        smartIndent: true,
+        indentUnit: 4,
+        lineNumbers: true
+
+    });
+}
+
+
+function getDoc(n){
+    var apidoc = actividades[n].apidoc;
+    w2ui.layout.content('preview', '');
+    for(var i =0; i<apidoc.length; i++){
+        var f =w2ui.layout.get('preview').content + '\n' + apidoc[i].funcion + ': ' + apidoc[i].descripcion;
+        w2ui.layout.content('preview', f);
+    }
+   
+}
+
+
+function setActivity(n) {
+    currentActivity =n;
     if (!editor) {
         addEditor();
     }
+
+    //carga js correspondiente
+    var file = 'activities/'+actividades[n].file;
+    addJavascript(file);
+    getDoc(n);
+
 
     var store = getStore(),
         request = store.get(actividades[n].actividad);
@@ -104,26 +165,60 @@ function setActividad(n) {
     request.onsuccess = function(event) {
         var data = event.target.result;
         if (data) {
+            //carga programa guardado
             editor.setValue(data.programa);
+        }else{
+            //carga programa inicial
+             editor.getDoc().setValue(actividades[n].initialprog);
         }
+       
+
     };
     request.onerror = function(event) {
         console.log('Error cargando actividad desde la BD');
     };
+
+    //TO DO mas mejor- esta horrible. console ejmeplo. mouseposicion. limpiar (correr a la derecha)
+    // to do: cargar documentación, etc
+
+}
+
+
+function getprogram() {
+    var prog = editor.doc.getValue();
+    return prog;
+}
+
+
+function limpiar(){
+    context.clearRect(0, 0, canvas.width, canvas.height);
 }
 
 function runProgram() {
-    // to do...
+
+    try {
+
+        eval(actividades[currentActivity].main); 
+         //to do: console como se llama y usa desde afuera
+
+        } catch (e) {
+            if (e instanceof SyntaxError) {
+                alert(e.message);
+            }
+        }
 }
 
-// On document ready...
 $(function () {
     var pstyle = 'background-color: #F5F6F7; border: 1px solid #dfdfdf; padding: 5px;',
         display = '<div id="tabshdr"></div><div id="tab-content" style="position: relative;">' +
                   '<div id="textconsole" width="100%" height="100%" ' +
                   'style="position: absolute; top:0; left:0; display: none">Bienvenido</div>' +
                   '<canvas id="canvas" width="100%" height="100%" ' +
-                  'style="position: absolute; top:0; left:0;"></canvas></div>';
+                  'style="position: absolute; top:0; left:0;"></canvas></div>' + 
+                  '<div style="position: relative; margin-top:430px;"><button id="clear" class="w2ui-btn" onclick=limpiar()' +
+                  '>limpiar</button></div>';
+                  
+              
 
     $('#mainLayout').w2layout({
         name: 'layout',
@@ -132,7 +227,8 @@ $(function () {
               content: '<h2>Departamento de Computación - FCEFQyN - UNRC</h2>' },
             { type: 'left', size: 150, resizable: true, style: pstyle },
             { type: 'main', size: '50%', style: pstyle},
-            { type: 'preview', size: '25%', resizable: true, style: pstyle, content: 'Doc' },
+            { type: 'preview', size: '25%', resizable: true, style: pstyle, content: '' },
+  
             { type: 'right', size: '50%', resizable: true, style: pstyle, content: display },
             { type: 'bottom', size: 50, resizable: true, style: pstyle, content: 'bottom' }
         ]
@@ -140,19 +236,15 @@ $(function () {
 
     // Sidebar: actividades
     w2ui.layout.content('left', $().w2sidebar({
-        name: 'actividades',
+        name: 'actsidebar',
         nodes: [
             {
-                id: 'act', text: 'Actividades', img: 'icon-folder', expanded: true,
-                nodes: [
-                    // to do: A este arreglo hay que llenarlo con las actividades...
-                    {id: 'actividad1', text: 'Actividad 1', img: 'icon-page',
-                     onClick: function(){setActividad(0);} },
-                    {id: 'actividad2', text: 'Actividad 2', img: 'icon-page',
-                     onClick: function(){setActividad(1);} }
-                ]
+                id: 'act', text: 'Actividades', img: 'icon-folder', expanded: false,
+                nodes: [{id: 'dummy'}]
             }
-        ]
+        ],
+        onExpand: function(){addActivities()}
+
     }));
 
     // main panel (editor)
@@ -164,7 +256,7 @@ $(function () {
               content: $().w2toolbar({
                   name: 'editortoolbar',
                   items: [
-                      { type: 'button', text: 'Guardar', img: 'icon-save',
+                      { type: 'button', text: 'Guardar', img: 'icon-page',
                         onClick: function() {save();}
                       },
                       { type: 'button', text: 'Ejecutar', img: 'icon-reload',
@@ -179,12 +271,18 @@ $(function () {
         ]
     }));
 
+
+
+
+
+
+
     // display (tabs for canvas and text console)
     $('#tabshdr').w2tabs({
     	name: 'tabs',
     	active: 'lienzo',
     	tabs: [
-    		{ id: 'lienzo', caption: 'Lienzo'},
+    		{ id: 'lienzo', caption: 'Lienzo' },
     		{ id: 'consola', caption: 'Consola'},
     	],
     	onClick: function (event) {
@@ -192,14 +290,24 @@ $(function () {
                 case 'lienzo':
                     $('#textconsole').hide();
                     $('#canvas').show();
+                    $('#clear').show();
                     break;
                 case 'consola':
                     $('#canvas').hide();
                     $('#textconsole').show();
+                    $('#clear').hide();
                     break;
             }
-    	}
+    	}, 
+        onRefresh: function(){
+            var canvas = document.getElementById("canvas");
+            context = canvas.getContext("2d");
+          }
+
+
     });
+
+
 });
 </script>
 
