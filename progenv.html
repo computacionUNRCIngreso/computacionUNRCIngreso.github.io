@@ -193,7 +193,7 @@ $(function () {
                   '<div id="textconsole" width="100%" height="100%" ' +
                   'style="position: absolute; top:0; left:0; display: none;">Bienvenido</div>' +
                   '<canvas id="canvas"  ' +
-                  'style="position: absolute; top:0; left:0; width: 100%; height: 100%;"></canvas></div>';  
+                  'style="position: absolute; top:0; left:0; width: 400px; height: 300px;  border:1px solid #000000;"></canvas></div>';  
                   
     $('#mainLayout').w2layout({
         name: 'layout',
@@ -274,31 +274,28 @@ $(function () {
             if(event.target == 'lienzo'){
 
                 canvas = document.getElementById("canvas");
-                context = canvas.getContext("2d");
 
                 //context.fillStyle = "blue";
                 //context.fillRect(0, 0, canvas.width, canvas.height);
-                
+                /* 
                 $('#canvas').css('width', $('#tab-content').width());
                 $('#canvas').css('height', $('#tab-content').width());
 
                 console.log('canvas size: ' + canvas.width + $("#tab-content").height());
-
-                var rect = canvas.getBoundingClientRect();
-
+                */
+            
                 canvas.addEventListener('mousemove', function(evt) {
                     var mousePos = getMousePos(canvas, evt);
                     var message = 'Mouse position: (x:' + mousePos.x + ', y:' + mousePos.y + ')';
 
                     w2ui.layout.content('bottom',message);
                 }, false);
+                context = canvas.getContext("2d");
             }
             else{
                 w2ui.layout.content('bottom','');
             }
         }
-
-
     });
 
     // $('#mainlayout').height(window.height);
