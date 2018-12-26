@@ -16,6 +16,7 @@
     <script src="lib/CodeMirror/mode/javascript/javascript.js"></script>
    
     <script src="activities/activitylist.js"></script>
+    <script src="activities/api.js"></script>
 </head>
 <body>
 
@@ -24,25 +25,10 @@
 
 <script type="text/javascript">
 var editor = null,
-context =null,
-canvas =null,
-currentActivity = -1,
-db;
-
-
-function writeConsole(message){
-
-    document.getElementById('textconsole').innerHTML =message;
-}
-
-
-function getProgram() {
-    var prog = editor.doc.getValue();
-    return prog;
-}
-
-
-
+    context =null,
+    canvas =null,
+    currentActivity = -1,
+    db;
 
 function getStore() {
     return db.transaction('actividades', 'readwrite').objectStore('actividades');
@@ -110,19 +96,17 @@ function addEditor() {
     });
 }
 
-
-
 function addJavascript(jsname) {
-            var s = document.getElementById('actividad');
-            if(s){
-                document.getElementsByTagName('body')[0].removeChild(s);
-            }
-            //var th = document.getElementsByTagName('head')[0];
-            s = document.createElement('script');
-            s.setAttribute('type','text/javascript');
-            s.setAttribute('id', 'actividad');
-            s.setAttribute('src',jsname);
-            document.getElementsByTagName('body')[0].appendChild(s);
+    var s = $('#actividad');
+    if(s){
+        document.getElementsByTagName('body')[0].removeChild(s);
+    }
+    //var th = document.getElementsByTagName('head')[0];
+    s = document.createElement('script');
+    s.setAttribute('type','text/javascript');
+    s.setAttribute('id', 'actividad');
+    s.setAttribute('src',jsname);
+    document.getElementsByTagName('body')[0].appendChild(s);
 }
 
 
@@ -136,8 +120,8 @@ function addActivities() {
         });
 
     }
-     w2ui['actsidebar'].remove('dummy');
-
+    
+    w2ui['actsidebar'].remove('dummy');
 }
 
 function addEditor() {
@@ -147,10 +131,8 @@ function addEditor() {
         smartIndent: true,
         indentUnit: 4,
         lineNumbers: true
-
     });
 }
-
 
 function getDoc(n){
     var apidoc = actividades[n].apidoc,
@@ -162,7 +144,6 @@ function getDoc(n){
     }
 }
 
-
 function setActivity(n) {
     currentActivity =n;
     if (!editor) {
@@ -173,7 +154,6 @@ function setActivity(n) {
     var file = 'activities/'+actividades[n].file;
     addJavascript(file);
     getDoc(n);
-
 
     var store = getStore(),
         request = store.get(actividades[n].actividad);
@@ -193,45 +173,21 @@ function setActivity(n) {
     request.onerror = function(event) {
         console.log('Error cargando actividad desde la BD');
     };
-
-    //TO DO mas mejor- esta horrible. console ejmeplo. limpiar (correr a la derecha)
-    // to do: cargar documentación, etc
-
 }
-
-
-
-
 
 function limpiar(){
     context.clearRect(0, 0, canvas.width, canvas.height);
 }
 
 function runProgram() {
-
     try {
-
         eval(actividades[currentActivity].main); 
-         //to do: console como se llama y usa desde afuera
-
-        } catch (e) {
-            if (e instanceof SyntaxError) {
-                alert(e.message);
-            }
+    } catch (e) {
+        if (e instanceof SyntaxError) {
+            alert(e.message);
         }
+    }
 }
-
-    /*****Canvas Mouse Position************/
-        function getMousePos(canvas, evt) {
-            var rect = canvas.getBoundingClientRect();
-            return {
-                  x: evt.clientX - rect.left,
-                  y: evt.clientY - rect.top
-            };
-
-           
-        }
-
 
 // On document ready...
 
