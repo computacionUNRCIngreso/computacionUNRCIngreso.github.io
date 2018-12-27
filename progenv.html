@@ -137,9 +137,10 @@ function getDoc(n){
     content = actividades[n].descripcion;
     w2ui.layout.content('preview', '');
     for(var i =0; i<apidoc.length; i++){
-        content = content + '<p>' + apidoc[i].funcion + ': ' + apidoc[i].descripcion + '</p>';
+        content = content + '<p> <b>' + apidoc[i].funcion + '</b>: ' + apidoc[i].descripcion + '</p>';
         w2ui.layout.content('preview', content);
     }
+
 }
 
 function setActivity(n) {
@@ -237,7 +238,7 @@ $(function () {
                       { type: 'button', text: 'Ejecutar', img: 'icon-reload',
                         onClick: function() {runProgram();}
                       },
-                      { type: 'button', text: 'Limpiar Canvas', img: 'icon-reload',
+                      { type: 'button', text: 'Limpiar Lienzo', img: 'icon-reload',
                         onClick: function() {clear();}
                       }
                   ]

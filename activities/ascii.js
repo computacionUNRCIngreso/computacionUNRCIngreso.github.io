@@ -15,7 +15,6 @@ function main() {
         return writeConsole(c.charCodeAt(0));
     }
 
-
     function longitudMensaje(texto){
         return texto.length;
     }
