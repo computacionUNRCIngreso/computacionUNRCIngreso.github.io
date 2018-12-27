@@ -98,11 +98,3 @@ function animatedDrawingLine(sx, sy, dx, dy, color, speed) {
         }
     };
 }
-
-eval(
-    "scene.push(animatedCircle(50, 50, 25, 'red'));" + 
-    "scene.push(animatedCircle(100,100, 15, 'green', 0.2));" +
-    "scene.push(animatedCircle(0, 0, 20, 'blue'));" +
-    "scene.push(animatedDrawingLine(10,10,400,100));" +
-    "animate();"
-);
