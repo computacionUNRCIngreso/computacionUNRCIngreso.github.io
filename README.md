@@ -12,14 +12,18 @@ Pasos para usar el ambiente:
 
 Pasos para agregar una nueva actividad:
 
-1. Para agregar actividades se debe editar el archivo activitylist.js ubicado en el directorio "activities",  agregando un nuevo objeto en el arreglo "actividades". Cada objeto contiene la siguiente información:
+1. El archivo \<myactividad\>.js conteniendo la implementación de la actividad (función principal y API) debe ubicarse en el directorio "activities". En este directorio se proveen actividades de ejemplo.
+
+2. Editar el archivo activitylist.js ubicado en el directorio "activities",  agregando un nuevo objeto en el arreglo "actividades". Cada objeto contiene la siguiente información:
 
     - actividad: nombre de la actividad. Este nombre aparecerá en la barra de herramientas "Actividades" del ambiente.
-    - descripcion: descripcion de la actividad. Será visualizado en la parte inferior del ambiente.
-    - archivo: nombre del archivo que contiene la funcion principal y la API que se provee como parte de la actividad. Este archivo debe estar ubicado en el directorio "activities".
-    - main: nombre de la funcion principal que se ejecutará cuando se haga click sobre el botón "ejecutar".
-    - apidoc: arreglo conteniendo la API (funcion y descripcion) que se provee como parte de la actividad. Esta información se muestra en la parte inferior del ambiente junto con la descripción de la actividad.
+    - descripcion: descripción de la actividad. Será visualizado en la parte inferior del ambiente.
+    - archivo: \<myactividad\>.js. Nombre del archivo que contiene la función principal y la API que se provee como parte de la actividad. Este archivo debe estar ubicado en el directorio "activities". 
+    - main: nombre de la función principal que se ejecutará cuando se haga click sobre el botón "ejecutar".
+    - apidoc: arreglo conteniendo la API (función y descripción) que se provee como parte de la actividad. Esta información se mostrará en la parte inferior del ambiente junto con la descripción de la actividad.
     - proginicial: programa/comentario que deseamos  que aparezca en el editor al momento de cargar la actividad.
+
+
 
 2. Para cada actividad se proveen las siguientes funciones (definidas en api.js), que se deben utilizar para acceder al lienzo (canvas), consola y editor:
 
