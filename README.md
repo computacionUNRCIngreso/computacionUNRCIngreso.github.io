@@ -7,7 +7,7 @@ Pasos para usar el ambiente:
 
 1. Para  ejecutar el ambiente, abrir el archivo progenv.html
 2. Desplegar la barra de herramientas "Actividades" ubicada en la parte izquierda del ambiente.
-3. Se proveen algunas actividades como ejemplo, se puede visualizar la documentación (descripcion y API) de cada una en la parte inferior del ambiente. 
+3. Se proveen algunas actividades a modo de ejemplo, se puede visualizar la documentación (descripcion y API) de cada una en la parte inferior del ambiente. 
 4. El botón "Guardar",  guarda la actividad  de manera local. Si la actividad fue guardada, se mostrará en el editor cuando se cargue nuevamente la actividad (utilizando siempre el mismo navegador).
 
 Pasos para agregar una nueva actividad:
