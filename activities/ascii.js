@@ -12,7 +12,7 @@ function main(){
       }
 
       function deCaracterAAscii(c){
-        return writeConsole(c.charCodeAt(0));
+        writeConsole(c.charCodeAt(0));
       }
 
 
