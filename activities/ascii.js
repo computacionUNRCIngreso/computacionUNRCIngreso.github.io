@@ -5,42 +5,41 @@
     *writeConsole(mensaje): escribe en la consola.
 */
 
-function main(){
+function main() {
 
-      function deAsciiACaracter(n){
+    function deAsciiACaracter(n){
         writeConsole(String.fromCharCode(n));
-      }
+    }
 
-      function deCaracterAAscii(c){
+    function deCaracterAAscii(c){
         return writeConsole(c.charCodeAt(0));
-      }
+    }
 
 
-      function longitudMensaje(texto){
+    function longitudMensaje(texto){
         return texto.length;
-      }
+    }
 
-      function paraTodoCaracterConvertir(mensaje){
+    function paraTodoCaracterConvertir(mensaje){
         var p ='';
         for (i = 0; i < longitudMensaje(mensaje); i++) {
-          p=p + ' ' + mensaje.charCodeAt(i);
+            p=p + ' ' + mensaje.charCodeAt(i);
         }
-        writeConsole(p);
-        
-      }
+        writeConsole(p);        
+    }
 
-      var prog = getProgram();
-      
-      try {
-        eval(prog); 
+    mostrarConsola();
 
-      }catch (e) {
+    var prog = getProgram();
+
+    try {
+        eval(prog);
+    } catch (e) {
         if (e instanceof SyntaxError) {
            alert(e.message);
         }
-      }
-      
-  }
+    }
+}
 
 
 
