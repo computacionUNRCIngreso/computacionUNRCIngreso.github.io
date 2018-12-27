@@ -27,7 +27,7 @@ function main() {
         writeConsole(p);        
     }
 
-    mostrarConsola();
+    showConsole();
 
     var prog = getProgram();
 

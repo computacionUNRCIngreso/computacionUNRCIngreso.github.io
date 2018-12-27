@@ -12,12 +12,12 @@ function getCanvasContext() {
 }
 
 // Hace visible el lienzo (canvas). Idem a hacer click en el tab correspondiente
-function mostrarLienzo() {
+function showCanvas() {
     w2ui.tabs.click('lienzo');
 }
 
 // Hace visible el lienzo (canvas). Idem a hacer click en el tab correspondiente
-function mostrarConsola() {
+function showConsole() {
     w2ui.tabs.click('consola');
 }
 
