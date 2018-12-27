@@ -23,7 +23,7 @@ Pasos para agregar una nueva actividad:
 
 2. Para cada actividad se proveen las siguientes funciones (definidas en api.js), que se deben utilizar para acceder al lienzo (canvas), consola y editor:
 
-    - getCanvasContext(): obtiene el objeto asociado con el lienzo (canvas) de dibujo.
+    - getCanvasContext(): obtiene el objeto context, asociado con el lienzo (canvas) de dibujo.
     - getProgram(): obtiene el texto (programa) del editor.
     - writeConsole(mensaje): escribe "mensaje" en la consola.
 
