@@ -46,6 +46,7 @@ function main(){
         ctx.lineWidth = ancho;
     }
     
+    showCanvas();
     try {
         eval(prog); 
      } catch (e) {
