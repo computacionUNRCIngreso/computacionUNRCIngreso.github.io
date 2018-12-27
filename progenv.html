@@ -134,7 +134,7 @@ function addEditor() {
 
 function getDoc(n){
     var apidoc = actividades[n].apidoc,
-        content = actividades[n].descripcion;
+    content = actividades[n].descripcion;
     w2ui.layout.content('preview', '');
     for(var i =0; i<apidoc.length; i++){
         content = content + '<p>' + apidoc[i].funcion + ': ' + apidoc[i].descripcion + '</p>';
@@ -149,7 +149,7 @@ function setActivity(n) {
     }
 
     //carga js correspondiente
-    var file = 'activities/'+actividades[n].file;
+    var file = 'activities/'+actividades[n].archivo;
     addJavascript(file);
     getDoc(n);
 
@@ -163,7 +163,7 @@ function setActivity(n) {
             editor.setValue(data.programa);
         }else{
             //carga programa inicial
-             editor.getDoc().setValue(actividades[n].initialprog);
+             editor.getDoc().setValue(actividades[n].proginicial);
         }
     };
     request.onerror = function(event) {
@@ -171,7 +171,7 @@ function setActivity(n) {
     };
 }
 
-function limpiar(){
+function clear(){
     context.clearRect(0, 0, canvas.width, canvas.height);
 }
 
@@ -238,7 +238,7 @@ $(function () {
                         onClick: function() {runProgram();}
                       },
                       { type: 'button', text: 'Limpiar Canvas', img: 'icon-reload',
-                        onClick: function() {limpiar();}
+                        onClick: function() {clear();}
                       }
                   ]
               })},
