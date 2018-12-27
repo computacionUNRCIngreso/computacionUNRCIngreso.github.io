@@ -12,15 +12,43 @@
 
 
 
-	/********************/
-
-	//context viene dado, lo puedo usar.
-	//getprogram tambien
+	/*API disponible para usar en cada actividad:
+		*getCanvasContext(): obtiene el objeto asociado con el lienzo (canvas) de dibujo
+		*getProgram(): obtiene el programa del editor
+		*writeConsole(mensaje): escribe en la consola.
+	*/
 
 	function main(){
 
+		var ctx=null,
+			prog = getProgram();
 
-	    var prog = getProgram();
+		ctx = getCanvasContext();
+
+
+		function marcarOrigen(x, y) {
+
+			ctx.beginPath();
+			ctx.moveTo(x, y);
+		}
+
+		function marcarDestino(x, y) {
+			ctx.lineTo(x, y);
+		}
+
+		function dibujar() {
+		  	ctx.stroke();
+		}
+
+		function cambiarColorLapiz(color) {
+		  ctx.strokeStyle = color;
+		}
+
+
+		function cambiarAnchoLapiz(ancho) {
+		  ctx.lineWidth = ancho;
+
+		}
 	    
 	    try {
 
@@ -32,43 +60,5 @@
 	     }
 	    }
 
-	   
-	    
 	}
-
-	/**************API*************/
-
-	function marcarOrigen(x, y) {
-		context.beginPath();
-		context.moveTo(x, y);
-	}
-
-	function marcarDestino(x, y) {
-		context.lineTo(x, y);
-	}
-
-	function dibujar() {
-	  	context.stroke();
-	}
-
-	function cambiarColorLapiz(color) {
-	  context.strokeStyle = color;
-	}
-
-
-	function cambiarAnchoLapiz(ancho) {
-	  context.lineWidth = ancho;
-
-	}
-
-	/*********************************/
-
-
-	
-
-
-
-
-
-
 

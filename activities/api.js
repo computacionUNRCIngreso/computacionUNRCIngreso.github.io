@@ -1,5 +1,5 @@
 function writeConsole(message){
-    $('#textconsole').innerHTML = message;
+	document.getElementById('textconsole').innerHTML = message;
 }
 
 function getProgram() {
