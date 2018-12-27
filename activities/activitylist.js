@@ -1,7 +1,6 @@
 var actividades=[
     {
         actividad: "Dibujando",
-        descripcion: "En esta actividad se proveen instrucciones que utilizadas en secuenciamente permite dibujar líneas en el lienzo y con ellas figuras",
         descripcion: "En esta actividad se proveen instrucciones que utilizadas  secuencialmente permiten dibujar líneas en el lienzo y con ellas figuras.",
         archivo: "actividad1.js",
         main: "main()",
