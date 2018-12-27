@@ -1,6 +1,6 @@
 var actividades=[
     {
-        actividad: "Actividad1",
+        actividad: "Dibujando",
         descripcion: "En esta actividad se proveen instrucciones que utilizadas en secuenciamente permite dibujar líneas en el lienzo y con ellas figuras",
         file: "actividad1.js",
         main: "main()",
