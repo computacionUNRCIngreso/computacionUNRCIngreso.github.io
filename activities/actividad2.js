@@ -99,6 +99,7 @@ function main(){
         ctx.stroke();
     }
 
+    showCanvas();
     try {
         eval(prog); 
     } catch (e) {

@@ -8,11 +8,13 @@
 function main() {
 
     function deAsciiACaracter(n){
+        showConsole();
         writeConsole(String.fromCharCode(n));
     }
 
     function deCaracterAAscii(c){
-        return writeConsole(c.charCodeAt(0));
+        showConsole();
+        writeConsole(c.charCodeAt(0));
     }
 
     function longitudMensaje(texto){
@@ -21,12 +23,11 @@ function main() {
 
     function paraTodoCaracterConvertir(mensaje){
         var p ='';
-        for (i = 0; i < longitudMensaje(mensaje); i++) {
+        for (var i of rango(0,longitudMensaje(mensaje)-1)) {
             p=p + ' ' + mensaje.charCodeAt(i);
         }
         writeConsole(p);        
     }
-
     showConsole();
 
     var prog = getProgram();

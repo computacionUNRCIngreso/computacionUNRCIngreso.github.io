@@ -9,6 +9,8 @@ Pasos para usar el ambiente:
 2. Desplegar la barra de herramientas "Actividades" ubicada en la parte izquierda del ambiente.
 3. Se proveen algunas actividades a modo de ejemplo, se puede visualizar la documentación (descripcion y API) de cada una en la parte inferior del ambiente. 
 4. El botón "Guardar",  guarda la actividad  de manera local. Si la actividad fue guardada, se mostrará en el editor cuando se cargue nuevamente la actividad (utilizando siempre el mismo navegador).
+5. El botón "Limpiar Lienzo" deja el lienzo de dibujo en blanco.
+6. El botón "Limpiar Console" deja la consola en blanco.
 
 Pasos para agregar una nueva actividad:
 
@@ -25,11 +27,16 @@ Pasos para agregar una nueva actividad:
 
 
 
-2. Para cada actividad se proveen las siguientes funciones (definidas en api.js), que se deben utilizar para acceder al lienzo (canvas), consola y editor:
+3. Para cada actividad se proveen las siguientes funciones (definidas en api.js), que se deben utilizar para acceder al lienzo (canvas), consola y editor. Todas han sido usadas, a modo de ejemplo, en las actividades provistas:
 
     - getCanvasContext(): obtiene el objeto context, asociado con el lienzo (canvas) de dibujo.
     - getProgram(): obtiene el texto (programa) del editor.
     - writeConsole(mensaje): escribe "mensaje" en la consola.
+    - showConsole(): automáticamente muestre la consola (sin necesidad de clickear en la pestaña).
+    - showCanvas(): automáticamente muestre el lienzo (sin necesidad de clickear en la pestaña). 
+
+    
+
 
 
 
