@@ -172,8 +172,12 @@ function setActivity(n) {
     };
 }
 
-function clear(){
+function clearCanvas(){
     context.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+function clearConsole(){
+    $('#textconsole').text('');
 }
 
 function runProgram() {
@@ -239,7 +243,10 @@ $(function () {
                         onClick: function() {runProgram();}
                       },
                       { type: 'button', text: 'Limpiar Lienzo', img: 'icon-reload',
-                        onClick: function() {clear();}
+                        onClick: function() {clearCanvas();}
+                      },
+                      { type: 'button', text: 'Limpiar Consola', img: 'icon-reload',
+                        onClick: function() {clearConsole();}
                       }
                   ]
               })},
