@@ -3,8 +3,7 @@ function writeConsole(message){
 }
 
 function getProgram() {
-    var prog = editor.doc.getValue();
-    return prog;
+    return editor.doc.getValue();
 }
 
 function getCanvasContext() {

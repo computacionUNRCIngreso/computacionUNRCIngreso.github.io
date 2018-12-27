@@ -3,8 +3,9 @@
 //==============================================================================
 var scene = [];
 
-function animate() {
+function animate(miliseconds) {
     var ctx = getCanvasContext(),
+        finishTime = Date.now() + miliseconds,
         lastTime = 0, // Last seen timestamp.
         drawFrame = function (timestamp) {
             // Clear canvas. An efficient implementation
@@ -19,10 +20,12 @@ function animate() {
             
             // Request to be called again.
             lastTime = timestamp;
-            window.requestAnimationFrame(drawFrame);
+            if (Date.now() < finishTime) {
+                window.requestAnimationFrame(drawFrame);
+            }
         };
     
-    // Kick off animation loop.
+    // Kick off animation loop. 
     window.requestAnimationFrame(drawFrame);
 }
 

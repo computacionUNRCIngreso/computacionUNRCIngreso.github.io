@@ -141,7 +141,6 @@ function getDoc(n){
         content = content + '<p> <b>' + apidoc[i].funcion + '</b>: ' + apidoc[i].descripcion + '</p>';
         w2ui.layout.content('preview', content);
     }
-
 }
 
 function setActivity(n) {
@@ -151,8 +150,9 @@ function setActivity(n) {
     }
 
     //carga js correspondiente
-    var file = 'activities/'+actividades[n].archivo;
-    addJavascript(file);
+    if (actividades[n].archivo) {
+        addJavascript('activities/'+actividades[n].archivo);
+    }
     getDoc(n);
 
     var store = getStore(),
@@ -165,7 +165,7 @@ function setActivity(n) {
             editor.setValue(data.programa);
         }else{
             //carga programa inicial
-             editor.getDoc().setValue(actividades[n].proginicial);
+            editor.getDoc().setValue(actividades[n].proginicial || "// Su código...");
         }
     };
     request.onerror = function(event) {
@@ -183,7 +183,11 @@ function clearConsole(){
 
 function runProgram() {
     try {
-        eval(actividades[currentActivity].main); 
+        if (actividades[currentActivity].main) {
+            eval(actividades[currentActivity].main);
+        } else {
+            eval(getProgram());
+        }
     } catch (e) {
         if (e instanceof SyntaxError) {
             alert(e.message);
@@ -311,6 +315,5 @@ $(function () {
 });
 </script>
 
-<script id="api" type="text/javascript"></script>
 </body>
 </html>

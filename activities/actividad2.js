@@ -16,10 +16,8 @@ function main(){
     var amarillo ='#ffff0e';
     var violeta ='#7f1aa0';
 
-    var ctx=null,
+    var ctx = getCanvasContext(),
         prog = getProgram();
-
-    ctx = getCanvasContext();
 
     function posicionarseEn(x, y) {
         ctx.beginPath();

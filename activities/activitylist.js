@@ -89,5 +89,10 @@ var actividades=[
             
         ],
         proginicial:"//Escriba su programa aquí"
-    }
-];
+    },
+    {
+        actividad: "Animaciones",
+        descripcion: "Ejemplo de la API de animación (cruda)",
+        apidoc: [],
+        proginicial:"//Escriba su programa aquí"
+    }];
