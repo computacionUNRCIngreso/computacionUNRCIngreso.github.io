@@ -38,3 +38,11 @@ function* rango(start, end) {
     }
 }
 
+// espera
+function esperar(milisegundos) {
+    var begin = new Date();
+ 
+    while (new Date() - begin < milisegundos) {
+        showConsole();
+    }
+}
