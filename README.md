@@ -12,7 +12,7 @@ Pasos para usar el ambiente:
 
 Pasos para agregar una nueva actividad:
 
-1. El archivo \<myactividad\>.js conteniendo la implementación de la actividad (función principal y API) debe ubicarse en el directorio "activities".
+1. El archivo \<myactividad\>.js conteniendo la implementación de la actividad (función principal y API) debe ubicarse en el directorio "activities". En este directorio se proveen actividades de ejemplo.
 
 2. Editar el archivo activitylist.js ubicado en el directorio "activities",  agregando un nuevo objeto en el arreglo "actividades". Cada objeto contiene la siguiente información:
 
