@@ -149,7 +149,7 @@ function setActivity(n) {
     }
 
     //carga js correspondiente
-    var file = 'activities/'+actividades[n].file;
+    var file = 'activities/'+actividades[n].archivo;
     addJavascript(file);
     getDoc(n);
 
@@ -163,7 +163,7 @@ function setActivity(n) {
             editor.setValue(data.programa);
         }else{
             //carga programa inicial
-             editor.getDoc().setValue(actividades[n].initialprog);
+             editor.getDoc().setValue(actividades[n].proginicial);
         }
     };
     request.onerror = function(event) {

@@ -2,7 +2,7 @@ var actividades=[
     {
         actividad: "Dibujando",
         descripcion: "En esta actividad se proveen instrucciones que utilizadas  secuencialmente permiten dibujar líneas en el lienzo y con ellas figuras.",
-        file: "actividad1.js",
+        archivo: "actividad1.js",
         main: "main()",
         apidoc: [
             {
@@ -27,12 +27,12 @@ var actividades=[
             }
 
         ],
-        initialprog:"//Escriba su programa aquí"
+        proginicial:"//Escriba su programa aquí"
     },
     {
         actividad: "Dibujando 2",
         descripcion: "Esta actividad provee instrucciones para dibujar líneas y figuras geométricas. Además de la instrucción tirarMoneda().",
-        file: "actividad2.js",
+        archivo: "actividad2.js",
         main: "main()",
         apidoc: [
           
@@ -66,12 +66,12 @@ var actividades=[
             }          
 
         ],
-        initialprog:"//Escriba su programa aquí"
+        proginicial:"//Escriba su programa aquí"
     },
     {
         actividad: "Código Ascii",
         descripcion: "En esta actividad se proveen instrucciones para pasar de ASCII a caracter y viceversa.",
-        file: "ascii.js",
+        archivo: "ascii.js",
         main: "main()",
         apidoc: [
             {
@@ -88,7 +88,7 @@ var actividades=[
             }
             
         ],
-        initialprog:"//Escriba su programa aquí"
+        proginicial:"//Escriba su programa aquí"
     }
 
 
