@@ -1,4 +1,10 @@
 
+/*API disponible para usar en cada actividad:
+    *getCanvasContext(): obtiene el objeto asociado con el lienzo (canvas) de dibujo
+    *getProgram(): obtiene el programa del editor
+    *writeConsole(mensaje): escribe en la consola.
+*/
+
 function main(){
 
       function deAsciiACaracter(n){

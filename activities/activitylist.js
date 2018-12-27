@@ -84,7 +84,7 @@ var actividades=[
             },
             {
                 funcion: "paraTodoCaracterConvertir(mensaje)",
-                descripcion: "Dada una cadena de caracteres (String), muestra el código ASCII de cada caracter de la misma"
+                descripcion: "Dada una cadena de caracteres (String), muestra el código ASCII de cada caracter de la misma en la consola."
             }
             
         ],
