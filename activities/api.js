@@ -23,7 +23,7 @@ function showConsole() {
 // Canvas Mouse Position: return object {x:pos, y:pos}
 function getMousePos(canvas, evt) {
     var rect = canvas.getBoundingClientRect();
-    
+
     return {
           x: evt.clientX - rect.left,
           y: evt.clientY - rect.top
@@ -40,7 +40,7 @@ function* rango(start, end) {
 // espera
 function esperar(milisegundos) {
     var begin = new Date();
- 
+
     while (new Date() - begin < milisegundos) {
         showConsole();
     }
