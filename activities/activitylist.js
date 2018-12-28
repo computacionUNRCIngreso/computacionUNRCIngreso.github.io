@@ -35,7 +35,7 @@ var actividades=[
         archivo: "actividad2.js",
         main: "main()",
         apidoc: [
-          
+
             {
                 funcion: "dibujarLinea(ox, oy, dx, dy)",
                 descripcion: "Dibuja una linea entre el punto de origen (ox,oy) y el punto destino (dx,dy)."
@@ -63,7 +63,7 @@ var actividades=[
             {
                 funcion: "dibujarTriangulo(ox, oy, l)",
                 descripcion: "dibuja un triángulo equilatero con vértice izquierdo (ox,oy) y lado de longitud l."
-            }          
+            }
 
         ],
         proginicial:"//Escriba su programa aquí"
@@ -86,7 +86,7 @@ var actividades=[
                 funcion: "paraTodoCaracterConvertir(mensaje)",
                 descripcion: "Dada una cadena de caracteres (String), muestra el código ASCII de cada caracter de la misma en la consola."
             }
-            
+
         ],
         proginicial:"//Escriba su programa aquí"
     },
@@ -94,5 +94,17 @@ var actividades=[
         actividad: "Animaciones",
         descripcion: "Ejemplo de la API de animación (cruda)",
         apidoc: [],
-        proginicial:"//Escriba su programa aquí"
-    }];
+        proginicial:`// animatedCircle(cx, cy, r, color, velocityX, velocityY
+var circle = animatedCircle(50,50, 20, 'blue', 0.1, 0.08);
+
+var scene = [
+    animatedDrawingLine(100,100, 300, 100, 'red'),
+    circle
+
+];
+
+animate(scene, function(elapsedTime){
+	return elapsedTime > 10000;
+});`
+    }
+];

@@ -2,10 +2,14 @@
 // Animations
 //==============================================================================
 
+// animate: Inicia la animación de los objetos contenidos en la escena
+// scene: Arreglo de objetos animables
+// stopFn (opcional): Función de decisión de finalización de la animación.
+// Recibe como parámetro el tiempo transcurrido de la animación
 function animate(scene, stopFn) {
     var ctx = getCanvasContext(),
         lastTime = 0, // Last seen timestamp.
-        firstTime = Date.now(),
+        initTime = Date.now(),
         drawFrame = function (timestamp) {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -18,7 +22,7 @@ function animate(scene, stopFn) {
             // Request to be called again.
             lastTime = timestamp;
 
-            if (!stopFn || !stopFn(Date.now() - firstTime)) {
+            if (!stopFn || !stopFn(Date.now() - initTime)) {
                 window.requestAnimationFrame(drawFrame);
             }
         };

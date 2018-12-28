@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="lib/CodeMirror/lib/codemirror.css">
     <script src="lib/CodeMirror/lib/codemirror.js"></script>
     <script src="lib/CodeMirror/mode/javascript/javascript.js"></script>
-   
+
     <script src="activities/activitylist.js"></script>
     <script src="activities/api.js"></script>
     <script src="activities/anim.js"></script>
@@ -112,14 +112,14 @@ function addJavascript(jsname) {
 
 function addActivities() {
     for(var i =0; i<actividades.length; i++){
-       
-        w2ui['actsidebar'].add('act', {id: i, text: actividades[i].actividad, img: 'icon-page', 
+
+        w2ui['actsidebar'].add('act', {id: i, text: actividades[i].actividad, img: 'icon-page',
             onClick: function(event){
                 setActivity(event.target);
             }
         });
 
-    } 
+    }
     w2ui['actsidebar'].remove('dummy');
 }
 
@@ -153,7 +153,9 @@ function setActivity(n) {
     if (actividades[n].archivo) {
         addJavascript('activities/'+actividades[n].archivo);
     }
-    getDoc(n);
+
+    if (actividades[n].apidoc)
+        getDoc(n);
 
     var store = getStore(),
         request = store.get(actividades[n].actividad);
@@ -203,8 +205,8 @@ $(function () {
                   '<div id="textconsole" width="100%" height="100%" ' +
                   'style="position: absolute; top:0; left:0; display: none;"></div>' +
                   '<canvas id="canvas"  width="500" height="500"' +
-                  'style="position: absolute; top:0; left:0; border:1px solid #000000;"></canvas></div>';  
-                  
+                  'style="position: absolute; top:0; left:0; border:1px solid #000000;"></canvas></div>';
+
     $('#mainLayout').w2layout({
         name: 'layout',
         panels: [
@@ -213,7 +215,7 @@ $(function () {
             { type: 'left', size: 150, resizable: true, style: pstyle },
             { type: 'main', size: '50%', style: pstyle},
             { type: 'preview', size: '25%', resizable: true, style: pstyle, content: '' },
-  
+
             { type: 'right', size: '50%', resizable: true, style: pstyle, content: display },
             { type: 'bottom', size: 50, resizable: true, style: pstyle, content: '' }
         ]
@@ -281,7 +283,7 @@ $(function () {
                     $('#textconsole').show();
                     break;
             }
-    	}, 
+    	},
         onRefresh: function(event){
 
             if(event.target == 'lienzo'){
@@ -290,13 +292,13 @@ $(function () {
 
                 //context.fillStyle = "blue";
                 //context.fillRect(0, 0, canvas.width, canvas.height);
-                /* 
+                /*
                 $('#canvas').css('width', $('#tab-content').width());
                 $('#canvas').css('height', $('#tab-content').width());
 
                 console.log('canvas size: ' + canvas.width + $("#tab-content").height());
                 */
-            
+
                 canvas.addEventListener('mousemove', function(evt) {
                     var mousePos = getMousePos(canvas, evt);
                     var message = 'Mouse position: (x:' + mousePos.x + ', y:' + mousePos.y + ')';
