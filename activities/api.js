@@ -31,8 +31,8 @@ function getMousePos(canvas, evt) {
 }
 
 // Retorna un rango (desde..hasta) para uso en for/of loops
-function* rango(start, end) {
-    for (let i = start; i <= end; i++) {
+function* rango(start, end, step = 1) {
+    for (let i = start; i <= end; i += step) {
         yield i;
     }
 }
