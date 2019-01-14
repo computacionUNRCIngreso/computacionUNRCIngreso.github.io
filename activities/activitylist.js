@@ -106,5 +106,49 @@ var scene = [
 animate(scene, function(elapsedTime){
 	return elapsedTime > 10000;
 });`
+    },
+
+    {
+        actividad: "Cifrando Mensajes",
+        descripcion: "Completar la función \"cifrar\" para que encripte el mensaje dado utilizando la clave dada.",
+        archivo: "cifradoCesar.js",
+        main: "main()",
+        apidoc: [
+            {
+                funcion: "obtenerCaracter(texto , i)",
+                descripcion: "Calcula y retorna la letra que se encuentra en la posición i del texto dado."
+            },
+            {
+                funcion: "convertirMinuscula(texto)",
+                descripcion: "Convierte y retorna el texto dado a minúscula."
+            },
+            {
+                funcion: "longitudMensaje(texto)",
+                descripcion: "Calcula y retorna la cantidad de letras que tiene el texto dado."
+            },
+            {
+                funcion: "deAsciiACaracter(n)",
+                descripcion: "Dado un número n, calcula y retorna el correspondiente símbolo de la tabla ASCII."
+            },
+            {
+                funcion: "deCaracterAAscii(c)", 
+                descripcion: "Dado un caracter, calcula y retorna  su código (número) según la tabla ASCII."
+            }
+            
+        ],
+        proginicial: 
+`cifrar("hola", 3);
+
+function cifrar(mensaje, clave) {
+    var resultado="";
+             
+    /*TODO: Dado un mensaje y una clave, escribir un programa que cifre el mensaje y le guarde en la
+    variable resultado.
+    */ 
+    
+    return resultado;
+  
+}`
+
     }
 ];
