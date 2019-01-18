@@ -2,7 +2,8 @@
 
 function main(){
 
-  
+    /***API para el alumno****/
+
     /* Esta función devuelve la letra que se encuentra en la posición i del texto*/
     function obtenerCaracter(texto,i){
         return texto.charAt(i);
@@ -28,9 +29,20 @@ function main(){
         return String.fromCharCode(c);
     }
 
-    /*Esta función encripta el texto dado mediante el mecanismo de cifrado cesar con código key*/  
-    //TODO: usarla como oraculo
-    function cifrarOculto(message,key) {
+    /****Fin API para el alumno****/
+
+    /*función para obtener los parámetros actuales con lo que se invoca la función 
+    que el alumno debe implementar*/
+    function getParams(func){
+        var str=func.toString();
+        var len = str.indexOf("(");
+        return str.substr(len+1,str.indexOf(")")-len -1).replace(/ /g,"").split(',')
+    }
+
+    /*Esta función encripta el texto dado mediante el mecanismo de cifrado cesar con código key 
+    Precondición: El texto de entrada contiene solo caracteres del alfabeto 
+    (inglés (sin acento- sin ñ)): [a..z,A..Z] */
+    function hideCesarEncrypted(message,key) {
         var result="",
             ascii,
             current,
@@ -57,18 +69,28 @@ function main(){
     
 
     try {
-        //se ejecuta el programa
-        var c = eval(prog);
+        var res = eval(prog),
+            msj = (getParams(prog)[0]).replace(/\"/g,""),
+            oracle = hideCesarEncrypted(msj, getParams(prog)[1]),
+            show = " ";
 
-        //muestra la consula y escribe el resultado
+        //muestra la consola
         showConsole();
-        writeConsole(c);
+
+        if(!res)
+            res = "indefinido";
+        
+        if(res == oracle){
+            show = "<br> <font color='#27e400'> <big> <b> Muy Bien!! </b> </big> </font> <br> <br> Resultado = " + res     
+        }else{
+            show = "<br> <font color='#fc0602'> <big> <b> Error! </b> </big> </font> <br> <br> Resultado Obtenido = " + res + "<br>" + "Resultado Esperado = " + oracle;            
+        }
+        writeConsole(show);
     } catch (e) {
         if (e instanceof SyntaxError) {
             alert(e.message);
         }
     }
-
 
 }//fin función main
 
