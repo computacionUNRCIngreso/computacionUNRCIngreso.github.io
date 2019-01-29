@@ -1,6 +1,24 @@
 	/*
 	Esta actividad implementa las instrucciones avanzar(pasos), girarDerecha(grados) y 
 	girarIzquierda(grados). Para ello se se lleva el estado del cursor, posición actual y dirección actual
+	Programa de ejemplo:
+
+
+	for(var i=0; i<4;i++){
+		avanzar(100);
+    	girarDerecha(90);
+	}
+	
+	subirLapiz();
+	girarIzquierda(90);
+	avanzar(100);
+	bajarLapiz();
+
+	for(var i=0; i<4;i++){
+    	avanzar(100);
+    	girarDerecha(90);
+
+	}
 	*/
     
 	//current position and direction	
