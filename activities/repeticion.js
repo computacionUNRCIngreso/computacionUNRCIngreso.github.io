@@ -204,12 +204,16 @@
 		}
 
 		function girarDerecha(grade){
-			direction = (direction + grade)%360;	
+			direction = (direction + grade)%360;
+			cursorctx.clearRect(0,0,canv.width,canv.height);
+			drawCursor();	
 
 		} 	
 
 		function girarIzquierda(grade){
 			girarDerecha(360-grade);
+			cursorctx.clearRect(0,0,canv.width,canv.height);
+			drawCursor();
 		}
 
 
