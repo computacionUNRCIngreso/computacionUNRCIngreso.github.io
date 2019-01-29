@@ -206,7 +206,7 @@ $(function () {
                   'style="position: absolute; top:0; left:0; display: none;"></div>' +
                   '<canvas id="canvas"  width="500" height="500"' +
                   'style="position: absolute; top:0; left:0; border:1px solid #000000;"></canvas></div>';
-
+    
     $('#mainLayout').w2layout({
         name: 'layout',
         panels: [
@@ -307,6 +307,7 @@ $(function () {
                 }, false);
                 context = canvas.getContext("2d");
                 context.lineWidth =2;
+                context.strokeStyle ='#000000';
             }
             else{
                 w2ui.layout.content('bottom','');
