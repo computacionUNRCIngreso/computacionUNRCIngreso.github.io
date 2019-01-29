@@ -150,5 +150,39 @@ function cifrar(mensaje, clave) {
   
 }`
 
+    },
+    {
+        actividad: "Repetición",
+        descripcion: "En esta actividad se proveen instrucciones para caminar (avanzar) y girar, dibujando el camino recorrido en el tapíz.",
+        archivo: "repeticion.js",
+        main: "main()",
+        apidoc: [
+            {
+                funcion: "avanzar(p)",
+                descripcion: "Avanza el cursor p cantidad de pasos, en línea recta, hacia la dirección indicada por el cursor. Si el lapiz esta bajo se dibuja el trayecto."
+            },
+            {
+                funcion: "girarDerecha(g)",
+                descripcion: "Gira el cursor g grados hacia la derecha."
+            },
+            {
+                funcion: "girarIzquierda(g)",
+                descripcion: "Gira el cursor g grados hacia la izquierda."
+            },
+            {
+                funcion: "subirLapiz()",
+                descripcion: "Luego de esta instrucción, y hasta tanto no se baje el lápiz, la instrucción avanzar modifica la posición del cursor pero no traza el camino recorrido."
+            },
+            {
+                funcion: "bajarLapiz()",
+                descripcion: "Baja el lápiz. Si el lápiz esta bajo la instrucción avanzar traza el camino recorrido."
+            },
+            {
+                funcion: "cambiarColorLapiz(c)",
+                descripcion: "Cambia el color del lápiz de dibujo al color  dado como argumento. colores disponibles: verde, rojo, blanco, negro, azul, amarillo y violeta."
+            }
+
+        ],
+        proginicial:"//Escriba su programa aquí"
     }
 ];
