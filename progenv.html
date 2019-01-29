@@ -157,6 +157,9 @@ function setActivity(n) {
     if (actividades[n].apidoc)
         getDoc(n);
 
+    clearCanvas();
+    clearConsole();
+    
     var store = getStore(),
         request = store.get(actividades[n].actividad);
 
