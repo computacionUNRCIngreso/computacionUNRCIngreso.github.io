@@ -129,7 +129,8 @@
 
 
 		innerdirection = turn(innerdirection,"left",120);
-
+		cursorctx.strokeStyle ='#fc0602';
+		cursorctx.lineWidth =4;
 		target = drawLine(innerxcursor,innerycursor,innerdirection,20);
 
 		innerxcursor = target.xtarget;
@@ -140,6 +141,8 @@
 
 		innerxcursor = target.xtarget;
 		innerycursor = target.ytarget;
+		cursorctx.lineWidth =3;
+		cursorctx.strokeStyle ='#006E00';
 
 		innerdirection = turn(innerdirection,"left",120);
 		target = drawLine(innerxcursor,innerycursor,innerdirection,10);
@@ -156,7 +159,7 @@
     	var  cursorCanvas = document.getElementById("cursorcanvas");
              cursorctx = cursorCanvas.getContext("2d");
              cursorctx.lineWidth =3;
-             cursorctx.strokeStyle ='#7f1aa0';
+             cursorctx.strokeStyle ='#006E00';
     	
 	}
 
