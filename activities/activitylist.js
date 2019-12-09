@@ -145,6 +145,54 @@ var actividades=[
         proginicial:"//Escriba su programa aquí"
     },
     {
+        actividad: "Donde esta el punto? (1)",
+        descripcion: "En esta actividad el programa que usted escriba en el editor será ejecutado al hacer click sobre el Lienzo. La línea horizontal en el lienzo se ubica en la coordenada y=250 y x variable entre 0 y 500.",
+        archivo: "dondeEstaElpunto1.js",
+        main: "main()",
+        apidoc: [
+            {
+                funcion: "escribir(mensaje)",
+                descripcion: "Muestra el mensaje dado en la Consola"
+            },
+            {
+                funcion: "obtenerX()",
+                descripcion: "devuelve la coordenada X del punto en donde se hizo click"
+            },
+            {
+                funcion: "obtenerY()",
+                descripcion: "devuelve la coordenada Y del punto en donde se hizo click"
+            }
+
+        ],
+        proginicial:`var x =obtenerX();
+var y =obtenerY();
+//continue su programa aquí`
+    },
+    {
+        actividad: "Donde esta el punto? (2)",
+        descripcion: "En esta actividad el programa que usted escriba en el editor será ejecutado al hacer click sobre el Lienzo. La línea horizontal en el lienzo se ubica en la coordenada y=250 y x variable entre 0 y 500. Por otra parte, la línea vertical en el lienzo se ubica en la coordenada x=250 e y variable entre 0 y 500.",
+        archivo: "dondeEstaElpunto2.js",
+        main: "main()",
+        apidoc: [
+            {
+                funcion: "escribir(mensaje)",
+                descripcion: "Muestra el mensaje dado en la Consola"
+            },
+            {
+                funcion: "obtenerX()",
+                descripcion: "devuelve la coordenada X del punto en donde se hizo click"
+            },
+            {
+                funcion: "obtenerY()",
+                descripcion: "devuelve la coordenada Y del punto en donde se hizo click"
+            }
+
+        ],
+        proginicial:`var x =obtenerX();
+var y =obtenerY();
+//continue su programa aquí`
+    },
+    {
         actividad: "Codificando caracteres",
         descripcion: "Se proveen  instrucciones para codificar caractares y números",
         archivo: "ascii.js",
