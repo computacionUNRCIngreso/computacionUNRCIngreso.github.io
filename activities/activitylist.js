@@ -69,6 +69,27 @@ var actividades=[
         proginicial:"//Escriba su programa aquí"
     },
     {
+        actividad: "Dibujar cuadrado",
+        descripcion: "Te proponemos que utilices las funciones disponibles para dibujar un cuadrado de lado 100 px.",
+        archivo: "secuencia.js",
+        main: "main()",
+        apidoc: [
+            {
+                funcion: "dibujarLinea(ox, oy, dx, dy)",
+                descripcion: "Dibuja una linea entre el punto de origen (ox,oy) y el punto destino (dx,dy)."
+            },
+            {
+                funcion: "cambiarAnchoLapiz(nro)",
+                descripcion: "Cambia el ancho del lápiz de dibujo al ancho dado como argumento."
+            },
+            {
+                funcion: "cambiarColorLapiz(c)",
+                descripcion: "Cambia el color del lápiz de dibujo al color  dado como argumento. colores disponibles: verde, rojo, blanco, negro, azul, amarillo y violeta."
+            },
+        ],
+        proginicial:"//Escriba su programa aquí"
+    },
+    {
         actividad: "Codificando caracteres",
         descripcion: "Se proveen  instrucciones para codificar caractares y números",
         archivo: "ascii.js",
@@ -95,24 +116,6 @@ var actividades=[
         ],
         proginicial:"//Escriba su programa aquí"
     },
-    {
-        actividad: "Animaciones",
-        descripcion: "Ejemplo de la API de animación (cruda)",
-        apidoc: [],
-        proginicial:`// animatedCircle(cx, cy, r, color, velocityX, velocityY
-var circle = animatedCircle(50,50, 20, 'blue', 0.1, 0.08);
-
-var scene = [
-    animatedDrawingLine(100,100, 300, 100, 'red'),
-    circle
-
-];
-
-animate(scene, function(elapsedTime){
-	return elapsedTime > 10000;
-});`
-    },
-
     {
         actividad: "Cifrando Mensajes",
         descripcion: "Completar la función \"cifrar\" para que encripte el mensaje dado utilizando la clave dada.",
@@ -155,5 +158,25 @@ function cifrar(mensaje, clave) {
   
 }`
 
+    },
+    {
+        actividad: "Animaciones",
+        descripcion: "Ejemplo de la API de animación (cruda)",
+        apidoc: [],
+        proginicial:`// animatedCircle(cx, cy, r, color, velocityX, velocityY
+var circle = animatedCircle(50,50, 20, 'blue', 0.1, 0.08);
+
+var scene = [
+    animatedDrawingLine(100,100, 300, 100, 'red'),
+    circle
+
+];
+
+animate(scene, function(elapsedTime){
+    return elapsedTime > 10000;
+});`
     }
+
+
+
 ];
