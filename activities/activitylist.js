@@ -90,6 +90,24 @@ var actividades=[
         proginicial:"//Escriba su programa aquí"
     },
     {
+        actividad: "Condicional Básico",
+        descripcion: "Escribe un programa en el que intentes adivinar si un número que elijas es el número que saldrá al tirar el dado. Para tirar el dado dispones de la función <b>tirarDado()</b>. En caso que el número aleatorio coincida con el número elegido, deberá mostrar un mensaje en la consola que diga: <b>Ganador!</b> y en caso que no adivine el número, el mensaje deberá decir: <b>Siga Participando!</b>. <br> <br><b>Ayuda:</b> puedes usar la sentencia condicional: <br> <b>&nbsp&nbsp&nbsp&nbspif(</b> escribe aquí una condición lógica a evaluar <b>){</b> <br>&nbsp&nbsp&nbsp&nbsp&nbsp //escribe aquí lo que quieres que suceda cuando sea verdadera <br><b>&nbsp&nbsp&nbsp&nbsp}else{</b><br> &nbsp&nbsp&nbsp&nbsp&nbsp //y aquí lo que quieres que suceda cuando sea falsa <br><b>&nbsp&nbsp&nbsp&nbsp}</b>",
+        archivo: "condicionalbase.js",
+        main: "main()",
+        apidoc: [
+            {
+                funcion: "tirarDado()",
+                descripcion: "Devuelve de manera aleatoria un número entre 1 y 6, y escribe el número aleatorio en la consola."
+            },            
+                        {
+                funcion: "escribirConsola(mensaje)",
+                descripcion: "Escribe el texto que contiene la variable <b>mensaje</b> en la consola. Ejemplo: <b>escribirConsola(</b>\"Hola!\"<b>)</b>;"
+            },
+                        
+        ],
+        proginicial:"//Escriba su programa aquí"
+    },
+    {
         actividad: "Codificando caracteres",
         descripcion: "Se proveen  instrucciones para codificar caractares y números",
         archivo: "ascii.js",
