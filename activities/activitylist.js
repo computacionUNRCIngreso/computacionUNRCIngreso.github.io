@@ -106,6 +106,43 @@ var actividades=[
                         
         ],
         proginicial:"//Escriba su programa aquí"
+    },    
+        {
+        actividad: "Toma de decisión",
+        descripcion: "Suponiendo que tenés un dado de seis caras, hacé un programa que para los números pares dibuje un triángulo, y para los impares dibuje un círculo",
+        archivo: "condicional.js",
+        main: "main()",
+        apidoc: [
+            {
+                funcion: "dibujarLinea(ox, oy, dx, dy)",
+                descripcion: "Dibuja una linea entre el punto de origen (ox,oy) y el punto destino (dx,dy)."
+            },
+            {
+                funcion: "cambiarAnchoLapiz(nro)",
+                descripcion: "Cambia el ancho del lápiz de dibujo al ancho dado como argumento."
+            },
+            {
+                funcion: "cambiarColorLapiz(c)",
+                descripcion: "Cambia el color del lápiz de dibujo al color  dado como argumento. colores disponibles: verde, rojo, blanco, negro, azul, amarillo y violeta."
+            },
+            {
+                funcion: "tirarDado()",
+                descripcion: "Devuelve de manera aleatoria un número entre 1 y 6, y escribe el número aleatorio en la consola."
+            },
+                        {
+                funcion: "esPar(nro)",
+                descripcion: "Dado un número como argumento, retorna <b>true</b> si es par, o <b>false</b> si es impar."
+            },
+                        {
+                funcion: "dibujarCirculo(ox, oy, r)",
+                descripcion: "dibuja un círculo con centro (ox,oy) y radio r."
+            },
+            {
+                funcion: "dibujarTriangulo(ox, oy, l)",
+                descripcion: "dibuja un triángulo equilatero con vértice izquierdo (ox,oy) y lado de longitud l."
+            },
+        ],
+        proginicial:"//Escriba su programa aquí"
     },
     {
         actividad: "Codificando caracteres",
