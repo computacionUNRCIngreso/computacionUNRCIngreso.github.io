@@ -69,8 +69,8 @@ var actividades=[
         proginicial:"//Escriba su programa aquí"
     },
     {
-        actividad: "Código Ascii",
-        descripcion: "En esta actividad se proveen instrucciones para pasar de ASCII a caracter y viceversa.",
+        actividad: "Codificando caracteres",
+        descripcion: "Se proveen  instrucciones para codificar caractares y números",
         archivo: "ascii.js",
         main: "main()",
         apidoc: [
@@ -85,7 +85,12 @@ var actividades=[
             {
                 funcion: "paraTodoCaracterConvertir(mensaje)",
                 descripcion: "Dada una cadena de caracteres (String), muestra el código ASCII de cada caracter de la misma en la consola."
+            },
+            {
+                funcion: "decimalABinario(nro)",
+                descripcion: "Dada una número en sistema decimal muestra en la consola su representación en el sistema binario."
             }
+
 
         ],
         proginicial:"//Escriba su programa aquí"

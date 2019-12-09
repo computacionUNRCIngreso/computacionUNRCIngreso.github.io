@@ -7,6 +7,10 @@
 
 function main() {
 
+    function decimalABinario(decimal){
+       writeConsole(decimal.toString(2));
+    }
+
     function deAsciiACaracter(n){
         showConsole();
         writeConsole(String.fromCharCode(n));
@@ -28,6 +32,14 @@ function main() {
         }
         writeConsole(p);        
     }
+    function concatenar()
+    {
+      for(i = 0; i <arguments.length; i++)
+      {
+        writeConsole(arguments[i]);
+      }
+    }
+
     showConsole();
 
     var prog = getProgram();
