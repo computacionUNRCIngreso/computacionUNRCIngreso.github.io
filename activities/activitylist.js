@@ -253,7 +253,7 @@ var y =obtenerY();
 function cifrar(mensaje, clave) {
     var resultado="";
              
-    /*TODO: Dado un mensaje y una clave, escribir un programa que cifre el mensaje y le guarde en la
+    /*TODO: Dado un mensaje y una clave, escribir un programa que cifre el mensaje y la guarde en la
     variable resultado.
     */ 
     
