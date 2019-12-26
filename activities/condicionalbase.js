@@ -32,9 +32,9 @@
 
 		function tirarDado() {
 		  var min = 1;
-                  var max = 6;
+          var max = 7;
   		  var dado = Math.floor((Math.random() * (max - min)))+ min;
-         	  writeConsole("Dado: " + dado );
+          writeConsole("Dado: " + dado );
 		  return dado;
 		}
     
