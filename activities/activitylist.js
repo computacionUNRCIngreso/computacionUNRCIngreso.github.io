@@ -280,6 +280,44 @@ animate(scene, function(elapsedTime){
 });`
     },
     {
+        actividad: "El caminante",
+        descripcion: "En esta actividad se proveen instrucciones para caminar (avanzar) y girar, dibujando el camino recorrido en el Lienzo.",
+        archivo: "repeticion.js",
+        main: "main()",
+        apidoc: [
+            {
+                funcion: "avanzar(p)",
+                descripcion: "Avanza el cursor p cantidad de pasos, en línea recta, hacia la dirección indicada por el cursor. Si el lapiz esta bajo se dibuja el trayecto."
+            },
+            {
+                funcion: "girarDerecha(g)",
+                descripcion: "Gira el cursor g grados hacia la derecha."
+            },
+            {
+                funcion: "girarIzquierda(g)",
+                descripcion: "Gira el cursor g grados hacia la izquierda."
+            },
+            {
+                funcion: "subirLapiz()",
+                descripcion: "Luego de esta instrucción, y hasta tanto no se baje el lápiz, la instrucción avanzar modifica la posición del cursor pero no traza el camino recorrido."
+            },
+            {
+                funcion: "bajarLapiz()",
+                descripcion: "Baja el lápiz. Si el lápiz esta bajo la instrucción avanzar traza el camino recorrido."
+            },
+            {
+                funcion: "cambiarColorLapiz(c)",
+                descripcion: "Cambia el color del lápiz de dibujo al color  dado como argumento. colores disponibles: verde, rojo, fucsia, negro, azul, amarillo y violeta."
+            },
+            {
+                 funcion: "cambiarColorLapizAleatorio()",
+                 descripcion: "Cambia el color del lápiz de dibujo a un color aleatorio dentro de los colores disponibles: verde, rojo, fuscia, negro, azul, amarillo y violeta."
+            }
+
+        ],
+        proginicial:"//Escriba su programa aquí"
+    },
+    {
         actividad: "A jugar...",
         descripcion: "Te proponemos que utilices las funciones que se proveen a continuación  para implementar el famoso juego TaTeTi. El docente te dará consignas para que puedas realizarlo. Manos a la obra! ",
         archivo: "tateti.js",
