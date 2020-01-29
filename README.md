@@ -36,7 +36,7 @@ Pasos para agregar una nueva actividad:
     - showCanvas(): automáticamente muestre el lienzo (sin necesidad de clickear en la pestaña). 
 
     
-[Ir a Ambiente de Programación](progenv.html)
+[Ir a Ambiente de Programación](https://computacionunrcingreso.github.io/progenv.html)
 
 
 
