@@ -393,6 +393,83 @@ function realizarJugada(){
      */
  }`
 
+},
+    {
+        actividad: "A jugar 2...",
+        descripcion: "Te proponemos que utilices las funciones que se proveen a continuación  para implementar el famoso juego TaTeTi. El docente te dará consignas para que puedas realizarlo. Manos a la obra! ",
+        archivo: "tateti2.js",
+        main: "main()",
+        apidoc: [
+            {
+                funcion: "escribir(mensaje)",
+                descripcion: "Muestra el mensaje dado en la Consola"
+            },
+            {
+                funcion: "obtenerX()",
+                descripcion: "Devuelve la coordenada X del punto en donde se hizo click"
+            },
+            {
+                funcion: "obtenerY()",
+                descripcion: "Devuelve la coordenada Y del punto en donde se hizo click"
+            },
+            {
+                funcion: "dibujarLinea(ox,oy,dx,dy)",
+                descripcion: "Dibuja una linea entre el punto de origen (ox,oy) y el punto destino (dx,dy)."
+            },
+            {
+                funcion: "cambiarColorLapiz(c)",
+                descripcion: "Cambia el color del lápiz de dibujo al color dado como argumento. colores disponibles: verde, rojo, blanco, negro, azul, amarillo y violeta."
+            },
+            {
+                funcion: "quienJuega()",
+                descripcion: "Devuelve el número de jugador (1 ó 2) al que le toca jugar"
+            },
+            {
+                funcion: "cambiarJugador()",
+                descripcion: "Cambia el jugador de turno. Si quien jugó es el jugador 1 entonces le tocará el turno al jugador 2. Por el contrario, si jugó el jugador 2 será el turno del jugador 1"
+            },
+            {
+                funcion: "anotarQuienJugoEn(celda, jugador)",
+                descripcion: "Registra que el jugador dado colocó una ficha en la celda dada. Se asume que la celda es un número entre el 1 y el 9 y el jugador es 1 ó 2"
+            },
+            {
+                funcion: "hayFicha(celda)",
+                descripcion: "Dada una celda, devuelve verdadero si hay una ficha colocada en la celda dada, en otro caso devuelve falso"
+            },
+            {
+                funcion: "quienJugoEnCelda(celda)",
+                descripcion: "Devuelve el número de jugador que colocó la ficha en la celda dada. Si la celda esta vacia devuelve 0. Se asume que la celda es un número entre el 1 y el 9"
+            }
+
+            
+        ],
+        proginicial:`
+/*Esta función se invoca al presionar el botón ejecutar.
+*/
+function dibujarTablero(){
+    
+    /*escriba su código aquí para:
+     *dibujar un tablero de TaTeTi de 3 x 3
+     */
+}
+
+
+/*Esta función se invoca al hacer click en el tablero.
+Si la celda del tablero sobre la cual se hizo click no esta
+ocupada por una ficha, dibuja la ficha del jugador de turno 
+en esa posición. Luego verifica
+si hay un jugador ganador. Si lo hay escribe el nombre del mismo
+en la consola (jugador 1 o jugador 2)
+*/
+function realizarJugada(){
+  
+    /*escriba su código aquí para:
+     *obtener la posición del  click,
+     *dibujar la ficha del jugador de turno en la celda clickeada,
+     *verificar si hay un jugador ganador e informarlo por consola
+     */
+ }`
+
 }
 
 ];
