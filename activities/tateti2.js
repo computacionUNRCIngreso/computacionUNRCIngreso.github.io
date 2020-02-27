@@ -54,6 +54,22 @@ var clickx=0,
          return clickx;
     }
    
+    function dibujarCuadrado(x,y,t,c){
+        
+        cambiarColorLapiz(c);
+        
+        dibujarLinea(x, y, x+t, y);
+        dibujarLinea(x, y, x, y+t);   
+        dibujarLinea(x+t, y, x+t, y+t);
+        dibujarLinea(x, y+t, x+t, y+t);
+    }
+
+    function dibujarImagen(x, y, t, jugador){
+        if (jugador==1) archImg= "activities/emogi1.jpg";
+        else archImg = "activities/emogi2.jpg";
+        dibujarFicha(x, y, t, archImg);
+    }
+
      function dibujarFicha(x,y,t,arch) {
          var ctx = getCanvasContext();  
          var img = new Image();
