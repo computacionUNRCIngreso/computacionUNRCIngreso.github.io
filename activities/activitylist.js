@@ -342,26 +342,6 @@ animate(scene, function(elapsedTime){
             {
                 funcion: "cambiarColorLapiz(c)",
                 descripcion: "Cambia el color del lápiz de dibujo al color dado como argumento. colores disponibles: verde, rojo, blanco, negro, azul, amarillo y violeta."
-            },
-            {
-                funcion: "quienJuega()",
-                descripcion: "Devuelve el número de jugador (1 ó 2) al que le toca jugar"
-            },
-            {
-                funcion: "cambiarJugador()",
-                descripcion: "Cambia el jugador de turno. Si quien jugó es el jugador 1 entonces le tocará el turno al jugador 2. Por el contrario, si jugó el jugador 2 será el turno del jugador 1"
-            },
-            {
-                funcion: "anotarQuienJugoEn(celda, jugador)",
-                descripcion: "Registra que el jugador dado colocó una ficha en la celda dada. Se asume que la celda es un número entre el 1 y el 9 y el jugador es 1 ó 2"
-            },
-            {
-                funcion: "hayFicha(celda)",
-                descripcion: "Dada una celda, devuelve verdadero si hay una ficha colocada en la celda dada, en otro caso devuelve falso"
-            },
-            {
-                funcion: "quienJugoEnCelda(celda)",
-                descripcion: "Devuelve el número de jugador que colocó la ficha en la celda dada. Si la celda esta vacia devuelve 0. Se asume que la celda es un número entre el 1 y el 9"
             }
 
             
