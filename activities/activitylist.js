@@ -398,7 +398,7 @@ function realizarJugada(){
             },
             {
                 funcion: "dibujarCuadrado(ox, oy, t, c)",
-                descripcion: "Dibuja un cuadrado con origen en (ox,oy), lado de longitud t y color c"
+                descripcion: "Dibuja un cuadrado con origen en (ox,oy), lado de longitud t y color c."
             },
             {
                 funcion: "cambiarColorLapiz(c)",

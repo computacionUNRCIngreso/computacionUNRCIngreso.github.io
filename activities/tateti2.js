@@ -65,8 +65,8 @@ var clickx=0,
     }
 
     function dibujarImagen(x, y, t, jugador){
-        if (jugador==1) archImg= "activities/emogi1.jpg";
-        else archImg = "activities/emogi2.jpg";
+        if (jugador==1) archImg= "activities/cross.png";
+        else archImg = "activities/circle.png";
         dibujarFicha(x, y, t, archImg);
     }
 
@@ -89,13 +89,13 @@ var clickx=0,
     /*Cambia el jugador de turno, si quien jugó es el jugador 1 
     entonces le tocará el turno al jugador 2. Si jugó el jugador 
     2 será el turno del jugador 1*/
-    function cambiarJugador(){
-       if (turno==1) 
-            turno = 2;
-       else 
-            turno = 1;
-    }
-
+    // function cambiarJugador(){
+    //    if (turno==1) 
+    //         turno = 2;
+    //    else 
+    //         turno = 1;
+    // }
+    
     /*Registra que el jugador dado colocó una ficha
     en la celda dada
     Pre:celda es un número entre el 1 y el 9 y 
