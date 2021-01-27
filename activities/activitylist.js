@@ -318,9 +318,9 @@ animate(scene, function(elapsedTime){
         proginicial:"//Escriba su programa aquí"
     },
     {
-        actividad: "A jugar...",
+        actividad: "Clase 8",
         descripcion: "Te proponemos que utilices las funciones que se proveen a continuación  para implementar el famoso juego TaTeTi. El docente te dará consignas para que puedas realizarlo. Manos a la obra! ",
-        archivo: "tateti.js",
+        archivo: "clase8.js",
         main: "main()",
         apidoc: [
             {
@@ -375,7 +375,7 @@ function realizarJugada(){
 
 },
     {
-        actividad: "A jugar 2...",
+        actividad: "TaTeTi",
         descripcion: "Te proponemos que utilices las funciones que se proveen a continuación  para implementar el famoso juego TaTeTi. El docente te dará consignas para que puedas realizarlo. Manos a la obra! ",
         archivo: "tateti2.js",
         main: "main()",
@@ -452,8 +452,8 @@ function realizarJugada(){
 
 },
     {
-        actividad: "Solución A jugar 2",
-        descripcion: "Solución del ejercicio A jugar 2 ",
+        actividad: "Solución TaTeTi",
+        descripcion: "Solución del ejercicio TaTeTi",
         archivo: "tateti2.js",
         main: "main()",
         apidoc: [
