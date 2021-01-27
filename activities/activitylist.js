@@ -377,7 +377,7 @@ function realizarJugada(){
     {
         actividad: "TaTeTi",
         descripcion: "Te proponemos que utilices las funciones que se proveen a continuación  para implementar el famoso juego TaTeTi. El docente te dará consignas para que puedas realizarlo. Manos a la obra! ",
-        archivo: "tateti2.js",
+        archivo: "tateti.js",
         main: "main()",
         apidoc: [
             {
@@ -454,7 +454,7 @@ function realizarJugada(){
     {
         actividad: "Solución TaTeTi",
         descripcion: "Solución del ejercicio TaTeTi",
-        archivo: "tateti2.js",
+        archivo: "tateti.js",
         main: "main()",
         apidoc: [
             {
