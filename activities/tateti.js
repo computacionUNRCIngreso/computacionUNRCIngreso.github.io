@@ -15,7 +15,6 @@ var tablero = [0,0,0,0,0,0,0,0,0];
 // jugador que tienen el turno para jugar (jugador 1 o jugador 2)
 var turnoJugador = 1;
 
-//
 var juegoTerminado = false;
 
 
@@ -114,8 +113,11 @@ var clickx=0,
          for (var i = 0; i < 9; i++) {
             tablero[i] =0;
          }
-                  
+        turnoJugador = 1;
+        juegoTerminado = false;
+         clearCanvas();
          dibujarTablero();
-         showCanvas();
+         //showCanvas();
+
     }
 	
