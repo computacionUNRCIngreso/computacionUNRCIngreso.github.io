@@ -52,7 +52,7 @@ function realizarJugada(){
 
     	// Registrar la jugada y verificar si hay un ganador o se ha alcanzado un empate
         guardarJugada(celda, turnoJugador);
-        ganador = verificarGanador();
+        var ganador = verificarGanador();
         if (ganador==1) escribir("Ganó jugador 1");
         if (ganador==2) escribir("Ganó jugador 2");
         if (ganador==0) escribir("Empate");
