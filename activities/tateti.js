@@ -115,8 +115,9 @@ var clickx=0,
          }
         turnoJugador = 1;
         juegoTerminado = false;
-         clearCanvas();
-         dibujarTablero();
+        clearCanvas();
+        clearConsole();
+        dibujarTablero();
          //showCanvas();
 
     }
