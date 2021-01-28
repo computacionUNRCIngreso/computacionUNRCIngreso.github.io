@@ -376,7 +376,7 @@ function realizarJugada(){
 },
     {
         actividad: "TaTeTi",
-        descripcion: "Te proponemos que utilices las funciones que se proveen a continuación  para implementar el famoso juego TaTeTi. El docente te dará consignas para que puedas realizarlo. Manos a la obra! ",
+        descripcion: "Te proponemos que utilices las funciones y variables que se proveen a continuación  para implementar el famoso juego TaTeTi. El docente te dará consignas para que puedas realizarlo. Manos a la obra! ",
         archivo: "tateti.js",
         main: "main()",
         apidoc: [
@@ -394,32 +394,25 @@ function realizarJugada(){
             },
             {
                 funcion: "dibujarLinea(ox, oy, dx, dy)",
-                descripcion: "Dibuja una linea entre el punto de origen (ox,oy) y el punto destino (dx,dy)."
+                descripcion: "Dibuja una línea entre el punto de origen (ox,oy) y el punto destino (dx,dy)."
             },
             {
-                funcion: "dibujarCuadrado(ox, oy, t, c)",
-                descripcion: "Dibuja un cuadrado con origen en (ox,oy), lado de longitud t y color c."
+                funcion: "dibujarImagen(arch, x, y, w, h)",
+                descripcion: "Dibuja la imagen dada 'arch' con origen en (ox,oy), ancho de longitud w y alto de longitud h"
             },
             {
-                funcion: "cambiarColorLapiz(c)",
-                descripcion: "Cambia el color del lápiz de dibujo al color dado como argumento. colores disponibles: verde, rojo, blanco, negro, azul, amarillo y violeta."
+                funcion: "variable: turnoJugador",
+                descripcion: "Almacena el jugador que tienen el turno para jugar (jugador 1 o jugador 2). Valor inicial: 1"
             },
             {
-                funcion: "quienJuega()",
-                descripcion: "Devuelve el número de jugador (1 ó 2) al que le toca jugar"
+                funcion: "variable: tablero",
+                descripcion: "Almacena el estado de cada una de las 9 posiciones del tablero (0 sin ficha, 1 ficha jugador 1, 2 ficha jugador 2). Valor inicial: [0,0,0,0,0,0,0,0,0]"
             },
             {
-                funcion: "anotarQuienJugoEn(celda, jugador)",
-                descripcion: "Registra que el jugador dado como parámetro colocó una ficha en la celda dada. Se asume que la celda es un número entre el 1 y el 9, y el jugador es 1 ó 2"
-            },
-            {
-                funcion: "hayFicha(celda)",
-                descripcion: "Dada una celda, devuelve verdadero si hay una ficha colocada en la celda, en otro caso devuelve falso"
-            },
-            {
-                funcion: "quienJugoEnCelda(celda)",
-                descripcion: "Devuelve el número de jugador que colocó la ficha en la celda dada como parámetro. Si la celda esta vacia devuelve 0. Se asume que la celda es un número entre el 1 y el 9"
+                funcion: "variable: juegoTerminado",
+                descripcion: "Almacena el estado del juego (true indica partida finalizada, false indica partida en curso). Valor inicial: false"
             }
+
 
             
         ],
