@@ -47,10 +47,10 @@ function realizarJugada(){
 			return;
         }
     
-    	// Dibujar la ficha del jugador correspondiente en la celda elegida
+    	// Dibujar la ficha del jugador correspondiente al turno en la celda elegida
     	dibujarFichaEnCelda(celda, turnoJugador);
 
-    	// Registrar la jugada y verificar si hay un ganador
+    	// Registrar la jugada y verificar si hay un ganador o se ha alcanzado un empate
         guardarJugada(celda, turnoJugador);
         ganador = verificarGanador();
         if (ganador==1) escribir("Ganó jugador 1");
