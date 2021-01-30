@@ -318,14 +318,18 @@ animate(scene, function(elapsedTime){
         proginicial:"//Escriba su programa aquí"
     },
     {
-        actividad: "Clase 8",
-        descripcion: "Te proponemos que utilices las funciones que se proveen a continuación  para implementar el famoso juego TaTeTi. El docente te dará consignas para que puedas realizarlo. Manos a la obra! ",
-        archivo: "clase8.js",
+        actividad: "TaTeTi - Preliminares",
+        descripcion: "En esta actividad dibujaremos las fichas y el tablero del juego TaTeTi, lo que servirá como base para la implementación del juego completo en las próximas clases. ¡Manos a la obra! ",
+        archivo: "preliminaresTaTeTi.js",
         main: "main()",
         apidoc: [
             {
                 funcion: "escribir(mensaje)",
                 descripcion: "Muestra el mensaje dado en la Consola"
+            },
+            {
+                funcion: "dibujarLinea(ox,oy,dx,dy)",
+                descripcion: "Dibuja una linea entre el punto de origen (ox,oy) y el punto destino (dx,dy)."
             },
             {
                 funcion: "obtenerX()",
@@ -336,42 +340,28 @@ animate(scene, function(elapsedTime){
                 descripcion: "Devuelve la coordenada Y del punto en donde se hizo click"
             },
             {
-                funcion: "dibujarLinea(ox,oy,dx,dy)",
-                descripcion: "Dibuja una linea entre el punto de origen (ox,oy) y el punto destino (dx,dy)."
-            },
-            {
                 funcion: "cambiarColorLapiz(c)",
                 descripcion: "Cambia el color del lápiz de dibujo al color dado como argumento. colores disponibles: verde, rojo, blanco, negro, azul, amarillo y violeta."
+            },
+            {
+                funcion: "dibujarImagen(arch, x, y, w, h)",
+                descripcion: "Dibuja la imagen almacenada en 'arch' con origen en (ox,oy), ancho de longitud w y alto de longitud h"
             }
-
-            
         ],
         proginicial:`
-/*Esta función se invoca al presionar el botón ejecutar.
-*/
-function dibujarTablero(){
-    
-    /*escriba su código aquí para:
-     *dibujar un tablero de TaTeTi de 3 x 3
-     */
+/*
+ * Esta función se invoca al presionar el botón Ejecutar
+ */
+function principal() {
+
 }
 
+/*
+ * Esta función se invoca al hacer click en el lienzo
+ */
+function clickEnLienzo() {
 
-/*Esta función se invoca al hacer click en el tablero.
-Si la celda del tablero sobre la cual se hizo click no esta
-ocupada por una ficha, dibuja la ficha del jugador de turno 
-en esa posición. Luego verifica
-si hay un jugador ganador. Si lo hay escribe el nombre del mismo
-en la consola (jugador 1 o jugador 2)
-*/
-function realizarJugada(){
-  
-    /*escriba su código aquí para:
-     *obtener la posición del  click,
-     *dibujar la ficha del jugador de turno en la celda clickeada,
-     *verificar si hay un jugador ganador e informarlo por consola
-     */
- }`
+}`
 
 },
     {

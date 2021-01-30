@@ -35,7 +35,7 @@ var clickx=0,
    		  }
 
        
-         realizarJugada();		
+         clickEnLienzo();		
 	   		
 	   },
 
@@ -146,7 +146,7 @@ var clickx=0,
             celdas[i] =0;
          }
                   
-         dibujarTablero();
+         principal();
          showCanvas();
     }
 	
