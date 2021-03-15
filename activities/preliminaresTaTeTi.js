@@ -53,61 +53,17 @@ var clickx=0,
     function obtenerX(){
          return clickx;
     }
-   
-     function dibujarFicha(x,y,t,arch) {
+
+
+    function dibujarImagen(arch, x, y, w, h) {
          var ctx = getCanvasContext();  
          var img = new Image();
          img.src = arch;
        
         img.onload = function(){
-                          ctx.drawImage(img, x, y, t, t);
-                     }
+            ctx.drawImage(img, x, y, w, h);
+        }
     }
-
-    /*Devuelve el número de jugador (1 ó 2) al que le toca jugar*/
-    function quienJuega(){
-        return turno;
-    }
-
-
-    /*Cambia el jugador de turno, si quien jugó es el jugador 1 
-    entonces le tocará el turno al jugador 2. Si jugó el jugador 
-    2 será el turno del jugador 1*/
-    function cambiarJugador(){
-       if (turno==1) 
-            turno = 2;
-       else 
-            turno = 1;
-    }
-
-    /*Registra que el jugador dado colocó una ficha
-    en la celda dada
-    Pre:celda es un número entre el 1 y el 9 y 
-    jugador es 1 o 2*/
-    function anotarQuienJugoEn(celda, jugador){
-       celdas[celda-1] =jugador;
-    }
-
-    /*Dada una celda, hayFicha devuelve verdadero si hay 
-    una ficha colocada en la celda dada*/
-    function hayFicha(celda){
-      return estadoDeCelda(celda)!=0
-    }
-
-    /*private: retorna 0,1 o2 
-    Pre:celda es un número entre el 1 y el 9*/
-    function estadoDeCelda(c){
-        return celdas[c-1];
-    }
-
-    /*Devuelve el numero de jugador que colocó 
-    la ficha en la celda dada.
-    Si la celda esta vacia devuelve 0
-    Pre:celda es un número entre el 1 y el 9*/
-    function quienJugoEnCelda(celda){
-        return estadoDeCelda(celda);
-    }
-
 
     
     function escribir(mensaje){
