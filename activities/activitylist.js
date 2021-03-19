@@ -410,10 +410,10 @@ function clickEnLienzo() {
 /*Esta función se invoca al presionar el botón ejecutar.
 */
 function dibujarTablero(){
-    
-    /*escriba su código aquí para:
-     *dibujar un tablero de TaTeTi de 3 x 3
-     */
+    dibujarLinea(167, 0, 167, 500)
+    dibujarLinea(334, 0, 334, 500)
+    dibujarLinea(0, 167, 500, 167)
+    dibujarLinea(0, 334, 500, 334)
 }
 
 
@@ -426,11 +426,18 @@ en la consola (jugador 1 o jugador 2)
 */
 function realizarJugada(){
   
-    /*escriba su código aquí para:
-     *obtener la posición del  click,
-     *dibujar la ficha del jugador de turno en la celda clickeada,
-     *verificar si hay un jugador ganador e informarlo por consola
-     */
+    // Verificar que el juego no haya terminado
+    
+    // Determinar la celda elegida y
+
+    // verificar que no esté ocupada
+
+    // Dibujar la ficha del jugador correspondiente al turno en la celda elegida
+    
+    // Registrar la jugada y verificar si hay un ganador o se ha alcanzado un empate
+
+    // Cambiar el turno para la próxima jugada
+    
  }`
 
 }

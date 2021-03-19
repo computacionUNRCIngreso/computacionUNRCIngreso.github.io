@@ -117,8 +117,8 @@ var clickx=0,
         juegoTerminado = false;
         clearCanvas();
         clearConsole();
+        showCanvas();
         dibujarTablero();
-         //showCanvas();
 
     }
 	
