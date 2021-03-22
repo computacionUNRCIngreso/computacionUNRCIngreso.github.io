@@ -440,6 +440,185 @@ function realizarJugada(){
     
  }`
 
+},
+
+{
+        actividad: "TaTeTi-Final ",
+        descripcion: "Ya hemos programada parte del TaTeTi, te proponemos que utilices las funciones  y variables que se proveen a continuación  para terminar con la implementación del famoso juego TaTeTi. El docente te dará consignas para que puedas realizarlo. Manos a la obra! ",
+        archivo: "tateti.js",
+        main: "main()",
+        apidoc: [
+            {
+                funcion: "escribir(mensaje)",
+                descripcion: "Muestra el mensaje dado en la Consola"
+            },
+            {
+                funcion: "obtenerX()",
+                descripcion: "Devuelve la coordenada X del punto en donde se hizo click"
+            },
+            {
+                funcion: "obtenerY()",
+                descripcion: "Devuelve la coordenada Y del punto en donde se hizo click"
+            },
+            {
+                funcion: "dibujarLinea(ox, oy, dx, dy)",
+                descripcion: "Dibuja una línea entre el punto de origen (ox,oy) y el punto destino (dx,dy)."
+            },
+            {
+                funcion: "dibujarImagen(arch, x, y, w, h)",
+                descripcion: "Dibuja la imagen dada 'arch' con origen en (ox,oy), ancho de longitud w y alto de longitud h"
+            },
+            {
+                funcion: "variable: turnoJugador",
+                descripcion: "Almacena el jugador que tienen el turno para jugar (jugador 1 o jugador 2). Valor inicial: 1"
+            },
+            {
+                funcion: "variable: tablero",
+                descripcion: "Almacena el estado de cada una de las 9 posiciones del tablero (0 sin ficha, 1 ficha jugador 1, 2 ficha jugador 2). Valor inicial: [0,0,0,0,0,0,0,0,0]"
+            },
+            {
+                funcion: "variable: juegoTerminado",
+                descripcion: "Almacena el estado del juego (true indica partida finalizada, false indica partida en curso). Valor inicial: false"
+            }
+
+
+            
+        ],
+        proginicial:`
+/*Esta función se invoca al presionar el botón ejecutar.
+*/
+function dibujarTablero(){
+    dibujarLinea(167, 0, 167, 500)
+    dibujarLinea(334, 0, 334, 500)
+    dibujarLinea(0, 167, 500, 167)
+    dibujarLinea(0, 334, 500, 334)
 }
+
+
+/*Esta función se invoca al hacer click en el tablero.
+Si la celda del tablero sobre la cual se hizo click no esta
+ocupada por una ficha, dibuja la ficha del jugador de turno 
+en esa posición. Luego verifica
+si hay un jugador ganador. Si lo hay escribe el nombre del mismo
+en la consola (jugador 1 o jugador 2)
+*/
+function realizarJugada(){
+  
+    // Verificar que el juego no haya terminado
+    
+    // Determinar la celda elegida y
+    var celda = obtenerCeldaClick();
+
+    // verificar que no esté ocupada
+
+    // Dibujar la ficha del jugador correspondiente al turno en la celda elegida
+    dibujarFichaEnCelda(celda,turnoJugador);
+    
+    // Registrar la jugada y verificar si hay un ganador o se ha alcanzado un empate
+
+    // Cambiar el turno para la próxima jugada
+    cambiarTurno();
+    
+ }
+
+function cambiarTurno(){
+    if(turnoJugador == 1)
+        turnoJugador = 2;
+    else
+        turnoJugador = 1;
+}
+
+
+function obtenerCeldaClick(){
+
+    var x = obtenerX();
+    var y = obtenerY();
+
+    //primera fila
+    if (x <= 167 && y <= 167)
+        return 1;
+    if (x >167 && x <= 334 && y <= 167 )
+        return 2;
+    if (x > 334 && x <= 500 && y <= 167 )
+        return 3;
+    
+    // segunda fila
+    if (x <= 167 && y > 167 && y <= 334)
+        return 4;
+    if (x >167 && x <= 334 && y > 167 && y <= 334 )
+        return 5;
+    if (x > 334 && x <= 500 && y > 167 && y <= 334 )
+        return 6;
+    
+    // ultima fila
+    if (x <= 167 && y > 334 && y <= 500)
+        return 7;
+    if (x >167 && x <= 334 && y > 334 && y <= 500 )
+        return 8;
+    if (x > 334 && x <= 500 && y > 334 && y <= 500 )
+        return 9;
+
+}
+
+function dibujarFichaEnCelda(celda,turnoJugador){
+
+    var t = 75;
+    var ox = 41;
+    var oy = 41;
+    
+    if (celda == 1){
+        dibujarFicha(turnoJugador, ox, oy, t);
+    }
+    if (celda == 2){
+        ox = 167 + 41;
+        dibujarFicha(turnoJugador, ox, oy, t);
+    }
+    if (celda == 3){
+        ox = 334 + 41;
+        dibujarFicha(turnoJugador, ox, oy, t);
+    }
+    if (celda == 4){
+        oy = 167 + 41;
+        dibujarFicha(turnoJugador, ox, oy, t);
+    }
+    if (celda == 5){
+        ox = 167 + 41;
+        oy = 167 + 41;
+        dibujarFicha(turnoJugador, ox, oy, t);
+    }
+    if (celda == 6){
+        ox = 334 + 41;
+        oy = 167 + 41
+        dibujarFicha(turnoJugador, ox, oy, t);
+    }
+    if (celda == 7){
+        oy = 334 + 41;
+        dibujarFicha(turnoJugador, ox, oy, t);
+    }
+    if (celda == 8){
+        ox = 167 + 41;
+        oy = 334 + 41;
+        dibujarFicha(turnoJugador, ox, oy, t);
+    }
+    if (celda == 9){
+        ox = 334 + 41;
+        oy = 334 + 41;
+        dibujarFicha(turnoJugador, ox, oy, t);
+    }
+    
+}
+
+function dibujarFicha(jugador, x, y, t){
+    if (jugador == 1){
+        dibujarImagen("activities/cross.png", x, y, t, t);
+    }else{
+        dibujarImagen("activities/circle.png", x, y, t, t);
+    }
+}
+
+`
+
+}
+
 
 ];
