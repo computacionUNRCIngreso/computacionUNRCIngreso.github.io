@@ -181,6 +181,38 @@ function verificarGanador(){
 }
 
 
+/*function verificarGanador(){
+    if ((quienJugoEnCelda(1)==1 && quienJugoEnCelda(2)==1 && quienJugoEnCelda(3)==1) ||
+        (quienJugoEnCelda(1)==1 && quienJugoEnCelda(4)==1 && quienJugoEnCelda(7)==1) ||
+        (quienJugoEnCelda(4)==1 && quienJugoEnCelda(5)==1 && quienJugoEnCelda(6)==1) ||
+        (quienJugoEnCelda(2)==1 && quienJugoEnCelda(5)==1 && quienJugoEnCelda(8)==1) ||
+        (quienJugoEnCelda(7)==1 && quienJugoEnCelda(8)==1 && quienJugoEnCelda(9)==1) ||
+        (quienJugoEnCelda(3)==1 && quienJugoEnCelda(6)==1 && quienJugoEnCelda(9)==1) ||
+        (quienJugoEnCelda(1)==1 && quienJugoEnCelda(5)==1 && quienJugoEnCelda(9)==1) ||
+        (quienJugoEnCelda(3)==1 && quienJugoEnCelda(5)==1 && quienJugoEnCelda(7)==1)){
+            return 1;
+    }
+    
+    if ((quienJugoEnCelda(1)==2 && quienJugoEnCelda(2)==2 && quienJugoEnCelda(3)==2) ||
+       (quienJugoEnCelda(1)==2 && quienJugoEnCelda(4)==2 && quienJugoEnCelda(7)==2) ||
+       (quienJugoEnCelda(4)==2 && quienJugoEnCelda(5)==2 && quienJugoEnCelda(6)==2) ||
+       (quienJugoEnCelda(2)==2 && quienJugoEnCelda(5)==2 && quienJugoEnCelda(8)==2) ||
+       (quienJugoEnCelda(7)==2 && quienJugoEnCelda(8)==2 && quienJugoEnCelda(9)==2) ||
+       (quienJugoEnCelda(3)==2 && quienJugoEnCelda(6)==2 && quienJugoEnCelda(9)==2) ||
+       (quienJugoEnCelda(1)==2 && quienJugoEnCelda(5)==2 && quienJugoEnCelda(9)==2) ||
+       (quienJugoEnCelda(3)==2 && quienJugoEnCelda(5)==2 && quienJugoEnCelda(7)==2)){
+            return 2;
+     }   
+     //empate
+     if (tableroLLeno()){ 
+            return 0
+     }
+}*/
+
+
+
+
+
 function dibujarFicha(jugador, x, y, t){
     if (jugador==1) archImg= "activities/cross.png";
     else archImg = "activities/circle.png";
