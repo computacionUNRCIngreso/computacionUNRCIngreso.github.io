@@ -14,12 +14,12 @@ function main(){
         return texto.toLowerCase();
     }
 
-    /* Esta función devuelve la cantidad de letras que tiene el texto dado*/
+    /*Esta función devuelve la cantidad de letras que tiene el texto dado*/
     function longitudMensaje(texto){
         return texto.length;
     }
 
-    /* Dado un caracter, devuelve el código ascii correspondiente */
+    /*Dado un caracter, devuelve el código ascii correspondiente */
     function deCaracterAAscii(c){
         return c.charCodeAt(0);
     }
