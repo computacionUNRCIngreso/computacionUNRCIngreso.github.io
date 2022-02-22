@@ -206,9 +206,9 @@
 
 	    function getRandomInt(min,max) {
         	return Math.floor(Math.random()* (max-min))+min;
-    	}	
+    	    }	
 
-    	function cambiarColorLapizAleatorio(){
+       	function cambiarColorLapizAleatorio(){
             switch(getRandomInt(1,8)) {
                 case 1:
                     ctx.strokeStyle = verde;
@@ -267,6 +267,13 @@
 			cursorctx.clearRect(0,0,canv.width,canv.height);
 			drawCursor();
 		}
+
+		
+	    function posicionarCursor(x,y){
+		updateState(x,y);
+		cursorctx.clearRect(0,0,canv.width,canv.height);
+		drawCursor();
+    	    }
 
 
 	    function cambiarColorLapiz(color) {

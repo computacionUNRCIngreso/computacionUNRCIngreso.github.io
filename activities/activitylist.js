@@ -312,7 +312,12 @@ animate(scene, function(elapsedTime){
             {
                  funcion: "cambiarColorLapizAleatorio()",
                  descripcion: "Cambia el color del lápiz de dibujo a un color aleatorio dentro de los colores disponibles: verde, rojo, fuscia, negro, azul, amarillo y violeta."
-            }
+            },
+	    {
+		funcion: "posicionarCursor(x,y)",
+		descripcion: "posiciona el cursor en la coordenada (x,y) dentro del tapíz, manteniendo la dirección actual del cursor."    
+	    } 	
+
 
         ],
         proginicial:"//Escriba su programa aquí"
