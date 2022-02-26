@@ -490,7 +490,17 @@ function realizarJugada(){
             
         ],
         proginicial:`
-/*Esta función se invoca al presionar el botón ejecutar.*/
+/*
+Las constantes FST (first) y SND (second) representan el primer y segundo número
+distinguido para delimitar celdas en el tablero de 500x500 pixeles. FST es un tercio
+de la longitud de lado y SND dos tercios.
+*/
+const FST = 167;
+const SND = 334;
+
+/*
+Esta función se invoca al presionar el botón ejecutar.
+*/
 function dibujarTablero(){
     dibujarLinea(167, 0, 167, 500)
     dibujarLinea(334, 0, 334, 500)
@@ -498,8 +508,8 @@ function dibujarTablero(){
     dibujarLinea(0, 334, 500, 334)
 }
 
-
-/*Esta función se invoca al hacer click en el tablero.
+/* 
+Esta función se invoca al hacer click en el tablero.
 Si la celda del tablero sobre la cual se hizo click no esta
 ocupada por una ficha, dibuja la ficha del jugador de turno 
 en esa posición. Luego verifica
@@ -507,20 +517,143 @@ si hay un jugador ganador. Si lo hay escribe el nombre del mismo
 en la consola (jugador 1 o jugador 2)
 */
 function realizarJugada(){
-  
+
     // Verificar que el juego no haya terminado
     
     // Determinar la celda elegida y
-
+    var celda = obtenerCeldaClick();
+    
     // verificar que no esté ocupada
 
     // Dibujar la ficha del jugador correspondiente al turno en la celda elegida
+    dibujarFichaEnCelda(celda, turnoJugador);
     
     // Registrar la jugada y verificar si hay un ganador o se ha alcanzado un empate
 
     // Cambiar el turno para la próxima jugada
+    cambiarTurno();
+}
+
+function obtenerCeldaClick() {
+
+    var x = obtenerX();
+    var y = obtenerY();
+
+    if (x < FST && y < FST){
+        return 1;
+    }
+
+    if (x > FST && x < SND && y < FST) {
+        return 2;
+    }
+
+    if (x > SND && y < FST) {
+        return 3;
+    }
+
+    if (x < FST && y > FST && y < SND) {
+        return 4;
+    }
+
+    if (x > FST && x < SND && y > FST && y < SND) {
+        return 5;
+    }
+
+    if (x > SND && y > FST && y < SND) {
+        return 6;
+    }
+
+    if (x < FST && y > SND) {
+        return 7;
+    }
+
+    if (x > FST && x < SND && y > SND) {
+        return 8;
+    }
+
+    if (x > SND && y > SND) {
+        return 9;
+    }
+}
+
+function dibujarFichaEnCelda(celda, turnoJugador) {
+
+    var size = 100;             // tamaño de la ficha
+    var shift = (FST - size)/2; // desplazamiento dentro de la celda
+    var x;                      // coordenadas para dibujar en cada celda
+    var y;
     
- } 
+    if (celda == 1) {
+        x = shift;
+        y = shift;
+        dibujarFicha(turnoJugador, x, y, size);
+    }
+    
+    if (celda == 2) {
+        x = shift + FST;
+        y = shift;
+        dibujarFicha(turnoJugador, x, y, size);
+    }
+    
+    
+    if (celda == 3) {
+        x = shift + SND;
+        y = shift;
+        dibujarFicha(turnoJugador, x, y, size);
+    }
+    
+    if (celda == 4) {
+        x = shift;
+        y = shift + FST;
+        dibujarFicha(turnoJugador, x, y, size);
+    }
+    
+    if (celda == 5){
+        x = shift + FST;
+        y = shift + FST;
+        dibujarFicha(turnoJugador, x, y, size);
+    }
+    
+    if (celda == 6) {
+        x = shift + SND;
+        y = shift + FST;
+        dibujarFicha(turnoJugador, x, y, size);
+    }
+    
+    if (celda == 7) {
+        x = shift;
+        y = shift + SND;
+        dibujarFicha(turnoJugador, x, y, size);
+    }
+    
+    if (celda == 8){
+        x = shift + FST;
+        y = shift + SND;
+        dibujarFicha(turnoJugador, x, y, size);
+    }
+    
+    if (celda == 9) {
+        x = shift + SND;
+        y = shift + SND;
+        dibujarFicha(turnoJugador, x, y, size);
+    }
+}
+
+function dibujarFicha(jugador, x, y, t) {
+    if (jugador == 1) {
+        dibujarImagen("activities/cross.png", x, y, t, t);
+    } else {
+        dibujarImagen("activities/circle.png", x, y, t, t);
+    }
+}
+
+function cambiarTurno(){
+    if( turnoJugador == 1){
+        turnoJugador = 2;
+    }else{
+        turnoJugador = 1;
+    }
+}
 `
 
 }
