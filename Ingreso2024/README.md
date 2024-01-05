@@ -1,9 +1,11 @@
-# Computación. Ingreso 2024
+# <font size = 10 > Computación </font>
 
-Este material está dirigido a los/las estudiantes de carreras de computación de
-la [FCEFQyN] de la [UNRC].
+# <font size = 6 > Actividades de Ingreso 2024 </font>
 
-Entre otras cosas, la Ciencia de la Computación estudia qué problemas se pueden resolver mediante una computadora, cómo resolverlos y a qué costo (cuántos pasos y memoria requiere un problema dado). 
+
+<font size = 4 >Este material está dirigido a los/las estudiantes de carreras de computación de
+la [FCEFQyN] de la [UNRC].</font>
+
 
 [FCEFQyN]: https://www.exa.unrc.edu.ar "Facultad de Ciencias Exactas,
     Físico-Químicas y Naturales"
