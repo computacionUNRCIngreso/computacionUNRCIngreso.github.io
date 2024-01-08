@@ -10,9 +10,8 @@
 
 
 * * *
-
-# <span style="color:green"> <font size = 10 > Problema fundamental </font> </span>
-
+# <span style="color:green"> <font size = 10 > Problema fundamental <!-- {docsify-ignore} -->
+</font> </span>
  <font size = 4 > ¿Qué tipos de problemas se pueden resover automáticamente (por una máquina)?  </font>
 
 

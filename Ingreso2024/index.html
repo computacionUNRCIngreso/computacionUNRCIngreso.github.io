@@ -9,12 +9,23 @@
       href="//cdn.jsdelivr.net/npm/docsify@4/themes/vue.css"
     />
   </head>
+  <style type="text/css">
+ 
+    .content {
+        overflow: auto;
+    }
+  </style>
   <body>
     <div id="app">Please wait...</div>
     <script>
       window.$docsify = {
         coverpage: 'cover.md',
-        loadSidebar: 'sidebar.md',  
+        loadSidebar: 'sidebar.md',
+        search: "auto",
+        auto2top: true,
+          
+        subMaxLevel: 2
+      
       };
     </script>
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>

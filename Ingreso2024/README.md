@@ -1,6 +1,7 @@
-# <font size = 10 > Computación </font>
+#  <span style="color:green"> <font size = 10 > Computación </font> </span>
 
-# <font size = 6 > Actividades de Ingreso 2024 </font>
+##  <span style="color:green"> <font size = 6 > Actividades de Ingreso 2024 </font>  </span>  <!-- {docsify-ignore} -->
+
 
 
 <font size = 4 >Este material está dirigido a los/las estudiantes de carreras de computación de
