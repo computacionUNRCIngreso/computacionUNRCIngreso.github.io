@@ -67,29 +67,54 @@ traducción a códigos de máquina específicas.
 
  <font size = 4 >3.  Calcular la suma de los números menores a uno dado, digamos m. Dé una descripción matemática del problema, luego escriba un algoritmo para resolver este problema.
 
+* * *
+## <span style="color:green"> <font size = 4 >   Computadora </font> </span>
+
+ <font size = 4 > **Una computadora moderna es una máquina que tiene al menos los siguientes componentes (hardware):** </font>
+
+* <font size = 4 > <span style="color:green"> Memoria:</span> Una secuencia de celdas que almacenan información. Permite almacenar (“recordar”) valores numéricos. </font>
+
+* <font size = 4 > <span style="color:green"> Unidad central de procesamiento o CPU: </span> se encarga de ejecutar las instrucciones de un programa almacenado en la memoria. </font>
+* <font size = 4 > <span style="color:green"> Dispositivos de entrada-salida (teclado, pantalla, sensores, etc.):</span> le permite interactuar con el mundo exterior. </font>
+
 
 * * *
 ## <span style="color:green"> <font size = 4 >   Funcionamiento de una computadora </font> </span>
 
+* <font size = 4 > La <span style="color:green"> memoria </span>  almacena las instrucciones de programa y los datos de entrada y los datos computados.</font>
+* <font size = 4 > La <span style="color:green"> CPU </span> analiza y ejecute las instrucciones: </font>
 
-Se requiere una memoria para almacenar las instrucciones de
-programa y los datos de entrada y computados
-Se requiere de un dispositivo (autómata) que analice y ejecute
-las instrucciones
-1 Tome (lea) la próxima instrucción
-2 La analice y ejecute, lo que puede requerir
-1 Leer valores de la memoria
-2 Realizar cálculos aritméticos y/o comparaciones
-3 Posiblemente escribir un valor en la memoria
-4 Determinar cuál será la próxima instrucción a ejecutar
-Este dispositivo se denomina Unidad Central de
-Procesamiento (CPU)2
+    1.  <font size = 4 > Tome (lea) la próxima instrucción </font>
+    2.  <font size = 4 > La analice y ejecute, lo que puede requerir: </font>
+        1.  <font size = 4 > Leer valores de la memoria </font>
+        2.  <font size = 4 > Realizar cálculos aritméticos y/o comparaciones </font>
+        3.  <font size = 4 > Posiblemente escribir un valor en la memoria </font>
+        4.  <font size = 4 > Determinar cuál será la próxima instrucción a ejecutar </font>
 
 
+* * *
 
+## <span style="color:green">  <font size = 4 > Herramientas de programación  </font> </span>
 
 
 
+# <span style="color:green">  <font size = 4 >  Lidiando con la complejidad  <!-- {docsify-ignore} -->   </font> </span>
 
+
+* <font size = 4 > Cargar las instrucciones y datos de un programa en la memoria usando números es muy tedioso y propenso a cometer errores </font>
+* <font size = 4 > Las instrucciones de máquina son muy simples (de bajo nivel). Un programa real requiere de miles o millones de instrucciones </font>
+
+# <span style="color:green">  <font size = 4 > Solución: Uso de herramientas y abstracciones  <!-- {docsify-ignore} --> </font> </span>
+
+
+* <font size = 4 > Programamos usando lenguajes de programación de alto nivel (texto legible)</font>
+* <font size = 4 > Los traducimos a instrucciones de máquina usando otros programas (compilador o intérprete)</font>
+
+
+* * * 
+
+probando...
+
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/kCc-U1osi" width="800" height="600" ></iframe>
 
 
