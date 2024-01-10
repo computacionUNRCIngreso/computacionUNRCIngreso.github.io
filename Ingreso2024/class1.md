@@ -170,10 +170,10 @@ Lo que sigue a <span style="color:green"> // </span> es ignorado por el traducto
 * <span style="color:green"> abajo(): </span> mueve el cursor 1 paso hacia abajo
 * <span style="color:green"> arriba(): </span> mueve el cursor 1 paso hacia abajo
 * <span style="color:green"> pintar(): </span> pinta en color negro la posición actual del cursor
-* <span style="color:green"> repetir(n){\<instrucciones\>}: </span> repite las instrucciones que aparecen entre llaves n veces
 
 </font>
 
+<!--span style="color:green"> repetir(n){\<instrucciones\>}:repite las instrucciones que aparecen entre llaves n veces</span--> 
 <iframe src="https://editor.p5js.org/compuUNRCIngreso/full/gWXUTRthW" width="800" height="600"></iframe>
 
 * * *
