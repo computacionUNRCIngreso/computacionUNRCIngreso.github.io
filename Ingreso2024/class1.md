@@ -150,7 +150,7 @@ Como veremos en la [clase 2](#clase2)
 <iframe src="https://editor.p5js.org/compuUNRCIngreso/full/-j2BmBYG5"  width="800" height="600"></iframe>
 <!--iframe src="https://editor.p5js.org/compuUNRCIngreso/full/kCc-U1osi" width="800" height="600" ></iframe-->
 
-
+<a id="abcd"></a> 
  <font size = 4 >  Podés acceder a este ejemplo: [multiplicar dos números](https://editor.p5js.org/compuUNRCIngreso/sketches/-j2BmBYG5).
 
 La sentencia <span style="color:green"> while (condición) </span> ejecuta las instrucciones entre llaves repetidamente mientras la condición sea verdadera.
@@ -158,6 +158,7 @@ Lo que sigue a <span style="color:green"> // </span> es ignorado por el traducto
 
 </font>
 
+<span style="color:red">  <font size = 6 >  BORRAR: podemos con este ejemplo comenzar a hablar del concepto de variables </font></span>
 
 * * *
 
