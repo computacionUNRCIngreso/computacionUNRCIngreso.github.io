@@ -2,6 +2,6 @@
 * [Introducción](introduction.md)
 * [Algoritmos y Programas](class1.md)
 * [Representación de la Información](class2.md)
-* [Clase 3](class3.md)
+* [Estructura Condicional Básica](class3.md)
 * [Clase 4](class4.md)
 * [Examen](exam.md)

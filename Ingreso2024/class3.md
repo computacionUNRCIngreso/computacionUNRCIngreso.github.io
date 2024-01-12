@@ -1,7 +1,22 @@
-# <span style="color:green"> <font size = 10 > Titulo correcto acá??</font> </span>
+# <span style="color:green"> <font size = 10 > Estructura Condicional en la resolución de problemas Algorítmicos</font> </span>
+
+ <span style="color:red"> <font size = 6 >BORRAR: nombre de este sección, mmm</font> </span>
+
+ <font size = 4 >  Piensa un número entre el 1 y el 6, arroja un dado, ganas si  adivinaste el número que saldrá al tirar el dado, pierdes en caso contrario. </font>
+
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/Jssw9sFDA" width="800" height="600"></iframe>
 
 
- <font size = 4 >  Si volvemos  al ejemplo de la primera clase [multiplicar dos números](#nuestro-programa-que-multiplica-dos-números-en-javaScript), hemos utilizado variables para recordar valores, </font>
+<font size = 4 > <span style="color:green"> Actividad: </span>Escribe un programa que luego de que elijas un número y tires el dado, dibuje un círculo en color verde si has tenido suerte, sino has tenido suerte, elije un color distinto para dibujar el círculo</font> 
+
+
+ <span style="color:red"> <font size = 6 >BORRAR: analisis del problema </font> </span>
+
+
+## <span style="color:green"> <font size = 4 > Algunos conceptos importantes para escribir un programa que resuelva este problema: </font> </span>
+
+
+ <font size = 4 >  Si recordamos  al ejemplo de la primera clase [multiplicar dos números](#nuestro-programa-que-multiplica-dos-números-en-javaScript), hemos utilizado variables para recordar valores, </font>
 
 ## <span style="color:green"> <font size = 4 > ¿Qué son las variables? </font> </span>
  
@@ -33,20 +48,27 @@ cambiar el valor de las variables, imprimir , etc. Hay una función que retorna 
 
 <iframe src="https://editor.p5js.org/compuUNRCIngreso/full/l56tAFfey" width="800" height="600"></iframe>
 
+<font size = 4 > Link para abrir este ejermplo en otra ventana del navegador [variables](https://editor.p5js.org/compuUNRCIngreso/full/l56tAFfey) </font>
+
 * * *
-<span style="color:green">  <font size = 4 >  Sentencia Condicional if: </font></span>
 
+## <span style="color:green">  <font size = 4 >  Sentencia Condicional if </font></span>
 
+ 
     ...
     if (CONDICION) {
         [BLOQUE DE SENTENCIAS] 
     }
 
-    [SENTENCIAS SIGUIENTES]
+    [BLOQUE DE SENTENCIAS SIGUIENTES]
     ...
-<span style="color:red">Continuará</font>
+
+
+<img src="/img/if.png" alt="Sentencia Condicional if" style="height: 300px; width:500px;"/>
+
+* * *
  
-<span style="color:green">  <font size = 4 >  Sentencia Condicional if-else: </font></span>
+## <span style="color:green">  <font size = 4 >  Sentencia Condicional if-else </font></span>
 
 
 
@@ -57,8 +79,47 @@ cambiar el valor de las variables, imprimir , etc. Hay una función que retorna 
         [BLOQUE DE SENTENCIAS 2] 
     }
 
-    [SENTENCIAS SIGUIENTES]
+    [BLOQUE DE SENTENCIAS SIGUIENTES]
     ...
 
+
+<img src="/img/if-else.png"  alt="Sentencia Condicional if" style="height: 300px; width:800px;"/>
+
+* * *
+
+## <span style="color:green">  <font size = 4 >  Operadores de comparación </font></span>
+
+<font size = 4 > Los operadores de comparación nos permiten comparar el valor de dos expresiones:  </font>
+
+    EXPR > EXPR
+    EXPR >= EXPR
+    EXPR < EXPR
+    EXPR <= EXPR
+    EXPR == EXPR
+    EXPR != EXPR
+
+<font size = 4 >  Estas expresiones booleanas, o condiciones, pueden ser usadas en el contexto de las sentencias condicionales  </font>
+
+* * *
+
+## <span style="color:green">  <font size = 4 >  Ahora si volvamos a tirar el dado... </font></span>
+
+
+Algunas funciones de utilidad [fill()](https://p5js.org/es/reference/#/p5/fill) y [circle()](https://p5js.org/es/reference/#/p5/circle) para resolver el problema.
+
+ <span style="color:red"> <font size = 6 >BORRAR: usar funciones con parametros </font> </span>
+ 
+
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/Jssw9sFDA" width="800" height="600"></iframe>
+
+<font size = 4 > Link para abrir este ejercicio en otra ventana del navegador [tirar los dados](https://editor.p5js.org/compuUNRCIngreso/full/Jssw9sFDA) </font>
+
+* * *
+
+
+
 <span style="color:red">Continuará</font> 
+
+
+
 
