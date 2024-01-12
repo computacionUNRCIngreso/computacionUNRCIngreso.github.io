@@ -7,7 +7,7 @@
 <iframe src="https://editor.p5js.org/compuUNRCIngreso/full/Jssw9sFDA" width="800" height="600"></iframe>
 
 
-<font size = 4 > <span style="color:green"> Actividad: </span>Escribe un programa que luego de que elijas un número y tires el dado, dibuje un círculo en color verde si has tenido suerte, sino has tenido suerte, elije un color distinto para dibujar el círculo</font> 
+<font size = 4 > <span style="color:green"> Actividad: </span>Escribe un programa que luego de que elijas un número y tires el dado, dibuje un círculo en color verde si has tenido suerte y adivinaste el valor del dado. Si no has tenido suerte,  dibuja un círculo en algún otro color a elección.</font> 
 
 
  <span style="color:red"> <font size = 6 >BORRAR: analisis del problema </font> </span>
