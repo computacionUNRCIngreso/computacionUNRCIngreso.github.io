@@ -126,6 +126,17 @@ cambiar el valor de las variables, imprimir , etc. Hay una función que retorna 
 
 * * *
 
+## <span style="color:green">  <font size = 4 >  Actividad 3 </font></span>
+
+<font size = 4 >  En este caso, encontrarás el Lienzo divido en cuatro cuadrantes. Nuevamente se proveen las variables que almacenan las coordenadas (x, y) del punto sobre el Lienzo donde se hizo 'click' ( <span style="color:green"> mouseX</span> y  <span style="color:green"> mouseY</span>). Escribir un programa que informe  en qué cuadrante se ha hecho click (arriba-derecha, arriba-izquierda, abajo-derecha o abajo- izquierda). </font>
+
+
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/OnSK_3K-7" width="800" height="600"></iframe>
+
+
+<font size = 4 > Link para abrir este ejercicio en otra ventana del navegador [Donde esta el punto (2)?](https://editor.p5js.org/compuUNRCIngreso/full/OnSK_3K-7) </font>
+
+* * *
 
 
 
