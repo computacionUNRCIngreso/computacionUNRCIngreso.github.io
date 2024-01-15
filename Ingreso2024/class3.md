@@ -105,9 +105,9 @@ cambiar el valor de las variables, imprimir , etc. Hay una función que retorna 
 ## <span style="color:green">  <font size = 4 >  Ahora si volvamos a tirar el dado... </font></span>
 
 
-Algunas funciones de utilidad [fill()](https://p5js.org/es/reference/#/p5/fill) y [circle()](https://p5js.org/es/reference/#/p5/circle) para resolver el problema.
+ <font size = 4 > Algunas funciones de utilidad [fill()](https://p5js.org/es/reference/#/p5/fill) y [circle()](https://p5js.org/es/reference/#/p5/circle) para resolver el problema. </font>
 
- <span style="color:red"> <font size = 6 >BORRAR: usar funciones con parametros </font> </span>
+ <span style="color:red"> <font size = 6 >BORRAR: acá se usan  funciones con parametros </font> </span>
  
 
 <iframe src="https://editor.p5js.org/compuUNRCIngreso/full/Jssw9sFDA" width="800" height="600"></iframe>
@@ -115,6 +115,18 @@ Algunas funciones de utilidad [fill()](https://p5js.org/es/reference/#/p5/fill) 
 <font size = 4 > Link para abrir este ejercicio en otra ventana del navegador [tirar los dados](https://editor.p5js.org/compuUNRCIngreso/full/Jssw9sFDA) </font>
 
 * * *
+
+## <span style="color:green">  <font size = 4 >  Actividad 2 </font></span>
+
+<font size = 4 > El Lienzo está dividido en dos secciones por una línea recta horizontal.  Se  proveen variables <span style="color:green"> mouseX </span> y <span style="color:green"> mouseY </span> que almacenan las coordenadas (x, y) del punto sobre el Lienzo en donde se hace ‘click’. Escribir un programa que informe  si se hizo un click por encima o por debajo de la línea. </font>
+
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/3eExV-33b" width="800" height="600"></iframe>
+
+<font size = 4 > Link para abrir este ejercicio en otra ventana del navegador [Donde esta el punto (1)?](https://editor.p5js.org/compuUNRCIngreso/full/3eExV-33b) </font>
+
+* * *
+
+
 
 
 
