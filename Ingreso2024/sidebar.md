@@ -3,5 +3,7 @@
 * [Algoritmos y Programas](class1.md)
 * [Representación de la Información](class2.md)
 * [Estructura Condicional Básica](class3.md)
-* [Clase 4](class4.md)
+* [Estructura Repetitiva Básica](class4.md)
+* [Definiendo Funciones]()
+
 * [Examen](exam.md)

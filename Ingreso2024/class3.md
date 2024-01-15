@@ -1,6 +1,6 @@
 # <span style="color:green"> <font size = 10 > Estructura Condicional en la resolución de problemas Algorítmicos</font> </span>
 
- <span style="color:red"> <font size = 6 >BORRAR: nombre de este sección, mmm</font> </span>
+ <span style="color:red"> <font size = 6 >BORRAR: nombre de este sección revisar</font> </span>
 
  <font size = 4 >  Piensa un número entre el 1 y el 6, arroja un dado, ganas si  adivinaste el número que saldrá al tirar el dado, pierdes en caso contrario. </font>
 
@@ -116,9 +116,9 @@ cambiar el valor de las variables, imprimir , etc. Hay una función que retorna 
 
 * * *
 
-## <span style="color:green">  <font size = 4 >  Actividad 2 </font></span>
+## <span style="color:green">  <font size = 4 >  Actividad 2: Dónde esta el punto (1)? </font></span>
 
-<font size = 4 > El Lienzo está dividido en dos secciones por una línea recta horizontal.  Se  proveen variables <span style="color:green"> mouseX </span> y <span style="color:green"> mouseY </span> que almacenan las coordenadas (x, y) del punto sobre el Lienzo en donde se hace ‘click’. Escribir un programa que informe  si se hizo un click por encima o por debajo de la línea. </font>
+<font size = 4 > El Lienzo está dividido en dos secciones por una línea recta horizontal.  Se  proveen variables <span style="color:green"> mouseX </span> y <span style="color:green"> mouseY </span> que almacenan las coordenadas (x, y) del punto sobre el Lienzo en donde se hace ‘click’. Escribir un programa que decida si se hizo un click por encima o por debajo de la línea. </font>
 
 <iframe src="https://editor.p5js.org/compuUNRCIngreso/full/3eExV-33b" width="800" height="600"></iframe>
 
@@ -126,9 +126,9 @@ cambiar el valor de las variables, imprimir , etc. Hay una función que retorna 
 
 * * *
 
-## <span style="color:green">  <font size = 4 >  Actividad 3 </font></span>
+## <span style="color:green">  <font size = 4 >  Actividad 3: Dónde esta el punto (2)? </font></span>
 
-<font size = 4 >  En este caso, encontrarás el Lienzo divido en cuatro cuadrantes. Nuevamente se proveen las variables que almacenan las coordenadas (x, y) del punto sobre el Lienzo donde se hizo 'click' ( <span style="color:green"> mouseX</span> y  <span style="color:green"> mouseY</span>). Escribir un programa que informe  en qué cuadrante se ha hecho click (arriba-derecha, arriba-izquierda, abajo-derecha o abajo- izquierda). </font>
+<font size = 4 >  En este caso, encontrarás el Lienzo divido en cuatro cuadrantes. Nuevamente se proveen las variables que almacenan las coordenadas (x, y) del punto sobre el Lienzo donde se hizo 'click' ( <span style="color:green"> mouseX</span> y  <span style="color:green"> mouseY</span>). Escribir un programa que decida  en qué cuadrante se ha hecho click (arriba-derecha, arriba-izquierda, abajo-derecha o abajo- izquierda). </font>
 
 
 <iframe src="https://editor.p5js.org/compuUNRCIngreso/full/OnSK_3K-7" width="800" height="600"></iframe>
@@ -138,10 +138,18 @@ cambiar el valor de las variables, imprimir , etc. Hay una función que retorna 
 
 * * *
 
+## <span style="color:green">  <font size = 4 >  Actividad 4: Le dí a la figura? </font></span>
+
+<font size = 4 >  Cuando ejecutas este programa (botón  <span style="color:fuchsia"> play</span> en la esquina superior izquierda), se dibuja un círculo de tamaño aleatorio en el lienzo, las partes (centro y diametro) de este círculo   quedarán almacenadas en las variables:  <span style="color:green"> xCentro</span>,  <span style="color:green"> yCentro</span> y  <span style="color:green"> diametro</span>. Además, contamos con las variables  <span style="color:green"> mouseX</span> y  <span style="color:green"> mouseY</span>,  utilizadas anteriormente,  que almacenan las coordenadas de un 'click'. Esta actividad consiste en escribir un programa que  decida si se hizo 'click' dentro del círculo o fuera de él. </font>
 
 
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/N4XRJQjAK" width="800" height="600"></iframe>
 
-<span style="color:red">Continuará</font> 
+
+<font size = 4 > Link para abrir este ejercicio en otra ventana del navegador [Le dí a la figura?](https://editor.p5js.org/compuUNRCIngreso/full/N4XRJQjAK) </font>
+
+* * *
+
 
 
 
