@@ -1,20 +1,33 @@
-# <span style="color:green"> <font size = 10 > ¿Qué estudia esta disciplina? </font> </span>
+# ¿Qué estudia esta disciplina?
 
-* <font size = 4 > Análisis y desarrollo de <span style="color:green"> algoritmos</span> </font>
+* Análisis y desarrollo de ***algoritmos***
 
-* <font size = 4 > Representación de problemas e información (estructuras de datos) </font>
+*Representación de problemas e información (estructuras de datos)
 
-* <font size = 4 > Estudio y desarrollo de modelos de computación, es decir de la maquinaria necesaria para computar </font>
+* Estudio y desarrollo de modelos de computación, es decir de la maquinaria
+  necesaria para computar
 
-* <font size = 4 > Áreas prácticas: Gráficos, animación, simulación, redes y telecomunicaciones, aprendizaje automático (inteligencia artificial), ingeniería de software, . . . </font>
+* Lenguajes y técnicas de programación
 
+* Áreas prácticas: Gráficos, animación, simulación, redes y telecomunicaciones,
+  aprendizaje automático (inteligencia artificial), ingeniería de software, ...
 
-* * *
-# <span style="color:green"> <font size = 10 > Problema fundamental <!-- {docsify-ignore} -->
-</font> </span>
- <font size = 4 > ¿Qué tipos de problemas se pueden resover automáticamente (por una máquina)?  </font>
+-------------------------------------------------------------------------------
 
+# Problemas fundamentales <!-- {docsify-ignore} -->
 
-<center>
-<img src="/img/pregunta.jpg" alt="pregunta" style="height: 200px; width:200px;"/>
-</center>
+ 1. ¿Qué tipos de problemas se pueden resover automáticamente (por una máquina)?
+
+ 2. ¿A qué costo se puede resolver un problema (cuántos pasos o cuánta memoria
+    requiere)?
+
+![pregunta](img/pregunta.jpg ':size=25%')
+
+<!-- ======================== local styles here =========================== -->
+<style>
+    p > img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
