@@ -18,7 +18,6 @@ Cada cifra binaria (0 o 1) se conoce como bit. Cada celda de la memoria contiene
 ## Ejemplos:
 
   
-
   
   $$ 0 0 1 0 1 0 1 1 = ? $$
 
