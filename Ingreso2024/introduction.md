@@ -21,13 +21,8 @@
  2. ¿A qué costo se puede resolver un problema (cuántos pasos o cuánta memoria
     requiere)?
 
-![pregunta](img/pregunta.jpg ':size=25%')
+![pregunta .center](img/pregunta.jpg ':size=25%')
 
 <!-- ======================== local styles here =========================== -->
 <style>
-    p > img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
 </style>
