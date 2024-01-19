@@ -2,7 +2,7 @@
 
 * Análisis y desarrollo de ***algoritmos***
 
-*Representación de problemas e información (estructuras de datos)
+* Representación de problemas e información (estructuras de datos)
 
 * Estudio y desarrollo de modelos de computación, es decir de la maquinaria
   necesaria para computar
