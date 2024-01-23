@@ -98,12 +98,40 @@ Un Ejemplo:
 > [!TIP|label:NOTA]
 > Link para abrir este ejercicio en otra ventana del navegador [Ejemplo while](https://editor.p5js.org/compuUNRCIngreso/sketches/kjMtG37Ihy)
 
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
+Algunas cuestiones a tener en cuenta:
 
+ * Una sentencia ``while`` repite la ejecución de  una secuencia de sentencias (lo que llamamos el cuerpo del while) ***mientras una condición es verdadera***
 
+ * Para de ejecutar cuando la condición es falsa.
+
+ * La condiición se chequea ***después*** de que el cuerpo del while es executado y ***antes*** de que este se repita.
+
+ * Si tu condición siempre es verdadera entonces tu programa nunca terminará de ejecutarse.
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
 ### Sentencia ``for``
 
+<span style="color:red"> <font size = 6 >BORRAR: acá estoy pensando solo en definite iteration</font> </span>
+
+Lo usamos cuando sabemos exactamente el número de repeticiones o el rango sobre el cual queremos iterar:
+
+``` 
+    ...
+    for(inicializacion; condicion; incremento) {
+        [BLOQUE DE SENTENCIAS] 
+    }
+    [BLOQUE DE SENTENCIAS SIGUIENTES]
+    ...
+
+```
+Algunas cuestiones a tener en cuenta:
+
+* La ``inicializacion``  es ejecutada una única vez: la primera vez que se ejecuta el for
+* La ``condicion``: Se ejecuta en cada repetición. El for para de iterar (repetir) cuando condicion es falsa.
+Continuará... section en construcción
+
+Volvamos al ejemplo anterior y veamos un ejemplo!
 
