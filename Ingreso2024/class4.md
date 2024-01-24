@@ -127,11 +127,31 @@ Lo usamos cuando sabemos exactamente el número de repeticiones o el rango sobre
     ...
 
 ```
+![sentencia for .center](img/for.png ':size=50%')
+
+**Volvamos al ejemplo anterior y veamos un ejemplo!**
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
 Algunas cuestiones a tener en cuenta:
 
-* La ``inicializacion``  es ejecutada una única vez: la primera vez que se ejecuta el for
-* La ``condicion``: Se ejecuta en cada repetición. El for para de iterar (repetir) cuando condicion es falsa.
-Continuará... section en construcción
 
-Volvamos al ejemplo anterior y veamos un ejemplo!
+* La ``inicializacion``  es ejecutada una única vez: la primera vez que se ejecuta el ``for``
+
+* La ``condicion``: se ejecuta en cada repetición. El ``for`` para de iterar (repetir) cuando ``condicion`` es falsa.
+
+*  ``[BLOQUE DE SENTENCIAS]``,  llamado cuerpo del ``for``,  se ejecuta en cada iteración (Si condicion es verdadera)
+
+* El ``incremento``: Se ejecuta en cada iteración, después del  ``[BLOQUE DE SENTENCIAS]``
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+> [!TIP|label:Manos a la obra]
+
+Te dejamos algunas [actividades](https://drive.google.com/file/d/1L5RKzGv-MMXO5FlGanxsvSSu5LbmAy8p/view?usp=drive_link) para que practiques!
+
+<span style="color:red"> <font size = 6 >BORRAR: No revisé las actividades (del último ingreso) poco? mucho?, cambiamos? revisar! resolver! </font> </span>
+
+
+
 
