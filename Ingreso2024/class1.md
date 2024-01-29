@@ -39,7 +39,7 @@ Por medio de un *lenguaje o notación* que permite describir las computaciones
        ![dos-cuadrados .center](img/dos-cuadrados.png ':size=50%')
 
 > [!NOTE|label:Preguntas]
-> 1. ¿Es la solución planteadas en el ejercicio anterior las únicas posibles? 
+> 1. ¿Es la solución planteada en el ejercicio anterior la única posible? 
 > 2. ¿Cuántas soluciones diferentes se podrían escribir?
 > 3. ¿Y si deseamos hacer 10 cuadrados?
  
@@ -125,7 +125,7 @@ Por medio de un *lenguaje o notación* que permite describir las computaciones
         - Realizar cálculos aritméticos o comparar valores
         - Posiblemente escribir un valor en la memoria
         - Determinar cuál será la próxima instrucción a ejecutar (comúnmente la
-          próxima)
+          inmediata siguiente)
 
   > [!NOTE|label:NOTA]
   > La CPU ejecuta esos pasos repetidamente (*ciclos*). Cada paso se hace en
