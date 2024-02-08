@@ -89,8 +89,8 @@ memoria y ejecutarla. Comúnmente hay distintos tipos de instrucciones:
 
 - Lectura/escritura de un valor en la CPU desde/hacia la memoria.
 - Operaciones aritméticas: $+, -, \times, /, \ldots$
-- Operaciones lógicas: $<, >, =, \neq, \ldots$
-- Otras como *saltar a otra instrucción*, *saltar si una condición vale$*, ...
+- Operaciones lógicas: $\lt, \gt, =, \neq, \leq, \geq, \ldots$
+- Otras como *saltar a otra instrucción*, *saltar si una condición es verdadera*, ...
 
 Los dispositivos de entrada-salida permiten que la computadora interactúe con el
 mundo exterior. Algunos dispositivos comunes son: teclados, mouse, pantallas,
@@ -108,3 +108,10 @@ discos (almacenamiento), cámaras de video, micrófonos, parlantes, etc.
 > ¿Por qué en *binario*? Porque es más simple diseñar un *bit* ya que tiene sólo
 > dos posibles estados o valores. Representar una cifra decimal requiere 10
 > estados posibles, lo cual será un dispositivo mucho más complejo.
+
+Mas adelante veremos cómo es posible representar con simples bits números
+enteros, aproximaciones de reales, vectores y matrices, imágenes, sonido, etc.
+
+También veremos que podremos hacer animaciones mostrando en forma repetitiva
+diferentes imágenes en la pantalla. Nuestro cerebro interpreta esa sucesión de
+imágenes mostradas rápidamente como algo en movimiento.
