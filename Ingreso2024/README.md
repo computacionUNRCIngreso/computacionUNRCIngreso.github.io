@@ -1,11 +1,9 @@
-#  <span style="color:green"> <font size = 10 > Computación </font> </span>
+# Computación
 
-##  <span style="color:green"> <font size = 6 > Actividades de Ingreso 2024 </font>  </span>  <!-- {docsify-ignore} -->
+##  Actividades de Ingreso 2024 <!-- {docsify-ignore} -->
 
-
-
-<font size = 4 >Este material está dirigido a los/las estudiantes de carreras de computación de
-la [FCEFQyN] de la [UNRC].</font>
+Este material está dirigido a los/las estudiantes de carreras de computación de
+la [FCEFQyN] de la [UNRC].
 
 
 [FCEFQyN]: https://www.exa.unrc.edu.ar "Facultad de Ciencias Exactas,

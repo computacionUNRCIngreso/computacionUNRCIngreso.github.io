@@ -77,6 +77,7 @@ Por medio de un *lenguaje o notación* que permite describir las computaciones
 
 ## Computadora
 
+
 - **Una computadora moderna es una máquina que tiene al menos los siguientes
   componentes (hardware):**
 
@@ -117,6 +118,7 @@ Por medio de un *lenguaje o notación* que permite describir las computaciones
 
 * La ***memoria*** almacena las instrucciones de programa, los datos de entrada
   y los datos computados o resultados.
+
 * La ***CPU*** analiza y ejecuta las instrucciones:
 
     1. Toma (lee) la próxima instrucción </font>
