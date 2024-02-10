@@ -68,8 +68,8 @@ e $y$ el valor en el eje vertical u *ordenada*.
 
 ![Coordenadas cartesianas .center](img/cartesian-coordinate-system.svg ":size=50%")
 
-> Veremos que los lenguajes de programación nos permiten definir y manipular
-> datos como los mencionados. En algunos casos con diferentes notaciones.
+> Los lenguajes de programación nos permiten definir y manipular datos como los
+> mencionados. En algunos casos con diferentes notaciones.
 
 ----------------------------------------------------------------------------
 
@@ -98,14 +98,14 @@ Un enfoque *computacional* es escribir un *programa* que *busque* la solución.
 Un programa posible (para funciones crecientes) se muestra abajo y se basa en la
 estrategia de ir achicando el intervalo en que se encontrará la raíz.
 
-Dado un intervalo $[x_0, x_1]$ en el que puede estar la raíz en $x$.
+Dado un intervalo $[x_0, x_1]$ en el que puede estar la raíz $x$.
 
 1. Determinar el punto medio del intervalo: $x = (x_1 + x_2) / 2$
 2. Si $abs(f(x))<0.001$, la raíz es $x$, fin del programa. Sino, seguimos
-3. Si $f(x)<0$, $x_1 = x$, sino es $x_2 = x$
+3. Si $f(x)<0$, $x_1 = x$, sino $x_2 = x$
 4. Volver al paso 1
 
-Ejecutemos el programa con el intervalo inicial $(-1,1)$.
+Ejecutemos el programa con el intervalo inicial $[x_1=-1, x_2=1]$.
 
 > 1. Paso 1: $x = (-1 + 1) / 2 = 0$
 > 2. Paso 2: $abs(f(0))=1$. Debemos continuar
@@ -115,9 +115,9 @@ Ejecutemos el programa con el intervalo inicial $(-1,1)$.
 > 6. Paso 2: Ahora $abs(f(0.5)) = 0 < 0.001$, la raíz es $x=0.5$
 
 > [!WARNING|label:Preguntas]
-> 1. ¿Qué sucede con el programa dado si damos un intervalo que no contiene la
+> 1. ¿Cuántos pasos haríamos si el intervalo inicial fuera $[0, 1]$?
+> 2. ¿Qué sucede con el programa dado si damos un intervalo que no contiene la
 >    raíz?
-> 2. ¿Cuántos pasos haríamos si el intervalo inicial fuera $[0, 1]$?
 
 ----------------------------------------------------------------------------
 
@@ -185,6 +185,27 @@ luego pueden ser *reutilizadas* en otro programas.
 
 Generalmente la tarea de un buen programador es *definir componentes (ej:
 funciones) reusables*.
+
+----------------------------------------------------------------------------
+
+## Computadora
+
+El ser humano se caracteriza por inventar herramientas. La mayoría de ellas se
+diseñan con propósitos específicos, es decir resolver un determinado tipo de
+problema.
+
+Si bien existen *máquinas programables* como un torno mecánico o una impresora
+3d, no necesariamente son *computadoras*.
+
+> [!Note|label:Computadora]
+> Máquina programable capaz de resolver la familia de *funciones computables*.
+> Una función es computable si existe un algoritmo que compute sus valores.
+> Se ha demostrado que hay funciones que no son computables, como verán mas
+> adelante en la carrera.
+
+Las computadoras modernas permiten almacenar los datos y las instrucciones de un
+programa en su *memoria* y una *unidad central de procesamiento (cpu)* se
+encarga de ejecutar las instrucciones en secuencia.
 
 ----------------------------------------------------------------------------
 
