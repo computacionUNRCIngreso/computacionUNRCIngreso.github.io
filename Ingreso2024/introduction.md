@@ -73,7 +73,7 @@ e $y$ el valor en el eje vertical u *ordenada*.
 
 ----------------------------------------------------------------------------
 
-## Problemas y computación
+## Resolución de problemas mediante algoritmos
 
 En matemáticas un problema o concepto comúnmente se describe mediante una
 definición.
@@ -85,7 +85,8 @@ definición.
 
 ![raiz de f .center](img/root-function-plot.svg ":size=50%")
 
-La frase anterior define *qué es* una raíz pero no especifica *cómo se calcula*.
+La frase anterior define *qué es* una raíz pero no especifica *cómo* la podemos
+encontrar.
 
 El álgebra nos permite encontrar una solución mediante su *manipulación
 simbólica* aplicando propiedades de la aritmética.
@@ -93,29 +94,97 @@ simbólica* aplicando propiedades de la aritmética.
 > Buscamos un valor $x$ tal que $2x-1=0$, entonces, $2x=1$, finalmente
 > $x=\frac{1}{2}=0.5$.
 
-Un enfoque *computacional* es escribir un *algoritmo* que *busque* la solución.
-Un algoritmo posible (para funciones crecientes) es el siguiente:
+Un enfoque *computacional* es escribir un *programa* que *busque* la solución.
+Un programa posible (para funciones crecientes) se muestra abajo y se basa en la
+estrategia de ir achicando el intervalo en que se encontrará la raíz.
 
 Dado un intervalo $[x_0, x_1]$ en el que puede estar la raíz en $x$.
 
 1. Determinar el punto medio del intervalo: $x = (x_1 + x_2) / 2$
-2. Si $abs(f(x))<0.001$, la raíz es $x$, fin del programa. Sino, continuamos
-3. Si $f(x)<0$, el nuevo intervalo es $(x_1=x, x_2)$, sino es $(x_1, x_2=x)$
+2. Si $abs(f(x))<0.001$, la raíz es $x$, fin del programa. Sino, seguimos
+3. Si $f(x)<0$, $x_1 = x$, sino es $x_2 = x$
 4. Volver al paso 1
 
-Ejecutemos el algoritmo con el intervalo inicial $(-1,1)$.
+Ejecutemos el programa con el intervalo inicial $(-1,1)$.
 
 > 1. Paso 1: $x = (-1 + 1) / 2 = 0$
 > 2. Paso 2: $abs(f(0))=1$. Debemos continuar
-> 3. Paso 3: Como $f(0)=-1<0$, el nuevo intervalo de búsqueda es $(0,1)$
+> 3. Paso 3: Como $f(0)=-1<0$, el nuevo intervalo es $[x_1=0, x_2=1]$
 > 4. Paso 4: Volvemos al paso 1 del algoritmo
 > 5. Paso 1: $x = (0 + 1) / 2 = \frac{1}{2} = 0.5$
 > 6. Paso 2: Ahora $abs(f(0.5)) = 0 < 0.001$, la raíz es $x=0.5$
 
 > [!WARNING|label:Preguntas]
-> 1. ¿Qué sucede con el algoritmo dado si damos un intervalo que no contiene la
+> 1. ¿Qué sucede con el programa dado si damos un intervalo que no contiene la
 >    raíz?
 > 2. ¿Cuántos pasos haríamos si el intervalo inicial fuera $[0, 1]$?
+
+----------------------------------------------------------------------------
+
+## Algoritmos
+
+> [!Note|label:Definición]
+> Un *algoritmo* es un programa que siempre termina.
+
+El programa dado arriba no es un *algoritmo* (*¿por qué?*). Sin embargo con una
+pequeña modificación en el paso 1 podríamos convertirlo en algoritmo.
+
+Debemos notar que en cada ciclo (repetición de los pasos 1- 3) vamos achicando
+el intervalo. Una forma de finalizar el programa es terminarlo si el intervalo
+es *considerablemente pequeño*.
+
+> ¿Te animas a proponer tal modificación?
+
+----------------------------------------------------------------------------
+
+## Lenguajes de programación
+
+Si bien podemos describir programas en *lenguaje natural* como lo hemos hecho,
+para programar una computadora real debemos expresar un programa en un *lenguaje
+formal*, es decir con estructuras sintácticas muy específicas.
+
+Un lenguaje de programación define la *sintaxis* y el *significado (semántica)*
+de sus frases.
+
+Existen muchísimos lenguajes de programación, cada uno con características
+particulares. Algunos lenguajes están diseñados para resolver ciertos tipos de
+problemas de manera más natural que otros.
+
+Los lenguajes de programación también definen *abstracciones* sobre la
+definición y manipulación de datos, como también el *flujo de control* de los
+pasos de un programa, como selección (*si-sino*) y repetición.
+
+> Cuando escribimos el texto de un programa en un lenguaje éste debe ser
+> *convertido* al *lenguaje de máquina*, es decir a las instrucciones concretas del
+> tipo de computadora que usemos.
+> 
+> Esta conversión o *traducción* se hace con otros programas específicos a cada
+> lenguaje. Estos programas se conocen como *compiladores* o *intérpretes*.
+
+----------------------------------------------------------------------------
+
+## Abstracción y descomposición de problemas
+
+La tarea de *abstraer* un problema, concepto o sistema consiste en descartar
+detalles y extraer los aspectos mas importantes para su análisis.
+
+Como vimos, los lenguajes de programación nos permiten abstraernos de los
+detalles de la máquina concreta. No necesitamos conocer los detalles de las
+instrucciones de máquina.
+
+Para resolver un problema comúnmente se usa una estrategia de *descomposición*
+en problemas mas simples para luego combinarlos en la solución final.
+
+Por ejemplo, en el programa de arriba, podríamos dejar el problema de calcular
+el valor absoluto (función `abs(v)`) para más tarde, asumiendo que será un
+problema más simple.
+
+Los lenguajes de programación nos permiten definir *mini-programas*, comúnmente
+*funciones* a los cuales les podemos dar un nombre (como `abs`). Esas funciones
+luego pueden ser *reutilizadas* en otro programas.
+
+Generalmente la tarea de un buen programador es *definir componentes (ej:
+funciones) reusables*.
 
 ----------------------------------------------------------------------------
 
@@ -125,7 +194,7 @@ La siguiente figura muestra la arquitectura de una computadora digital.
 
 ![hardware .center](img/hardware.png ':size=50%')
 
-Cuando calculamos manualmente usamos papel y lápiz para *anotando* o
+Cuando calculamos manualmente usamos papel y lápiz para ir *anotando* o
 *recordando* valores y resultados intermedios. En una computadora, el papel es
 la *memoria*. En la memoria también se almacenan las instrucciones del programa
 a ajecutar.
