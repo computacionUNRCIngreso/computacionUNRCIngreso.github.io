@@ -209,6 +209,21 @@ encarga de ejecutar las instrucciones en secuencia.
 
 ----------------------------------------------------------------------------
 
+## Áreas de la computación
+
+- Teoría: Computabilidad, complejidad comutacional, ...
+- Programación: resolución de problemas mediante algoritmos
+- Manejo de grandes volúmenes de datos
+- Comunicaciones y redes
+- Sistemas operativos y software de base
+- Análisis, diseño e implementación de lenguajes de programación
+- Ingeniería de software (sistemas de gran tamaño, ...)
+- Computación científica: Aplicaciones en biología, química, medicina, etc
+- Simulación y control: Entrenamiento, conducción autónoma, ...
+- Otros...
+
+----------------------------------------------------------------------------
+
 ## Tecnología: Computadoras digitales
 
 La siguiente figura muestra la arquitectura de una computadora digital.
