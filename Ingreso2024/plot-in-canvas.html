@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            canvas {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="plot" width="500px" height="500px"></canvas>
+        <script>
+            class Plotter {
+
+                constructor(cfg) {
+                    this.cfg = cfg
+                    this.ctx = cfg.ctx
+                    this.minX = cfg.minX || -5
+                    this.maxX = cfg.maxX ||  5
+                    this.minY = cfg.minY || -5
+                    this.maxY = cfg.maxY ||  5
+                    this.xFactor = cfg.xFactor || 1
+                    this.yFactor = cfg.yFactor || 1
+                }
+
+                clear() {
+                    this c = this.ctx
+                    c.clearRect(0, 0, c.canvas.width, c.canvas.height)
+                }
+
+                drawLine(x1, y1, x2, y2) {
+                    this.ctx.beginPath()
+                    this.ctx.moveTo(x1, y1)
+                    this.ctx.lineTo(x2, y2)
+                    this.ctx.stroke()
+                }
+
+                getGridPointDist(min, max, factor) {
+                    const diff = max - min;
+                    const l = Math.ceil(Math.log(diff) / Math.log(10.0))
+                    let result = Math.pow(10.0, - 1);
+                    switch (diff / result) {
+                        case 7:
+                        case 6:
+                        case 5:
+                        case 4:
+                            result /= 2;
+                            break;
+                        case 3:
+                            result /= 4;
+                            break;
+                        case 2:
+                            result /= 5;
+                            break;
+                        case 1:
+                            result /= 10;
+                            break;
+                    }
+                    result *= factor;
+                    return result;
+                }
+
+                drawGrid() {
+                    let c = this
+                    clear()
+                    const xDiff = c.xMax - c.xMin
+                    const xPixPerUnit = c.ctx.canvas.width / xDiff
+                    const yDiff = c.yMax - c.yMin
+                    const yPixPerUnit = c.ctx.canvas.height / yDiff
+                    const xF = getGridPointDist(c.xMin, c.xMax, c.xFactor)
+                    const yF = getGridPointDist(c.yMin, c.yMax, c.yFactor)
+
+                    {
+                        let value = Math.ceil(c.xMin / xF) * xF
+                        let number = Math.round(Math.floor(xDiff / xF)) + 1
+                        let pos
+                        if (c.yMin < 0 && c.yMax > 0) {
+                            posY = c.ctx.canvas.height + c.yMin * yPixPerUnit + 12
+                        } else {
+                            posY = c.ctx.canvas.height - 12
+                        }
+                        for (let i = 0; i < number; i++) {
+                            const p = Math.round((value - c.xMin) * xPixPerUnit)
+                            drawLine(c.ctx, p, 0, p, c.ctx.canvas.height)
+                            const n = Math.round(value * 100) / 100
+                            c.ctx.fillText(`${n}`, p + 4, posY)
+                            value += xF
+                        }
+                    }
+
+                    {
+                        let value = Math.ceil(c.yMin / yF) * yF;
+                        const number = Math.round(Math.floor(yDiff / yF)) + 1;
+                        let axisPosition;
+                        if (c.xMin < 0 && c.xMax > 0) {
+                            axisPosition = -c.xMin * xPixPerUnit + 5;
+                        } else {
+                            axisPosition = 5;
+                        }
+                        c.ctx.strokeStyle = gridColor;
+                        for (let i = 0; i < number; i++) {
+                            if (Math.abs(startValue) < yF * 0.5) {
+                                c.ctx.strokeStyle = axisColor;
+                            }
+                            const position = c.ctx.canvas.height - Math.round((startValue - c.yMin) * yPixPerUnit);
+                            drawLine(c.ctx, 0, position, c.ctx.canvas.width, position);
+                            c.ctx.fillStyle = axisColor;
+                            const text = Math.round(startValue * 100) / 100;
+                            c.ctx.fillText(text + '', axisPosition, position - 4);
+                            c.ctx.strokeStyle = gridColor;
+                            startValue += yF;
+                        }
+                    }
+                }
+        </script>
+    </body>
+</html>
