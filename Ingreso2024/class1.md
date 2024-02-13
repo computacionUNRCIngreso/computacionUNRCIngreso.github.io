@@ -24,7 +24,62 @@ Por medio de un *lenguaje o notación* que permite describir las computaciones
 
 ## Escribiendo Algortimos para resolver problemas
 
-1. Dada una grilla de $n \times n$ y un lápiz que comprende y puede ejecutar  las
+
+> *Problema*: Calcular la multiplicación de dos números naturales (llamemos a estos dos 
+> números a y b ) usando sumas. Dé en primer lugar una descripción matemática
+> del problema y luego  escriba un algoritmo en lenguaje natural para resolver
+> este problema.
+
+Podemos describir este problema matemáticamente como:
+
+         
+$$a \times b = \sum_{i=1}^b a$$
+
+La notación de arriba significa: $\underbrace{a+a+\ldots+a}_{b \: veces}$
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * *
+
+
+Un Algoritmo que resuelve este problema es el siguiente (en lenguaje natural):**
+
+1. $a=?$, $b=?$, $resultado \leftarrow 0$, $veces \leftarrow 0$ `a` y `b` son los *datos de entrada* o *inputs* 
+`resultado` y `veces`: *variables auxiliares*
+2. **Si** veces = b **ir** al paso 6 (terminar)
+3. resultado **←** resultado + a
+4. veces **←** veces + 1
+5. **Volver al paso 2**
+6. **Fin**: en `resultado` queda la solución
+
+**¿Lo  ejecutamos paso a paso para a = 4 y b = 3?**
+
+
+Como vimos, los lenguajes de programación nos permiten abstraernos de los detalles de la máquina concreta. Escribamos en JavaScript
+ el programa que multiplica dos números en JavaScript:  
+
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/-j2BmBYG5"  width="100%" height="900"></iframe>
+
+
+> [!TIP|label: NOTA]
+> Link para abrir este ejermplo en otra ventana del navegador  [multiplicar dos números](https://editor.p5js.org/compuUNRCIngreso/sketches/-j2BmBYG5)
+
+
+- La sentencia `while` (mientras) ejecuta las instrucciones que siguen entre
+llaves repetidamente mientras la condición sea verdadera. Este es solo nuestro primer ejemplo! Veremos estructuras repetitivas en las próximas clases!
+
+- Lo que sigue a `//`es ignorado por el traductor (son comentarios del programador)
+
+> [!NOTE|label: NOTA]
+> Una ***variable*** representa un valor (como en matemáticas) que se puede usar
+> mediante su nombre o identificador. 
+> En un programa, cada variable corresponde a una celda de la memoria la cual
+> contendrá el valor correspondiente.
+
+
+
+
+
+
+2. Dada una grilla de $n \times n$ y un lápiz que comprende y puede ejecutar  las
   siguientes primitivas:
 
     ![primitivas .center](img/primitivas.png ':size=50%')
@@ -45,30 +100,7 @@ Por medio de un *lenguaje o notación* que permite describir las computaciones
  
  ------------------------------
 
- 2. Calcular la multiplicación de dos números naturales (llamemos a estos dos
-    números a y b ) usando sumas. Dé en primer lugar una descripción matemática
-    del problema y luego  escriba un algoritmo en lenguaje natural para resolver
-    este problema.
-
-    **Solución:**
-         
-    $$a \times b = \sum_{i=1}^b a$$
-
-    La notación de arriba significa: $\underbrace{a+a+\ldots+a}_{b \: veces}$
-
-    **Algoritmo (en lenguaje natural):**
-
-    1. $a=?$, $b=?$, $resultado \leftarrow 0$, $veces \leftarrow 0$ <br>
-       `a` y `b` son los *datos de entrada* o *input* <br>
-       `resultado` y `veces`: *variables auxiliares*
-    2. **Si** veces = b **ir** al paso 6 (terminar)
-    3. resultado **←** resultado + a
-    4. veces **←** veces + 1
-    5. **Volver al paso 2**
-    6. **Fin**: en `resultado` queda la solución
-
-    **¿Lo  ejecutamos paso a paso para a = 4 y b = 3?**
-
+ 
  3.  Calcular la suma de los números menores a uno dado, digamos $m$. Dar una
      descripción matemática del problema, luego escriba un algoritmo para
      resolver este problema.
