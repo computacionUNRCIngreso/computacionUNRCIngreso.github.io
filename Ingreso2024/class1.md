@@ -196,23 +196,6 @@ llaves repetidamente mientras la condición sea verdadera. Este es solo nuestro 
 
 ## Lenguajes de programación
 
-### Nuestro programa que multiplica dos números en JavaScript:  <!-- {docsify-ignore} -->
-
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/-j2BmBYG5"  width="100%" height="900"></iframe>
-
-Podés acceder a este ejemplo: [multiplicar dos números](https://editor.p5js.org/compuUNRCIngreso/sketches/-j2BmBYG5)
-
-- La sentencia `while` (mientras) ejecuta las instrucciones que siguen entre
-llaves repetidamente mientras la condición sea verdadera.
-- Lo que sigue a `//`es ignorado por el traductor (son comentarios del programador)
-
-> [!NOTE|label: NOTA]
-> Una ***variable*** representa un valor (como en matemáticas) que se puede usar
-> mediante su nombre o identificador. 
-> En un programa, cada variable corresponde a una celda de la memoria la cual
-> contendrá el valor correspondiente.
-
-* * *
 
 Volvamos a los ejercicios 
 [1a y 1b](#escribiendo-algortimos-para-resolver-problemas), y utilicemos 
