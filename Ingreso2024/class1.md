@@ -74,7 +74,7 @@ Por medio de un *lenguaje o notación* que permite describir las computaciones
      resolver este problema.
 
 * * *
-
+<!--
 ## Computadora
 
 
@@ -93,7 +93,9 @@ Por medio de un *lenguaje o notación* que permite describir las computaciones
   Permiten interactuar con el mundo exterior. </font>
 
 * * *
+-->
 
+<!--
 ## Memoria
 
 ### Memoria (principal o RAM)
@@ -102,7 +104,8 @@ Por medio de un *lenguaje o notación* que permite describir las computaciones
 * Contiene las instrucciones del programa y datos
 * Cada celda se referencia por su dirección: Valor entre $[0, n − 1]$
 * Su capacidad es $n$ (cantidad de celdas o bytes)
-
+-->
+<!--
 ### Sólo almacena números! (por eso es digital)
 
 > [!WARNING]
@@ -111,7 +114,8 @@ Por medio de un *lenguaje o notación* que permite describir las computaciones
 
 ***todo se debe codificar con números!*** (como veremos en la [clase 2](#clase2))
 
-
+-->
+<!--
 * * *
 
 ## Funcionamiento de una computadora
@@ -140,22 +144,23 @@ Por medio de un *lenguaje o notación* que permite describir las computaciones
   de la memoria
 
 * * *
-
+-->
+<!--
 ## Herramientas de programación
 
-### Lidiando con la complejidad  <!-- {docsify-ignore} -->
+### Lidiando con la complejidad  
 
 * Cargar las instrucciones y datos de un programa en la memoria usando números
   es muy tedioso y propenso a cometer errores
 * Las instrucciones de máquina son muy simples (de bajo nivel). Un programa real
   requerirá cientos de miles o millones de instrucciones
 
-### Solución: Uso de herramientas y abstracciones  <!-- {docsify-ignore} -->
-
+### Solución: Uso de herramientas y abstracciones  
 * Programamos usando lenguajes de programación de alto nivel (texto legible)
 * Los traducimos a instrucciones de máquina usando otros programas (compilador o intérprete)
 
 * * * 
+-->
 
 ## Lenguajes de programación
 
