@@ -56,7 +56,7 @@ soluciones mediante la aplicación de *funciones* y *operadores*.
 >                           \end{matrix}
 >                         \right.
 > $$
-> En un programa (en un lenguaje hipotético) se podría definir como
+> En un programa (en un lenguaje hipotético) se podría definir como:
 > ```
 > abs(n) = n si n > 0 sino -n
 > ```
@@ -98,7 +98,7 @@ Un enfoque *computacional* es escribir un *programa* que *busque* la solución.
 Un programa posible (para funciones crecientes) se muestra abajo y se basa en la
 estrategia de ir achicando el intervalo en que se encontrará la raíz.
 
-Dado un intervalo $[x_0, x_1]$ en el que puede estar la raíz $x$.
+Dado un intervalo $[x_1, x_2]$ en el que puede estar la raíz $x$.
 
 1. Determinar el punto medio del intervalo: $x = (x_1 + x_2) / 2$
 2. Si $abs(f(x))<0.001$, la raíz es $x$, fin del programa. Sino, seguimos
