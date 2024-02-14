@@ -169,7 +169,7 @@ Cuando ejecutas este programa (botón ``play`` en la esquina superior izquierda)
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
 
-##  Actividad 4: Le dí a la figura (2)?
+##  Actividad 5: Le dí a la figura (2)?
  
 Cuando ejecutas este programa (botón ``play`` en la esquina superior izquierda), se dibuja un cuadrado de tamaño aleatorio en el lienzo, el tamaño de los lados de este cuadrado   quedará almacenada en la variable: ``lado``, y las coordenadas `(x,y)` de la esquina superior izquierda del cuadrado en las variables `xCoord` e `yCoord` respectivamente. Además, contamos con las variables ``mouseX`` y ``mouseY``,  que almacenan las coordenadas de un 'click'. Esta actividad consiste en escribir un programa que  decida si se hizo 'click' dentro del cuadrado o fuera de él.
 
