@@ -42,7 +42,7 @@ Si recordamos  al ejemplo de la primera clase [multiplicar dos números](#nuestr
 
 Donde  ``nombre_variable`` es el nombre elegido para la variable. La asignación cambia el valor de la variable  ``nombre_variable`` por el valor de  ``expresion``
 
-<span style="color:red">  <font size = 6 >  BORRAR: acá abajo la idea es utilizar este espacio para ejemplos on the fly
+<span style="color:red">  <font size = 6 >  acá abajo la idea es utilizar este espacio para ejemplos on the fly
 cambiar el valor de las variables, imprimir , etc. Hay una función que retorna un valor
 </font></span>
 
@@ -178,4 +178,34 @@ Cuando ejecutas este programa (botón ``play`` en la esquina superior izquierda)
 
 
 > [!TIP|label:NOTA]
-> Link para abrir este ejercicio en otra ventana del navegador [Le dí a la figura?](https://editor.p5js.org/compuUNRCIngreso/sketches/obPixCPm6) 
+> Link para abrir este ejercicio en otra ventana del navegador [Le dí a la figura?](https://editor.p5js.org/compuUNRCIngreso/sketches/obPixCPm6)
+
+
+##  Actividad 6: Que no se escape Angry Bird!
+
+
+
+Cuando ejecutas este programa (botón ``play`` en la esquina superior izquierda), tendrás a **Angry Bird** en su posición inicial, has click en el lienzo para comenzar.
+
+Cada vez que presionas la tecla `->` **Angry Bird** se mueve unos pasos hacia adelante!. Analicemos el código provisto con detalle. Podrás notar que **Angry Bird** desaparece cuando sobrepasa los límites del lienzo. La tarea consiste en modificar el código provisto para que **Angry Bird** vuelva a comenzar desde su posición inicial cuando este sobrepasa los límites del lienzo. 
+
+
+Algunas variables necesarias para resolver este problema:
+
+* `windowWidth`: almacena el  ancho del lienzo
+* `windowHeight`: almacena la altura del lienzo
+
+* `birdX`: almacena la  coordenada x de la  posición de angry bird en el lienzo
+* `birdY`: almacena la  coordenada y de la  posición de angry bird en el lienzo
+
+
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/K22t_WWgl" . width="800" height="600">></iframe>
+
+
+> [!TIP|label:NOTA]
+> Link para abrir este ejercicio en otra ventana del navegador [Angry Bird en movimiento](https://editor.p5js.org/compuUNRCIngreso/sketches/K22t_WWgl)
+ 
+> [!TIP|label:NOTA]
+>  Si te animás podes definir la la función **moveBackward()**,  que mueve a **AngryBird** 20 pasos hacia atrás cuando se presiona la tecla **<-**  
+
+ 

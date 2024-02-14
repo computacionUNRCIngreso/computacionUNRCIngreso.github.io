@@ -94,8 +94,7 @@ llaves repetidamente mientras la condición sea verdadera. Este es solo nuestro 
 
 > [!NOTE|label:Preguntas]
 > 1. ¿Es la solución planteada en el ejercicio anterior la única posible? 
-> 2. ¿Cuántas soluciones diferentes se podrían escribir?
-> 3. ¿Y si deseamos hacer 10 cuadrados?
+> 2. ¿Y si deseamos hacer 10 cuadrados?
 
 
 Utilizaremos el editor web **p5.js** y JavaScript para programar los algoritmos que ya realizamos. 
