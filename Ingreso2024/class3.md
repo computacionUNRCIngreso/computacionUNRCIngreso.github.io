@@ -1,6 +1,5 @@
 # Estructura Condicional en la resolución de problemas Algorítmicos
 
- <span style="color:red"> <font size = 6 >BORRAR: REVISAR nombre de este sección</font> </span>
 
 Piensa un número entre el 1 y el 6, arroja un dado, ganas si  adivinaste el número que saldrá al tirar el dado, pierdes en caso contrario. 
 
@@ -10,8 +9,6 @@ Piensa un número entre el 1 y el 6, arroja un dado, ganas si  adivinaste el nú
 
 ***Actividad***: Escribe un programa que luego de que elijas un número y tires el dado, dibuje un círculo en color verde si has tenido suerte y adivinaste el valor del dado. Si no has tenido suerte,  dibuja un círculo en algún otro color a elección.
 
-
- <span style="color:red"> <font size = 6 >BORRAR: analisis del problema </font> </span>
 
 
 ## Algunos conceptos importantes para escribir un programa que resuelva este problema:
@@ -120,7 +117,7 @@ Estas expresiones booleanas, o condiciones, pueden ser usadas en el contexto de 
 > [!TIP|label:AYUDA]
 > Algunas funciones de utilidad [fill()](https://p5js.org/es/reference/#/p5/fill) y [circle()](https://p5js.org/es/reference/#/p5/circle) para resolver el problema.
 
- <span style="color:red"> <font size = 6 >BORRAR: acá se usan  funciones con parametros </font> </span>
+ <span style="color:red"> <font size = 6 >acá se usan  funciones con parametros </font> </span>
  
 
 <iframe src="https://editor.p5js.org/compuUNRCIngreso/full/Jssw9sFDA" width="800" height="600"></iframe>
