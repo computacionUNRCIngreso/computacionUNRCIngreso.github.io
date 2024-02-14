@@ -54,7 +54,10 @@ Un Algoritmo que resuelve este problema es el siguiente (en lenguaje natural):**
 
 
 Como vimos, los lenguajes de programación nos permiten abstraernos de los detalles de la máquina concreta. Escribamos en JavaScript
- el programa que multiplica dos números en JavaScript:  
+el programa que multiplica dos números.
+
+> [!TIP|label: Atención]
+> Antes de comenzar exploremos el ambiente de programación
 
 <iframe src="https://editor.p5js.org/compuUNRCIngreso/full/-j2BmBYG5"  width="100%" height="900"></iframe>
 
@@ -75,10 +78,6 @@ llaves repetidamente mientras la condición sea verdadera. Este es solo nuestro 
 > contendrá el valor correspondiente.
 
 
-
-
-
-
 2. Dada una grilla de $n \times n$ y un lápiz que comprende y puede ejecutar  las
   siguientes primitivas:
 
@@ -87,7 +86,7 @@ llaves repetidamente mientras la condición sea verdadera. Este es solo nuestro 
     1. Escriba un Algoritmo (secuencia de pasos) que pinte el siguiente
        cuadrado:
        
-       ![cuadrado .center](img/cuadrado.png ':size=50%')
+       ![cuadrado .center](img/cuadrado.png ':size=40%')
     
     2. Escriba un Algoritmo (secuencia de pasos) que pinte dos cuadrados:
 
@@ -97,10 +96,29 @@ llaves repetidamente mientras la condición sea verdadera. Este es solo nuestro 
 > 1. ¿Es la solución planteada en el ejercicio anterior la única posible? 
 > 2. ¿Cuántas soluciones diferentes se podrían escribir?
 > 3. ¿Y si deseamos hacer 10 cuadrados?
- 
- ------------------------------
 
- 
+
+Utilizaremos el editor web **p5.js** y JavaScript para programar los algoritmos que ya realizamos. 
+
+Antes de comenzar exploremos el ambiente de programación y las funciones con las que contamos:
+
+
+* `izquierda()`: mueve el cursor 1 paso a la izquierda
+* `derecha()`: </span> mueve el cursor 1 paso a la derecha
+* `arriba()`: mueve el cursor 1 paso hacia abajo
+* `abajo()`: mueve el cursor 1 paso hacia abajo
+* `pintar()`: pinta en color negro la posición actual del cursor
+
+> [!NOTE|label:IMPORTANTE]
+> Notar que las `funciones` anteriores definen comportamiento reusable y podemos **abstraernos** de `cómo` funcionan, solo nos interesa `qué` función realizan cuando  estás son invocadas: Cada una de ella realiza una de las primitivas definida en la tabla de primitivas presentada anteriormente.
+
+
+<!--span style="color:green"> repetir(n){\<instrucciones\>}:repite las instrucciones que aparecen entre llaves n veces</span--> 
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/gWXUTRthW" width="800" height="600"></iframe>
+
+Link para abrir este ejemplo en otra ventana del navegador  [dibujar en la cuadricula](https://editor.p5js.org/compuUNRCIngreso/sketches/gWXUTRthW)
+
+  
  3.  Calcular la suma de los números menores a uno dado, digamos $m$. Dar una
      descripción matemática del problema, luego escriba un algoritmo para
      resolver este problema.
@@ -194,28 +212,6 @@ llaves repetidamente mientras la condición sea verdadera. Este es solo nuestro 
 * * * 
 -->
 
-## Lenguajes de programación
-
-
-Volvamos a los ejercicios 
-[1a y 1b](#escribiendo-algortimos-para-resolver-problemas), y utilicemos 
-[p5.js](https://editor.p5js.org/compuUNRCIngreso/sketches/gWXUTRthW) y
-JavaScript para programar los algoritmos que ya realizamos. 
-
-Antes de comenzar exploremos el ambiente de programación, las funciones e
-intrucciones con las que contamos:
-
-
-* `izquierda()`: mueve el cursor 1 paso a la izquierda
-* `derecha()`: </span> mueve el cursor 1 paso a la derecha
-* `abajo()`: mueve el cursor 1 paso hacia abajo
-* `arriba()`: mueve el cursor 1 paso hacia abajo
-* `pintar()`: pinta en color negro la posición actual del cursor
-
-<!--span style="color:green"> repetir(n){\<instrucciones\>}:repite las instrucciones que aparecen entre llaves n veces</span--> 
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/gWXUTRthW" width="800" height="600"></iframe>
-
-* * *
 
 ## Programación
 
