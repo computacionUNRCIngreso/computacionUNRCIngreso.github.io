@@ -16,7 +16,7 @@
 
 ## Problemas fundamentales
 
- 1. ¿Qué tipos de problemas se pueden resover automáticamente (por una máquina)?
+ 1. ¿Qué tipos de problemas se pueden resoLver automáticamente (por una máquina)?
 
  2. ¿A qué costo se puede resolver un problema (cuántos pasos o cuánta memoria
     requiere)?
