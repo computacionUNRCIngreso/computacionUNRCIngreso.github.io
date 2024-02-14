@@ -63,7 +63,7 @@ el programa que multiplica dos números.
 
 
 > [!TIP|label: NOTA]
-> Link para abrir este ejermplo en otra ventana del navegador  [multiplicar dos números](https://editor.p5js.org/compuUNRCIngreso/sketches/-j2BmBYG5)
+> Link para abrir este ejemplo en otra ventana del navegador  [multiplicar dos números](https://editor.p5js.org/compuUNRCIngreso/sketches/-j2BmBYG5)
 
 
 - La sentencia `while` (mientras) ejecuta las instrucciones que siguen entre
