@@ -30,6 +30,8 @@ Por medio de un *lenguaje o notación* que permite describir las computaciones
 > del problema y luego  escriba un algoritmo en lenguaje natural para resolver
 > este problema.
 
+
+
 Podemos describir este problema matemáticamente como:
 
          
@@ -78,6 +80,7 @@ llaves repetidamente mientras la condición sea verdadera. Este es solo nuestro 
 > contendrá el valor correspondiente.
 
 
+
 2. Dada una grilla de $n \times n$ y un lápiz que comprende y puede ejecutar  las
   siguientes primitivas:
 
@@ -113,9 +116,15 @@ Antes de comenzar exploremos el ambiente de programación y las funciones con la
 
 
 <!--span style="color:green"> repetir(n){\<instrucciones\>}:repite las instrucciones que aparecen entre llaves n veces</span--> 
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/gWXUTRthW" width="800" height="600"></iframe>
 
-Link para abrir este ejemplo en otra ventana del navegador  [dibujar en la cuadricula](https://editor.p5js.org/compuUNRCIngreso/sketches/gWXUTRthW)
+
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/zZbT3F77b" width="800" height="600">></iframe>
+
+
+
+
+
+Link para abrir este ejemplo en otra ventana del navegador  [dibujar en la cuadricula](https://editor.p5js.org/compuUNRCIngreso/sketches/zZbT3F77b)
 
   
  3.  Calcular la suma de los números menores a uno dado, digamos $m$. Dar una
