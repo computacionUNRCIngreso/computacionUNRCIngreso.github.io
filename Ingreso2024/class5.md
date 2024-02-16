@@ -5,14 +5,29 @@ En esta sección vamos a integrar gran parte de los conceptos que vinimos trabaj
 pequeño videojuego.
 El videojuego a desarrollar esta inspirado en la narrativa del famoso videojuego [Angry Birds](https://es.wikipedia.org/wiki/Angry_Birds).
 
-En esta variante del juego el rey cerdo intenta atrapar (aplastar) al angry bird, para esto, cada un cierto tiempo determina una posición a la cual trasladarse (de manera aleatoria) y si el angry bird esta en un cierto rango de distancia de la posición elegida por el cerdo, entonces el angry bird cerá atrapado. El jugador podrá mover al angry bird por toda el area de juego para tratar de escapar, utilizando las teclas de dirección (o arrow keys).
+En esta variante del juego el rey cerdo intenta atrapar (aplastando) al angry bird, para esto, cada un cierto tiempo determina una posición a la cual trasladarse (de manera aleatoria) y si el angry bird se encuentra justo en un cierto rango de distancia de la posición elegida por el cerdo, entonces el angry bird será atrapado. El jugador podrá mover al angry bird por toda el area de juego para tratar de escapar, utilizando las teclas de dirección (&larr; , &uarr; , &darr; , &rarr;).
+
+A medida que vayamos avanzando en esta sección iremos complejizando el juego y agregando más funcionalidades. Por el momento comencemos por lo básico:
 
 <iframe src="https://editor.p5js.org/compuUNRCIngreso/full/2rmPQj_1e" width="800" height="600"></iframe>
 
+***Actividad***: La primer tarea será dotar de movilidad a nuestro personaje para que se pueda desplazar (sin salirse de los limites
+de la pantalla). En concreto deberas programar las funciones *moveForward(), moveBackward(), moveUp() y moveDown()* para que cambien la posición del angry bird al ser ejecutadas. La invocación a estas cuatro funciones se dará cuando el jugador presiona las teclas de dirección respectivamente.
 
+> [!NOTE|label:NOTA]
+> Las posiciones de los personajes en el area de juego están representadas por valores almacenados en cuatro variables, dos para las coordenadas x e y del angry bird, y otras dos para las del cerdo. Cualquier cambio en el valor de esas variables se verá reflejado como un cambio de posición del personaje en la pantalla de juego.
 
-***Actividad***: La primer tarea será dotar de movilidad a nuestro personaje para que se pueda desplazar sin salirse de los limites
-de la pantalla.
+##  ¿Cómo se escriben las funciones?
+
+Ya has utilizado funciones y también las has escrito (al menos su cuerpo), pero ya es hora de detenernos en algunos detalles y dejarlos bien en claro.
+Cuando queremos utilizar una función (ejecutarla) simplemente escribimos su nombre seguido de un par de paréntesis y finalizamos con un punto y coma (;) si luego siguen más instrucciones, por ejemplo escribimos *moveForward();* para invocarla. Para que una invocación funcione, previamente, debemos definir la función en algún lado (escribirla siguiendo algunas reglas sintácticas). La definición de una función comienza con la palabra *function*, que es seguida del nombre que le demos a la función; luego un par de paréntesis, entre ellos puede o no haber, uno o más nombres (identificadores) que llamaremos parametros de la función; y a continuación de los paréntesis un par de llaves que encerrarán todo el cuerpo de la función, todas las instrucciones o sentencias que definen lo que hace la función.
+
+```
+   function nombreDeLaFuncion( parametro1, parametro2, ..., parametro_n) {
+        [BLOQUE DE SENTENCIAS] 
+    }
+```
+
 
 <!--
 
