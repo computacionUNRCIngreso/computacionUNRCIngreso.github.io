@@ -98,18 +98,18 @@ Un enfoque *computacional* es escribir un *programa* que *busque* la solución.
 Un programa posible (para funciones crecientes) se muestra abajo y se basa en la
 estrategia de ir achicando el intervalo en que se encontrará la raíz.
 
-Dado un intervalo $[x_1, x_2]$ en el que puede estar la raíz $x$.
+Dado un intervalo $[a, b]$ en el que puede estar la raíz $f$.
 
-1. Determinar el punto medio del intervalo: $x = (x_1 + x_2) / 2$
+1. Determinar el punto medio del intervalo: $x = (a + b) / 2$
 2. Si $abs(f(x))<0.001$, la raíz es $x$, fin del programa. Sino, seguimos
-3. Si $f(x)<0$, $x_1 = x$, sino $x_2 = x$
+3. Si $f(x)<0$, $a = x$, sino $b = x$
 4. Volver al paso 1
 
-Ejecutemos el programa con el intervalo inicial $[x_1=-1, x_2=1]$.
+Ejecutemos el programa con el intervalo inicial $[a=-1, b=1]$.
 
 > 1. Paso 1: $x = (-1 + 1) / 2 = 0$
 > 2. Paso 2: $abs(f(0))=1$. Debemos continuar
-> 3. Paso 3: Como $f(0)=-1<0$, el nuevo intervalo es $[x_1=0, x_2=1]$
+> 3. Paso 3: Como $f(0)=-1<0$, el nuevo intervalo es $[a=x=0, b=1]$
 > 4. Paso 4: Volvemos al paso 1 del algoritmo
 > 5. Paso 1: $x = (0 + 1) / 2 = \frac{1}{2} = 0.5$
 > 6. Paso 2: Ahora $abs(f(0.5)) = 0 < 0.001$, la raíz es $x=0.5$
@@ -273,15 +273,17 @@ $$d_{n-1} d_{n-2} \ldots d_0 = \sum_{i=0}^{n-1} d_i^{b^i} $$
 
 Ejemplos: 
 
-1. En decimal, la base $b=10$, entonces
+1. En decimal, la base $b=10$, los dígitos, $\{0,1,2,3,4,5,6,7,8,9\}$
 
    $$4531 = 1 \times 10^0 + 3 \times 10^1 + 5 \times 10^2 + 4 \times 10^3$$
 
+   ($4531 = 1 + 30 + 500 + 4000$)
+
 2. En binario, la base $b=2$ y las cifras, el conjunto $\{0,1\}$
 
-   $$1011 = 1 \times 2^0 + 1 \times 2^1 + 0 \times 2^2 + 1 \times 2^3$$
+   $$(1101)_2 = 1 \times 2^0 + 0 \times 2^1 + 1 \times 2^2 + 1 \times 2^3 = (13)_10$$
 
-   $1011$ en binario equivale al 11 en decimal: $(1011)_{2} = (11)_{10}$
+   (el 1101 en binario equivale al 13 en decimal)
 
 > [!NOTE|label:Pregunta]
 > ¿Por qué en *binario*? Porque es más simple diseñar un *bit* ya que tiene sólo
