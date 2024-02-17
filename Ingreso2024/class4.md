@@ -1,6 +1,139 @@
 #  Estructura Repetitiva en la Resolución de Problemas Algorítmicos
 
 
+
+Retomaremos un ejercicio  visto en clases anteriores: Dada una grilla de *n x n* y las siguientes funciones: 
+
+* `izquierda()`: mueve el cursor 1 paso a la izquierda
+* `derecha()`:  mueve el cursor 1 paso a la derecha
+* `arriba()`: mueve el cursor 1 paso hacia arriba
+* `abajo()`: mueve el cursor 1 paso hacia abajo
+* `pintar()`: pinta en color negro la posición actual del cursor
+
+
+El programa que se muestra en el editor de `p5.js` dibuja una línea (hacia la derecha del cursor), de 4 casilleros de longitud:
+
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/Xv5SeaErt" width="800" height="600"></iframe> 
+
+> [!TIP|label:NOTA]
+> Link para abrir este ejemplo en otra ventana del navegador  [dibujar en la cuadricula](https://editor.p5js.org/compuUNRCIngreso/sketches/Xv5SeaErt)
+
+
+> [!NOTE|label:Preguntas]
+> ¿Notaste que  la secuencia `pintar(); derecha()` se repite 4 veces?
+> ¿Cómo  haríamos para dibujar una línea, hacia la derecha del cursor, de 10 casilleros de longitud? repetimos 10 veces la secuencia?
+ 
+
+## Estructuras Repetitivas
+
+Las estructuras repetitivas se utilizan cuando se quiere ejecutar un conjunto de instrucciones un cierto número de veces.
+
+### Una estructura repetitiva simple: ``repetir ``
+
+La primera estructura repetitiva que tendremos definida y usaremos será el `repetir`. Utilizaremos el `repetir`,  como en este caso, cuando sabemos la cantidad de veces  exacta que queremos repetir nuestra secuencia de instrucciones:
+
+
+```
+function lineaDerecha() {
+  repetir(4, [pintar, derecha])
+}
+
+```
+
+En este caso, la secuencia de instrucciones` [pintar, derecha]) ` se repite 4 veces.
+
+> [!NOTE|label:IMPORTANTE]
+>  Las instrucciones` pintar, derecha ` se ejecutan 4 veces exactamente en el orden en el que aparecen en la lista!
+
+
+
+> [!TIP|label:Ejercicios]
+> Utilice el `repetir` para definir funciones `lineaIzquierda()`, `lineaAbajo()` y `lineaArriba()` las cuales grafican lineas de 4 casilleros de longitud hacia la izquierda, abajo y arriba de la posición del cursor, respectivamente.  Utilice estas funciones para graficar un cuadrado.  
+
+
+ 
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+### Sentencia ``for``
+
+<span style="color:red"> <font size = 6 >BORRAR: acá estoy pensando solo en definite iteration</font> </span>
+
+Lo usamos cuando sabemos exactamente el número de repeticiones o el rango sobre el cual queremos iterar:
+
+``` 
+    ...
+    for(inicializacion; condicion; incremento) {
+        [BLOQUE DE SENTENCIAS] 
+    }
+    [BLOQUE DE SENTENCIAS SIGUIENTES]
+    ...
+
+```
+![sentencia for .center](img/for.png ':size=50%')
+
+**Volvamos al ejemplo anterior y veamos un ejemplo!**
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+Algunas cuestiones a tener en cuenta:
+
+
+* La ``inicializacion``  es ejecutada una única vez: la primera vez que se ejecuta el ``for``
+
+* La ``condicion``: se ejecuta en cada repetición. El ``for`` para de iterar (repetir) cuando ``condicion`` es falsa.
+
+*  ``[BLOQUE DE SENTENCIAS]``,  llamado cuerpo del ``for``,  se ejecuta en cada iteración (Si condicion es verdadera)
+
+* El ``incremento``: Se ejecuta en cada iteración, después del  ``[BLOQUE DE SENTENCIAS]``
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+### Sentencia ``while``
+
+``` 
+    ...
+    while (CONDICION) {
+        [BLOQUE DE SENTENCIAS] 
+    }
+
+    [BLOQUE DE SENTENCIAS SIGUIENTES]
+    ...
+```
+
+![sentencia while .center](img/while.png ':size=50%')
+
+Un Ejemplo:
+
+
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/kjMtG37Ihy"  width="800" height="600">></iframe>
+
+> [!TIP|label:NOTA]
+> Link para abrir este ejercicio en otra ventana del navegador [Ejemplo while](https://editor.p5js.org/compuUNRCIngreso/sketches/kjMtG37Ihy)
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+Algunas cuestiones a tener en cuenta:
+
+ * Una sentencia ``while`` repite la ejecución de  una secuencia de sentencias (lo que llamamos el cuerpo del while) ***mientras una condición es verdadera***
+
+ * Para de ejecutar cuando la condición es falsa.
+
+ * La condiición se chequea ***después*** de que el cuerpo del while es executado y ***antes*** de que este se repita.
+
+ * Si tu condición siempre es verdadera entonces tu programa nunca terminará de ejecutarse.
+
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+
+
+
+
+
+
 Las funciones  que se listan abajo permiten  dibujar en el lienzo la trayectoria de ***El Lápiz del Caminante***. El sistema de coordenadas del ***Caminante*** utiliza píxeles como medida de la  distancia y grados para las rotaciones. ***El caminante*** inicia su recorrido en el centro del lienzo  mirando recto hacia la derecha (0 grados).
 
 > [!NOTE|label: IMPORTANTE]
@@ -71,81 +204,6 @@ La primera  actividad consiste escribir un programa que dibuje  la siguiente tra
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-## Estructuras Repetitivas
-
-Las estructuras repetitivas se utilizan cuando se quiere ejecutar un conjunto de instrucciones un cierto número de veces.
-
-
-### Sentencia ``while``
-
-``` 
-    ...
-    while (CONDICION) {
-        [BLOQUE DE SENTENCIAS] 
-    }
-
-    [BLOQUE DE SENTENCIAS SIGUIENTES]
-    ...
-```
-
-![sentencia while .center](img/while.png ':size=50%')
-
-Un Ejemplo:
-
-
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/kjMtG37Ihy"  width="800" height="600">></iframe>
-
-> [!TIP|label:NOTA]
-> Link para abrir este ejercicio en otra ventana del navegador [Ejemplo while](https://editor.p5js.org/compuUNRCIngreso/sketches/kjMtG37Ihy)
-
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-
-Algunas cuestiones a tener en cuenta:
-
- * Una sentencia ``while`` repite la ejecución de  una secuencia de sentencias (lo que llamamos el cuerpo del while) ***mientras una condición es verdadera***
-
- * Para de ejecutar cuando la condición es falsa.
-
- * La condiición se chequea ***después*** de que el cuerpo del while es executado y ***antes*** de que este se repita.
-
- * Si tu condición siempre es verdadera entonces tu programa nunca terminará de ejecutarse.
-
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-
-### Sentencia ``for``
-
-<span style="color:red"> <font size = 6 >BORRAR: acá estoy pensando solo en definite iteration</font> </span>
-
-Lo usamos cuando sabemos exactamente el número de repeticiones o el rango sobre el cual queremos iterar:
-
-``` 
-    ...
-    for(inicializacion; condicion; incremento) {
-        [BLOQUE DE SENTENCIAS] 
-    }
-    [BLOQUE DE SENTENCIAS SIGUIENTES]
-    ...
-
-```
-![sentencia for .center](img/for.png ':size=50%')
-
-**Volvamos al ejemplo anterior y veamos un ejemplo!**
-
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-
-
-Algunas cuestiones a tener en cuenta:
-
-
-* La ``inicializacion``  es ejecutada una única vez: la primera vez que se ejecuta el ``for``
-
-* La ``condicion``: se ejecuta en cada repetición. El ``for`` para de iterar (repetir) cuando ``condicion`` es falsa.
-
-*  ``[BLOQUE DE SENTENCIAS]``,  llamado cuerpo del ``for``,  se ejecuta en cada iteración (Si condicion es verdadera)
-
-* El ``incremento``: Se ejecuta en cada iteración, después del  ``[BLOQUE DE SENTENCIAS]``
-
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 > [!TIP|label:Manos a la obra]
 
 Te dejamos algunas [actividades](https://drive.google.com/file/d/1L5RKzGv-MMXO5FlGanxsvSSu5LbmAy8p/view?usp=drive_link) para que practiques!

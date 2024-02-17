@@ -1,34 +1,32 @@
 # Estructura Condicional en la resolución de problemas Algorítmicos
 
+Pulsa el botón ![ejecutar](img/runbtn.svg) en la ventana del editor, luego piensa un número entre el 1 y el 6 y  arroja un dado, ganas si  adivinaste el número que saldrá al tirar el dado, pierdes en caso contrario. 
 
-Piensa un número entre el 1 y el 6, arroja un dado, ganas si  adivinaste el número que saldrá al tirar el dado, pierdes en caso contrario. 
 
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/sketches/Jssw9sFDA" width="800" height="600"></iframe>
 
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/Jssw9sFDA" width="800" height="600"></iframe>
 
 
 ***Actividad***: Escribe un programa que luego de que elijas un número y tires el dado, dibuje un círculo en color verde si has tenido suerte y adivinaste el valor del dado. Si no has tenido suerte,  dibuja un círculo en algún otro color a elección.
 
 
 
-## Algunos conceptos importantes para escribir un programa que resuelva este problema:
+## Revisaremos algunos conceptos importantes antes de escribir un programa que resuelva este problema:
 
 
-Si recordamos  al ejemplo de la primera clase [multiplicar dos números](#nuestro-programa-que-multiplica-dos-números-en-javaScript), hemos utilizado variables para recordar valores,
+Si recordamos  al ejemplo de la primera clase [multiplicar dos números](#nuestro-programa-que-multiplica-dos-números-en-javaScript), hemos utilizado variables para recordar valores, pero...
 
 ## ¿Qué son las variables? 
  
-* Una variabla es la combinación de las siguientes cosas: 
+Una variable es la combinación de las siguientes cosas: 
 
-* Un nombre  (o identificador) a elección 
-
-* Una dirección en la memoria de la computadora 
-* Un valor almacenado en esa dirección de la memoria que puede cambiar durante la ejecución del programa
-
-* Un tipo, que especifica cuanto espacio ocupa ese valor en la memoria, y cómo interpretar este valor 
+* Un nombre  (o identificador) a elección, 
+* Una dirección en la memoria de la computadora, 
+* Un valor almacenado en esa dirección de la memoria que puede cambiar durante la ejecución del programa,
+* Un tipo, que especifica cuanto espacio ocupa ese valor en la memoria, y cómo interpretar este valor. 
 
 > [!WARNING|label: IMPORTANTE]
->  Para usar una variable, necesitas en primer lugar declarar la variable 
+>  Para usar una variable necesitas, en primer lugar, declarar la variable! 
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
@@ -42,16 +40,13 @@ Si recordamos  al ejemplo de la primera clase [multiplicar dos números](#nuestr
 
 Donde  ``nombre_variable`` es el nombre elegido para la variable. La asignación cambia el valor de la variable  ``nombre_variable`` por el valor de  ``expresion``
 
-<span style="color:red">  <font size = 6 >  acá abajo la idea es utilizar este espacio para ejemplos on the fly
-cambiar el valor de las variables, imprimir , etc. Hay una función que retorna un valor
-</font></span>
 
 Ejemplo: 
 
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/l56tAFfey" width="800" height="600"></iframe>
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/sketches/l56tAFfey" width="800" height="600"></iframe>
 
 > [!TIP|label: NOTA]
-> Link para abrir este ejermplo en otra ventana del navegador [variables](https://editor.p5js.org/compuUNRCIngreso/full/l56tAFfey)
+> Link para abrir este ejermplo en otra ventana del navegador [variables](https://editor.p5js.org/compuUNRCIngreso/sketches/l56tAFfey)
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
@@ -67,7 +62,7 @@ Ejemplo:
     ...
 ```
 
-![sentencia if .center](img/if.png ':size=40%')
+![sentencia if .center](img/if.png ':size=50%')
 
 
 
@@ -81,7 +76,7 @@ Ejemplo:
     ...
     if (CONDICION) {
         [BLOQUE DE SENTENCIAS 1] 
-    }else{
+    } else{
         [BLOQUE DE SENTENCIAS 2] 
     }
 
@@ -89,7 +84,7 @@ Ejemplo:
     ...
 
 ```
-![sentencia if .center](img/if-else.png ':size=60%')
+![sentencia if .center](img/if-else.png ':size=70%')
 
 
 
@@ -116,20 +111,19 @@ Estas expresiones booleanas, o condiciones, pueden ser usadas en el contexto de 
 
 > [!TIP|label:AYUDA]
 > Algunas funciones de utilidad [fill()](https://p5js.org/es/reference/#/p5/fill) y [circle()](https://p5js.org/es/reference/#/p5/circle) para resolver el problema.
-
- <span style="color:red"> <font size = 6 >acá se usan  funciones con parametros </font> </span>
  
 
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/Jssw9sFDA" width="800" height="600"></iframe>
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/sketches/Jssw9sFDA" width="800" height="600"></iframe>
 
 > [!TIP|label:NOTA]
-> Link para abrir este ejercicio en otra ventana del navegador [tirar los dados](https://editor.p5js.org/compuUNRCIngreso/full/Jssw9sFDA) 
+> Link para abrir este ejercicio en otra ventana del navegador [tirar los dados](https://editor.p5js.org/compuUNRCIngreso/sketches/Jssw9sFDA) 
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
 
 ## Actividad 2: Dónde esta el punto (1)?
  
+<!--Al pulsar el botón ![ejecutar](img/runbtn.svg) en la ventana del editor-->
 
 El Lienzo está dividido en dos secciones por una línea recta horizontal.  Se  proveen variables ``mouseX`` y  ``mouseY`` que almacenan las coordenadas ``(x, y)`` del punto sobre el Lienzo en donde se hace ‘click’. Escribir un programa que decida si se hizo un click por encima o por debajo de la línea. 
 
