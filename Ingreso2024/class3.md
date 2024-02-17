@@ -218,7 +218,7 @@ Algunas variables necesarias para resolver este problema:
 > [!TIP|label:NOTA]
 > Link para abrir este ejercicio en otra ventana del navegador [Angry Bird en movimiento](https://editor.p5js.org/compuUNRCIngreso/sketches/K22t_WWgl)
  
-> [!WARNING|label:Ejercicio]
+> [!TIP|label:Ejercicio]
 >  Si te animás podes definir la la función **moveBackward()**,  que mueve a **AngryBird** 20 pasos hacia atrás cuando se presiona la tecla `<-`  
 
  
