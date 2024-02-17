@@ -4,7 +4,7 @@
 ## ¿Qué es un algoritmo?
 
 > ***Algoritmo:***: Una secuencia de operaciones bien definidas que resuelve un
-> problema concreto luego de una secuencia de pasos finita (*termina*)
+> problema concreto luego de una secuencia de pasos finita (*termina*).
 
 * * *
 
@@ -68,7 +68,7 @@ En este problema ya existen las siguientes primitivas (funciones) predefinidas:
 
 * `izquierda()`: mueve el cursor 1 paso a la izquierda
 * `derecha()`: </span> mueve el cursor 1 paso a la derecha
-* `arriba()`: mueve el cursor 1 paso hacia abajo
+* `arriba()`: mueve el cursor 1 paso hacia arriba
 * `abajo()`: mueve el cursor 1 paso hacia abajo
 * `pintar()`: pinta en color negro la posición actual del cursor
 
@@ -100,9 +100,10 @@ dibuje un cuadrado.
 Al pulsar el botón ![ejecutar](img/runbtn.svg) en la ventana del editor, el
 sistema ejecutará la función `dibujar()`.
 
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/zZbT3F77b" 
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/sketches/zZbT3F77b" 
         width="800" height="600">
 </iframe>
+
 
 Link para abrir este ejemplo en otra ventana del navegador [dibujar en la
 cuadricula](https://editor.p5js.org/compuUNRCIngreso/sketches/zZbT3F77b)
@@ -156,7 +157,7 @@ b               // 3. Aquí ya salimos del ciclo
 > para describir ciclos sin usar *saltos* (como *volver al paso 2*, por
 > ejemplo).
 
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/-j2BmBYG5" 
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/sketches/-j2BmBYG5" 
         width="100%" height="900">
 </iframe>
 

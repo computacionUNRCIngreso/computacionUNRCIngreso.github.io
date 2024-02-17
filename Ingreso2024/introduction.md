@@ -181,7 +181,7 @@ problema más simple.
 
 Los lenguajes de programación nos permiten definir *mini-programas*, comúnmente
 *funciones* a los cuales les podemos dar un nombre (como `abs`). Esas funciones
-luego pueden ser *reutilizadas* en otro programas.
+luego pueden ser *reutilizadas* en otros programas.
 
 Generalmente la tarea de un buen programador es *definir componentes (ej:
 funciones) reusables*.
