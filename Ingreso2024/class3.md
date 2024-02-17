@@ -123,52 +123,63 @@ Estas expresiones booleanas, o condiciones, pueden ser usadas en el contexto de 
 
 ## Actividad 2: Dónde esta el punto (1)?
  
-<!--Al pulsar el botón ![ejecutar](img/runbtn.svg) en la ventana del editor-->
+Al pulsar el botón ![ejecutar](img/runbtn.svg) en la ventana del editor se mostrará el Lienzo, de tamaño **500 x 500**, dividido en dos partes iguales  por una línea recta horizontal.  Se  proveen variables ``mouseX`` y  ``mouseY`` que almacenan las coordenadas ``(x, y)`` del punto  donde se hace *click* sobre el lienzo. 
 
-El Lienzo está dividido en dos secciones por una línea recta horizontal.  Se  proveen variables ``mouseX`` y  ``mouseY`` que almacenan las coordenadas ``(x, y)`` del punto sobre el Lienzo en donde se hace ‘click’. Escribir un programa que decida si se hizo un click por encima o por debajo de la línea. 
+La tarea consiste en escribir un programa que decida si se hizo  *click* por encima o por debajo de la línea horizontal.
 
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/3eExV-33b" width="800" height="600"></iframe>
+> [!TIP|label:AYUDA]
+> Notar que cada vez que se hace *click* sobre el lienzo, en la esquina inferior derecha se muestran las coordenadas del *click*! Esto puede ayudarte al inicio para ubicarte en el sistema de coordenadas cartesianas.  
+
+
+> [!TIP|label:IMPORTANTE]
+> Nuestro lienzo esta representado como un **sistema de coordenadas cartesianas**! ¿Dónde esta representado el punto (0,0) en este sistema de coordenadas?
+ 
+
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/sketches/3eExV-33b" width="800" height="600"></iframe>
 
 > [!TIP|label:NOTA]
-> Link para abrir este ejercicio en otra ventana del navegador [Donde esta el punto (1)?](https://editor.p5js.org/compuUNRCIngreso/full/3eExV-33b)
+> Link para abrir este ejercicio en otra ventana del navegador [Donde esta el punto (1)?](https://editor.p5js.org/compuUNRCIngreso/sketches/3eExV-33b)
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
 
-## Actividad 3: Dónde esta el punto (2)? 
+## Actividad 3: Dónde esta el punto (2)?
+ 
 
-En este caso, encontrarás el Lienzo divido en cuatro cuadrantes. Nuevamente se proveen las variables que almacenan las coordenadas ``(x, y)`` del punto sobre el Lienzo donde se hizo 'click' (``mouseX`` y  ``mouseY``). 
+En este caso, al pulsar el botón ![ejecutar](img/runbtn.svg) en la ventana del editor, encontrarás el Lienzo divido en cuatro cuadrantes. Nuevamente se proveen las variables que almacenan las coordenadas ``(x, y)`` del punto donde se hizo *click* (``mouseX`` y  ``mouseY``). 
 
-Escribir un programa que decida  en qué cuadrante se ha hecho click (arriba-derecha, arriba-izquierda, abajo-derecha o abajo- izquierda). 
+Escribir un programa que decida  en qué cuadrante se ha hecho *click* (*arriba-derecha*, *arriba-izquierda*, *abajo-derecha* o *abajo-izquierda*). 
 
 
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/OnSK_3K-7" width="800" height="600"></iframe>
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/sketches/OnSK_3K-7" width="800" height="600"></iframe>
 
 
 > [!TIP|label:NOTA]
-> Link para abrir este ejercicio en otra ventana del navegador [Donde esta el punto (2)?](https://editor.p5js.org/compuUNRCIngreso/full/OnSK_3K-7)
+> Link para abrir este ejercicio en otra ventana del navegador [Donde esta el punto (2)?](https://editor.p5js.org/compuUNRCIngreso/sketches/OnSK_3K-7)
  
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
 ##  Actividad 4: Le dí a la figura?
+
+
  
-Cuando ejecutas este programa (botón ``play`` en la esquina superior izquierda), se dibuja un círculo de tamaño aleatorio en el lienzo, las partes (centro y diametro) de este círculo   quedarán almacenadas en las variables: ``xCentro``, ``yCentro`` y ``diametro``. Además, contamos con las variables ``mouseX`` y ``mouseY``,  utilizadas anteriormente,  que almacenan las coordenadas de un 'click'. Esta actividad consiste en escribir un programa que  decida si se hizo 'click' dentro del círculo o fuera de él.
+Cuando ejecutas este programa (botón  ![ejecutar](img/runbtn.svg)), se dibuja un círculo de tamaño aleatorio en el lienzo. Las partes (*centro* y *diametro*) de este círculo quedarán almacenadas en las variables: ``xCentro``, ``yCentro`` y ``diametro``. Además, contamos con las variables ``mouseX`` y ``mouseY``,  utilizadas anteriormente,  que almacenan las coordenadas de un *click*. Esta actividad consiste en escribir un programa que  decida si se hizo *click* dentro del círculo o fuera de él.
 
 
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/N4XRJQjAK" width="800" height="600"></iframe>
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/sketches/N4XRJQjAK" width="800" height="600"></iframe>
 
 > [!TIP|label:NOTA]
-> Link para abrir este ejercicio en otra ventana del navegador [Le dí a la figura?](https://editor.p5js.org/compuUNRCIngreso/full/N4XRJQjAK) 
+> Link para abrir este ejercicio en otra ventana del navegador [Le dí a la figura?](https://editor.p5js.org/compuUNRCIngreso/sketches/N4XRJQjAK) 
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
 
 ##  Actividad 5: Le dí a la figura (2)?
  
-Cuando ejecutas este programa (botón ``play`` en la esquina superior izquierda), se dibuja un cuadrado de tamaño aleatorio en el lienzo, el tamaño de los lados de este cuadrado   quedará almacenada en la variable: ``lado``, y las coordenadas `(x,y)` de la esquina superior izquierda del cuadrado en las variables `xCoord` e `yCoord` respectivamente. Además, contamos con las variables ``mouseX`` y ``mouseY``,  que almacenan las coordenadas de un 'click'. Esta actividad consiste en escribir un programa que  decida si se hizo 'click' dentro del cuadrado o fuera de él.
+Cuando ejecutas este programa (botón  ![ejecutar](img/runbtn.svg)), se dibuja un cuadrado de tamaño aleatorio en el lienzo. El tamaño de los lados de este cuadrado   quedará almacenada en la variable: ``sideSise``; y las coordenadas `(x,y)` de la esquina superior izquierda del cuadrado quedará almacenada en las variables `xCoord` e `yCoord`, respectivamente. Además, contamos con las variables ``mouseX`` y ``mouseY``,  que almacenan las coordenadas de un *click*. Esta actividad consiste en escribir un programa que  decida si se hizo *click* dentro del cuadrado o fuera de él.
 
 
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/obPixCPm6"  width="800" height="600">></iframe>
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/sketches/obPixCPm6"  width="800" height="600">></iframe>
 
 
 > [!TIP|label:NOTA]
@@ -179,9 +190,17 @@ Cuando ejecutas este programa (botón ``play`` en la esquina superior izquierda)
 
 
 
-Cuando ejecutas este programa (botón ``play`` en la esquina superior izquierda), tendrás a **Angry Bird** en su posición inicial, has click en el lienzo para comenzar.
+Cuando ejecutas este programa (botón  ![ejecutar](img/runbtn.svg)), tendrás a **Angry Bird** en su posición inicial, has *click* en el lienzo para comenzar.
 
-Cada vez que presionas la tecla `->` **Angry Bird** se mueve unos pasos hacia adelante!. Analicemos el código provisto con detalle. Podrás notar que **Angry Bird** desaparece cuando sobrepasa los límites del lienzo. La tarea consiste en modificar el código provisto para que **Angry Bird** vuelva a comenzar desde su posición inicial cuando este sobrepasa los límites del lienzo. 
+Cada vez que presionas la tecla `->`, **Angry Bird** se mueve unos pasos hacia adelante!
+ 
+
+> [!NOTE|label:IMPORTANTE]
+> Nos detenemos y analizamos el código provisto con detalle. 
+
+
+
+**Angry Bird** desaparece cuando sobrepasa los límites del lienzo! La tarea consiste en modificar el código provisto para que **Angry Bird** vuelva a comenzar desde su posición inicial cuando éste sobrepasa los límites del lienzo. 
 
 
 Algunas variables necesarias para resolver este problema:
@@ -193,13 +212,13 @@ Algunas variables necesarias para resolver este problema:
 * `birdY`: almacena la  coordenada y de la  posición de angry bird en el lienzo
 
 
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/K22t_WWgl" . width="800" height="600">></iframe>
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/sketches/K22t_WWgl" . width="800" height="600">></iframe>
 
 
 > [!TIP|label:NOTA]
 > Link para abrir este ejercicio en otra ventana del navegador [Angry Bird en movimiento](https://editor.p5js.org/compuUNRCIngreso/sketches/K22t_WWgl)
  
-> [!TIP|label:NOTA]
->  Si te animás podes definir la la función **moveBackward()**,  que mueve a **AngryBird** 20 pasos hacia atrás cuando se presiona la tecla **<-**  
+> [!WARNING|label:Ejercicio]
+>  Si te animás podes definir la la función **moveBackward()**,  que mueve a **AngryBird** 20 pasos hacia atrás cuando se presiona la tecla `<-`  
 
  
