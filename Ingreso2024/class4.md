@@ -1,5 +1,6 @@
 #  Estructura Repetitiva en la Resolución de Problemas Algorítmicos
 
+<span style="color:red"> <font size = 6 >Desde Aquí documentación en construcción</font> </span>
 
 
 Retomaremos un ejercicio  visto en clases anteriores: Dada una grilla de *n x n* y las siguientes funciones: 
@@ -23,6 +24,8 @@ El programa que se muestra en el editor de `p5.js` dibuja una línea (hacia la d
 > ¿Notaste que  la secuencia `pintar(); derecha()` se repite 4 veces?
 > ¿Cómo  haríamos para dibujar una línea, hacia la derecha del cursor, de 10 casilleros de longitud? repetimos 10 veces la secuencia?
  
+
+
 
 ## Estructuras Repetitivas
 
@@ -56,7 +59,6 @@ En este caso, la secuencia de instrucciones` [pintar, derecha]) ` se repite 4 ve
 
 ### Sentencia ``for``
 
-<span style="color:red"> <font size = 6 >BORRAR: acá estoy pensando solo en definite iteration</font> </span>
 
 Lo usamos cuando sabemos exactamente el número de repeticiones o el rango sobre el cual queremos iterar:
 
