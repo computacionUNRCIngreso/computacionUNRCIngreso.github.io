@@ -1,7 +1,5 @@
 #  Estructura Repetitiva en la Resolución de Problemas Algorítmicos
 
-<span style="color:red"> <font size = 6 >Desde Aquí documentación en construcción</font> </span>
-
 
 Retomaremos un ejercicio  visto en clases anteriores: Dada una grilla de *n x n* y las siguientes funciones: 
 
@@ -14,7 +12,7 @@ Retomaremos un ejercicio  visto en clases anteriores: Dada una grilla de *n x n*
 
 El programa que se muestra en el editor de `p5.js` dibuja una línea (hacia la derecha del cursor), de 4 casilleros de longitud:
 
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/Xv5SeaErt" width="800" height="600"></iframe> 
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/sketches/Xv5SeaErt" width="800" height="600"></iframe> 
 
 > [!TIP|label:NOTA]
 > Link para abrir este ejemplo en otra ventana del navegador  [dibujar en la cuadricula](https://editor.p5js.org/compuUNRCIngreso/sketches/Xv5SeaErt)
@@ -25,15 +23,13 @@ El programa que se muestra en el editor de `p5.js` dibuja una línea (hacia la d
 > ¿Cómo  haríamos para dibujar una línea, hacia la derecha del cursor, de 10 casilleros de longitud? repetimos 10 veces la secuencia?
  
 
-
-
 ## Estructuras Repetitivas
 
-Las estructuras repetitivas se utilizan cuando se quiere ejecutar un conjunto de instrucciones un cierto número de veces.
+Las estructuras repetitivas se utilizan cuando se quiere ejecutar repetidamente una secuencia de instrucciones un cierto número de veces.
 
 ### Una estructura repetitiva simple: ``repetir ``
 
-La primera estructura repetitiva que tendremos definida y usaremos será el `repetir`. Utilizaremos el `repetir`,  como en este caso, cuando sabemos la cantidad de veces  exacta que queremos repetir nuestra secuencia de instrucciones:
+La primera estructura repetitiva que tendremos definida en nuestro lenguaje será el `repetir`. Utilizaremos el `repetir`,  como en este caso, cuando sabemos la cantidad de veces  exacta que queremos repetir nuestra secuencia de instrucciones:
 
 
 ```
@@ -43,17 +39,18 @@ function lineaDerecha() {
 
 ```
 
-En este caso, la secuencia de instrucciones` [pintar, derecha]) ` se repite 4 veces.
-
 > [!NOTE|label:IMPORTANTE]
 >  Las instrucciones` pintar, derecha ` se ejecutan 4 veces exactamente en el orden en el que aparecen en la lista!
 
 
-
-> [!TIP|label:Ejercicios]
-> Utilice el `repetir` para definir funciones `lineaIzquierda()`, `lineaAbajo()` y `lineaArriba()` las cuales grafican lineas de 4 casilleros de longitud hacia la izquierda, abajo y arriba de la posición del cursor, respectivamente.  Utilice estas funciones para graficar un cuadrado.  
+Podemos ahora reescribir nuestra función `lineaDerecha()` utilizando el `repetir`. ¿Cómo lo modificamos para conseguir una línea de 10 casilleros? 
 
 
+> [!TIP|label:Algunos ejercicios extras]
+> Utilice el `repetir` para definir funciones `lineaIzquierda()`, `lineaAbajo()` y `lineaArriba()` las cuales grafican líneas de 4 casilleros de longitud hacia la izquierda, abajo y arriba de la posición del cursor, respectivamente.  Luego, utilice estas funciones para graficar un cuadrado.  
+
+
+<span style="color:red"> <font size = 6 >Desde Aquí documentación en construcción</font> </span>
  
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
