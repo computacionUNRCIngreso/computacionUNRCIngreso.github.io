@@ -166,6 +166,10 @@ La primera  actividad consiste escribir un programa que dibuje  la siguiente tra
    }  
 -->
 
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/sketches/kCc-U1osi"  width="800" height="600">></iframe>
+
+
+
 
 > [!TIP|label:NOTA]
 > Link para abrir este ejercicio en otra ventana del navegador [El Caminante](https://editor.p5js.org/compuUNRCIngreso/sketches/kCc-U1osi)
@@ -175,16 +179,19 @@ La primera  actividad consiste escribir un programa que dibuje  la siguiente tra
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-<span style="color:red"> <font size = 6 >Desde Aquí documentación en construcción</font> </span>
 
 > [!TIP|label:Manos a la obra]
-> Te dejamos algunas actividades para que práctiques!  [actividades](https://drive.google.com/file/d/1L5RKzGv-MMXO5FlGanxsvSSu5LbmAy8p/view?usp=drive_link) para que practiques!
+> Te dejamos algunas actividades para que practiques! 
+> 1. Dibujar un triángulo equilatero: La suma de sus ángulos interiores es 180º (Cada ángulo mide 60º)
+> 2. Dibujar un hexágono (polígono regular de 6 lados):  La suma de sus ángulos interiores es 720º (Cada ángulo mide 120º)
+> 3. ¿Es posible dibujar un círculo? ¿Cómo? En caso afirmativo escriba las instrucciones para ello.
+> 4. Escriba un programa para dibujar la siguiente figura donde los lados de cada triángulo equilatero miden 50 pixeles. Recuerde que puede definir, y usar, nuevas funciones, por ejemplo `dibujarTriangulo()`.
+>
+> ![banderines .center](img/banderines.png ':size=40%')
 
-1. 
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-
-
-
+<span style="color:red"> <font size = 6 >Desde Aquí documentación en construcción</font> </span>
 
 
 ### Sentencia ``while``
