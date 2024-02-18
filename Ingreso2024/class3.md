@@ -123,16 +123,16 @@ Estas expresiones booleanas, o condiciones, pueden ser usadas en el contexto de 
 
 ## Actividad 2: Dónde esta el punto (1)?
  
-Al pulsar el botón ![ejecutar](img/runbtn.svg) en la ventana del editor se mostrará el Lienzo, de tamaño **500 x 500**, dividido en dos partes iguales  por una línea recta horizontal.  Se  proveen variables ``mouseX`` y  ``mouseY`` que almacenan las coordenadas ``(x, y)`` del punto  donde se hace *click* sobre el lienzo. 
+Al pulsar el botón ![ejecutar](img/runbtn.svg) en la ventana del editor se mostrará el Lienzo, de tamaño **500 x 500**, dividido en dos partes iguales  por una línea recta horizontal.  Se  proveen variables ``mouseX`` y  ``mouseY`` que almacenan las coordenadas ``(x, y)`` del punto  donde se hace ***click*** sobre el lienzo. 
 
-La tarea consiste en escribir un programa que decida si se hizo  *click* por encima o por debajo de la línea horizontal.
+La tarea consiste en escribir un programa que decida si se hizo  ***click*** por encima o por debajo de la línea horizontal.
 
 > [!TIP|label:AYUDA]
-> Notar que cada vez que se hace *click* sobre el lienzo, en la esquina inferior derecha se muestran las coordenadas del *click*! Esto puede ayudarte al inicio para ubicarte en el sistema de coordenadas cartesianas.  
+> Notar que cada vez que se hace ***click*** sobre el lienzo, en la esquina inferior derecha se muestran las coordenadas del ***click***! Esto puede ayudarte al inicio para ubicarte en el sistema de coordenadas cartesianas.  
 
 
 > [!TIP|label:IMPORTANTE]
-> Nuestro lienzo esta representado como un **sistema de coordenadas cartesianas**! ¿Dónde esta representado el punto (0,0) en este sistema de coordenadas?
+> Nuestro lienzo esta representado como un ***sistema de coordenadas cartesianas***! ¿Dónde esta representado el punto `(0,0)` en este sistema de coordenadas?
  
 
 <iframe src="https://editor.p5js.org/compuUNRCIngreso/sketches/3eExV-33b" width="800" height="600"></iframe>
@@ -146,9 +146,9 @@ La tarea consiste en escribir un programa que decida si se hizo  *click* por enc
 ## Actividad 3: Dónde esta el punto (2)?
  
 
-En este caso, al pulsar el botón ![ejecutar](img/runbtn.svg) en la ventana del editor, encontrarás el Lienzo divido en cuatro cuadrantes. Nuevamente se proveen las variables que almacenan las coordenadas ``(x, y)`` del punto donde se hizo *click* (``mouseX`` y  ``mouseY``). 
+En este caso, al pulsar el botón ![ejecutar](img/runbtn.svg) en la ventana del editor, encontrarás el Lienzo divido en cuatro cuadrantes. Nuevamente se proveen las variables que almacenan las coordenadas ``(x, y)`` del punto donde se hizo ***click*** (``mouseX`` y  ``mouseY``). 
 
-Escribir un programa que decida  en qué cuadrante se ha hecho *click* (*arriba-derecha*, *arriba-izquierda*, *abajo-derecha* o *abajo-izquierda*). 
+Escribir un programa que decida  en qué cuadrante se ha hecho ***click*** (*arriba-derecha*, *arriba-izquierda*, *abajo-derecha* o *abajo-izquierda*). 
 
 
 <iframe src="https://editor.p5js.org/compuUNRCIngreso/sketches/OnSK_3K-7" width="800" height="600"></iframe>
@@ -163,7 +163,7 @@ Escribir un programa que decida  en qué cuadrante se ha hecho *click* (*arriba-
 
 
  
-Cuando ejecutas este programa (botón  ![ejecutar](img/runbtn.svg)), se dibuja un círculo de tamaño aleatorio en el lienzo. Las partes (*centro* y *diametro*) de este círculo quedarán almacenadas en las variables: ``xCentro``, ``yCentro`` y ``diametro``. Además, contamos con las variables ``mouseX`` y ``mouseY``,  utilizadas anteriormente,  que almacenan las coordenadas de un *click*. Esta actividad consiste en escribir un programa que  decida si se hizo *click* dentro del círculo o fuera de él.
+Cuando ejecutas este programa (botón  ![ejecutar](img/runbtn.svg)), se dibuja un círculo de tamaño aleatorio en el lienzo. Las partes (*centro* y *diametro*) de este círculo quedarán almacenadas en las variables: ``xCentro``, ``yCentro`` y ``diametro``. Además, contamos con las variables ``mouseX`` y ``mouseY``,  utilizadas anteriormente,  que almacenan las coordenadas de un ***click***. Esta actividad consiste en escribir un programa que  decida si se hizo ***click*** dentro del círculo o fuera de él.
 
 
 <iframe src="https://editor.p5js.org/compuUNRCIngreso/sketches/N4XRJQjAK" width="800" height="600"></iframe>
@@ -190,9 +190,9 @@ Cuando ejecutas este programa (botón  ![ejecutar](img/runbtn.svg)), se dibuja u
 
 
 
-Cuando ejecutas este programa (botón  ![ejecutar](img/runbtn.svg)), tendrás a **Angry Bird** en su posición inicial, has *click* en el lienzo para comenzar.
+Cuando ejecutas este programa (botón  ![ejecutar](img/runbtn.svg)), tendrás a ***Angry Bird*** en su posición inicial, has ***click*** en el lienzo para comenzar.
 
-Cada vez que presionas la tecla `->`, **Angry Bird** se mueve unos pasos hacia adelante!
+Cada vez que presionas la tecla `->`, ***Angry Bird*** se mueve unos pasos hacia adelante!
  
 
 > [!NOTE|label:IMPORTANTE]
@@ -200,7 +200,7 @@ Cada vez que presionas la tecla `->`, **Angry Bird** se mueve unos pasos hacia a
 
 
 
-**Angry Bird** desaparece cuando sobrepasa los límites del lienzo! La tarea consiste en modificar el código provisto para que **Angry Bird** vuelva a comenzar desde su posición inicial cuando éste sobrepasa los límites del lienzo. 
+**Angry Bird** desaparece cuando sobrepasa los límites del lienzo! La tarea consiste en modificar el código provisto para que ***Angry Bird*** vuelva a comenzar desde su posición inicial cuando éste sobrepasa los límites del lienzo. 
 
 
 Algunas variables necesarias para resolver este problema:
@@ -219,6 +219,6 @@ Algunas variables necesarias para resolver este problema:
 > Link para abrir este ejercicio en otra ventana del navegador [Angry Bird en movimiento](https://editor.p5js.org/compuUNRCIngreso/sketches/K22t_WWgl)
  
 > [!TIP|label:Ejercicio]
->  Si te animás podes definir la la función **moveBackward()**,  que mueve a **AngryBird** 20 pasos hacia atrás cuando se presiona la tecla `<-`  
+>  Si te animás podes definir la la función **moveBackward()**,  que mueve a ***AngryBird*** 20 pasos hacia atrás cuando se presiona la tecla `<-`  
 
  
