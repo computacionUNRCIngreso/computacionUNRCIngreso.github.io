@@ -92,14 +92,13 @@ Esta estructura también la  usaremos cuando sabemos exactamente el número de r
 -->
 
 
-<span style="color:red"> <font size = 6 >Desde Aquí documentación en construcción</font> </span>
 
 
 ## Más Actividades!
 
 
-Las funciones  que se listan abajo permiten  dibujar en el lienzo la trayectoria de ***El Lápiz del Caminante***. El sistema de coordenadas del ***Caminante*** utiliza píxeles como medida de la  distancia y grados para las rotaciones. ***El caminante*** inicia su recorrido en el centro del lienzo  mirando recto hacia la derecha (0 grados).
-
+Las funciones  que se listan abajo permiten  dibujar en el lienzo la trayectoria de ***El Lápiz del Caminante***. El sistema de coordenadas del ***Caminante*** utiliza píxeles como medida de la  distancia y grados para las rotaciones. ***El caminante*** inicia su recorrido en el ***centro del lienzo  mirando recto hacia la derecha (0 grados)***
+.
 > [!NOTE|label: IMPORTANTE]
 > Los grados  positivos son en el sentido de las agujas del reloj!
 
@@ -140,7 +139,7 @@ Funciones para manipular ***El  Caminante*** sobre el lienzo:
 
 
 > [!TIP]
-> Si haces click sobre el lienzo, verás la posición del *click* en la consola
+> Si haces click sobre el lienzo, verás la posición del ***click*** en la consola!
 
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
@@ -158,15 +157,17 @@ La primera  actividad consiste escribir un programa que dibuje  la siguiente tra
    }  
 -->
 
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/kCc-U1osi"  width="800" height="600"></iframe>
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/sketches/kCc-U1osi"  width="800" height="600"></iframe>
 
 > [!TIP|label:NOTA]
 > Link para abrir este ejercicio en otra ventana del navegador [El Caminante](https://editor.p5js.org/compuUNRCIngreso/sketches/kCc-U1osi)
 
 > [!WARNING]
-> Notames que la misma secuencia de pasos se repite!
+> Si tienes la necesidad de repetir la misma secuencia de instrucciones para resolver el ejercicio, entonces recuerda usar  las estructuras repetitivas!
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+<span style="color:red"> <font size = 6 >Desde Aquí documentación en construcción</font> </span>
 
 > [!TIP|label:Manos a la obra]
 
