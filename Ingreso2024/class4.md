@@ -20,12 +20,13 @@ El programa que se muestra en el editor de `p5.js` dibuja una línea (hacia la d
 
 > [!NOTE|label:Preguntas]
 > ¿Notaste que  la secuencia `pintar(); derecha()` se repite 4 veces?
-> ¿Cómo  haríamos para dibujar una línea, hacia la derecha del cursor, de 10 casilleros de longitud? repetimos 10 veces la secuencia?
+> ¿Cómo  haríamos para dibujar una línea, hacia la derecha del cursor, de 10 casilleros de longitud? ¿Repetimos 10 veces la secuencia?
  
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
 ## Estructuras Repetitivas
 
-Las estructuras repetitivas se utilizan cuando se quiere ejecutar repetidamente una secuencia de instrucciones un cierto número de veces.
+Las estructuras repetitivas se utilizan cuando se quiere ejecutar repetidamente una secuencia de instrucciones un cierto número de veces. En esta clase veremos algunas estructuras repetitivas simples.
 
 ### Una estructura repetitiva simple: ``repetir ``
 
@@ -50,32 +51,32 @@ Podemos ahora reescribir nuestra función `lineaDerecha()` utilizando el `repeti
 > Utilice el `repetir` para definir funciones `lineaIzquierda()`, `lineaAbajo()` y `lineaArriba()` las cuales grafican líneas de 4 casilleros de longitud hacia la izquierda, abajo y arriba de la posición del cursor, respectivamente.  Luego, utilice estas funciones para graficar un cuadrado.  
 
 
-<span style="color:red"> <font size = 6 >Desde Aquí documentación en construcción</font> </span>
- 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-### Sentencia ``for``
+### Estructura repetitiva``for-of``
 
 
-Lo usamos cuando sabemos exactamente el número de repeticiones o el rango sobre el cual queremos iterar:
+Esta estructura también la  usaremos cuando sabemos exactamente el número de repeticiones o el rango sobre el cual queremos iterar:
 
 ``` 
     ...
-    for(inicializacion; condicion; incremento) {
-        [BLOQUE DE SENTENCIAS] 
+
+    for (var i of range(1,5) ){
+        pintar()
+        derecha();
     }
     [BLOQUE DE SENTENCIAS SIGUIENTES]
     ...
 
 ```
-![sentencia for .center](img/for.png ':size=50%')
+![sentencia for .center](img/for-of.png ':size=60%')
 
-**Volvamos al ejemplo anterior y veamos un ejemplo!**
+**Volvamos al ejercicio anterior y veamos un ejemplo!**
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
 
-Algunas cuestiones a tener en cuenta:
+<!--Algunas cuestiones a tener en cuenta:
 
 
 * La ``inicializacion``  es ejecutada una única vez: la primera vez que se ejecuta el ``for``
@@ -88,49 +89,13 @@ Algunas cuestiones a tener en cuenta:
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-
-### Sentencia ``while``
-
-``` 
-    ...
-    while (CONDICION) {
-        [BLOQUE DE SENTENCIAS] 
-    }
-
-    [BLOQUE DE SENTENCIAS SIGUIENTES]
-    ...
-```
-
-![sentencia while .center](img/while.png ':size=50%')
-
-Un Ejemplo:
+-->
 
 
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/kjMtG37Ihy"  width="800" height="600">></iframe>
-
-> [!TIP|label:NOTA]
-> Link para abrir este ejercicio en otra ventana del navegador [Ejemplo while](https://editor.p5js.org/compuUNRCIngreso/sketches/kjMtG37Ihy)
-
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-
-Algunas cuestiones a tener en cuenta:
-
- * Una sentencia ``while`` repite la ejecución de  una secuencia de sentencias (lo que llamamos el cuerpo del while) ***mientras una condición es verdadera***
-
- * Para de ejecutar cuando la condición es falsa.
-
- * La condiición se chequea ***después*** de que el cuerpo del while es executado y ***antes*** de que este se repita.
-
- * Si tu condición siempre es verdadera entonces tu programa nunca terminará de ejecutarse.
+<span style="color:red"> <font size = 6 >Desde Aquí documentación en construcción</font> </span>
 
 
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-
-
-
-
-
-
+## Más Actividades!
 
 
 Las funciones  que se listan abajo permiten  dibujar en el lienzo la trayectoria de ***El Lápiz del Caminante***. El sistema de coordenadas del ***Caminante*** utiliza píxeles como medida de la  distancia y grados para las rotaciones. ***El caminante*** inicia su recorrido en el centro del lienzo  mirando recto hacia la derecha (0 grados).
@@ -175,7 +140,7 @@ Funciones para manipular ***El  Caminante*** sobre el lienzo:
 
 
 > [!TIP]
-> Si haces click sobre el lienzo, en la Consola, verás la posición del click
+> Si haces click sobre el lienzo, verás la posición del *click* en la consola
 
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
@@ -211,4 +176,40 @@ Te dejamos algunas [actividades](https://drive.google.com/file/d/1L5RKzGv-MMXO5F
 
 
 
+### Sentencia ``while``
+
+``` 
+    ...
+    while (CONDICION) {
+        [BLOQUE DE SENTENCIAS] 
+    }
+
+    [BLOQUE DE SENTENCIAS SIGUIENTES]
+    ...
+```
+
+![sentencia while .center](img/while.png ':size=50%')
+
+Un Ejemplo:
+
+
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/kjMtG37Ihy"  width="800" height="600">></iframe>
+
+> [!TIP|label:NOTA]
+> Link para abrir este ejercicio en otra ventana del navegador [Ejemplo while](https://editor.p5js.org/compuUNRCIngreso/sketches/kjMtG37Ihy)
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+Algunas cuestiones a tener en cuenta:
+
+ * Una sentencia ``while`` repite la ejecución de  una secuencia de sentencias (lo que llamamos el cuerpo del while) ***mientras una condición es verdadera***
+
+ * Para de ejecutar cuando la condición es falsa.
+
+ * La condiición se chequea ***después*** de que el cuerpo del while es executado y ***antes*** de que este se repita.
+
+ * Si tu condición siempre es verdadera entonces tu programa nunca terminará de ejecutarse.
+
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
