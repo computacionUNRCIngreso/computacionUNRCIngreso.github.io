@@ -18,7 +18,7 @@ El programa que se muestra en el editor de `p5.js` dibuja una línea (hacia la d
 > Link para abrir este ejemplo en otra ventana del navegador  [dibujar en la cuadricula](https://editor.p5js.org/compuUNRCIngreso/sketches/Xv5SeaErt)
 
 
-> [!NOTE|label:Preguntas]
+> [!WARNING|label:Preguntas]
 > ¿Notaste que  la secuencia `pintar(); derecha()` se repite 4 veces?
 > ¿Cómo  haríamos para dibujar una línea, hacia la derecha del cursor, de 10 casilleros de longitud? ¿Repetimos 10 veces la secuencia?
  
@@ -33,18 +33,29 @@ Las estructuras repetitivas se utilizan cuando se quiere ejecutar repetidamente 
 La primera estructura repetitiva que tendremos definida en nuestro lenguaje será el `repetir`. Utilizaremos el `repetir`,  como en este caso, cuando sabemos la cantidad de veces  exacta que queremos repetir nuestra secuencia de instrucciones:
 
 
-```
-function lineaDerecha() {
-  repetir(4, [pintar, derecha])
-}
+ ``` js
+                                           
+ function lineaDerecha() {              function lineaDerecha() { 
+   repetir(4,[pintar, derecha])            repetir(4,pintarDerecha)                                  
+ }                                =     }
 
+                                        function pintarDerecha() { 
+                                           pintar();
+                                           derecha();
+                                        }
+                       
 ```
+
 
 > [!NOTE|label:IMPORTANTE]
->  Las instrucciones` pintar, derecha ` se ejecutan 4 veces exactamente en el orden en el que aparecen en la lista!
+>  * Repetir toma como argumento una lista de funciones sin argumentos o bien una función sin argumentos
+>  * Las funciones` pintar, derecha ` se ejecutan 4 veces exactamente en el orden en el que aparecen en la lista!
 
 
-Podemos ahora reescribir nuestra función `lineaDerecha()` utilizando el `repetir`. ¿Cómo lo modificamos para conseguir una línea de 10 casilleros? 
+> [!WARNING|label:Pregunta]
+> ¿Cómo lo modificamos para conseguir una línea de 10 casilleros? 
+
+
 
 
 > [!TIP|label:Algunos ejercicios extras]
@@ -58,7 +69,7 @@ Podemos ahora reescribir nuestra función `lineaDerecha()` utilizando el `repeti
 
 Esta estructura también la  usaremos cuando sabemos exactamente el número de repeticiones o el rango sobre el cual queremos iterar:
 
-``` 
+```js 
     ...
 
     for (var i of range(1,5) ){
@@ -90,8 +101,6 @@ Esta estructura también la  usaremos cuando sabemos exactamente el número de r
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
 -->
-
-
 
 
 ## Más Actividades!
@@ -157,7 +166,6 @@ La primera  actividad consiste escribir un programa que dibuje  la siguiente tra
    }  
 -->
 
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/sketches/kCc-U1osi"  width="800" height="600"></iframe>
 
 > [!TIP|label:NOTA]
 > Link para abrir este ejercicio en otra ventana del navegador [El Caminante](https://editor.p5js.org/compuUNRCIngreso/sketches/kCc-U1osi)
@@ -170,23 +178,25 @@ La primera  actividad consiste escribir un programa que dibuje  la siguiente tra
 <span style="color:red"> <font size = 6 >Desde Aquí documentación en construcción</font> </span>
 
 > [!TIP|label:Manos a la obra]
+> Te dejamos algunas actividades para que práctiques!  [actividades](https://drive.google.com/file/d/1L5RKzGv-MMXO5FlGanxsvSSu5LbmAy8p/view?usp=drive_link) para que practiques!
 
-Te dejamos algunas [actividades](https://drive.google.com/file/d/1L5RKzGv-MMXO5FlGanxsvSSu5LbmAy8p/view?usp=drive_link) para que practiques!
+1. 
 
-<span style="color:red"> <font size = 6 >BORRAR: No revisé las actividades (del último ingreso) poco? mucho?, cambiamos? revisar! resolver! </font> </span>
+
+
 
 
 
 ### Sentencia ``while``
 
-``` 
+```js
     ...
     while (CONDICION) {
         [BLOQUE DE SENTENCIAS] 
     }
 
     [BLOQUE DE SENTENCIAS SIGUIENTES]
-    ...
+   ` ...
 ```
 
 ![sentencia while .center](img/while.png ':size=50%')
