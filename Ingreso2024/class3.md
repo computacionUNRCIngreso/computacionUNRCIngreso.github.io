@@ -34,7 +34,8 @@ Una variable es la combinación de las siguientes cosas:
 ## ¿Cómo cambiamos el valor almacenado en una variable?
 
 ***Asignación***: Una asignación cambia el valor de una variable. Una asignación es una sentencia de la forma:
-   ```
+   
+   ```js
     nombre_variable = expresion;
    ```
 
@@ -52,7 +53,7 @@ Ejemplo:
 
 ## Sentencia Condicional ``if``
 
-``` 
+```js 
     ...
     if (CONDICION) {
         [BLOQUE DE SENTENCIAS] 
@@ -72,7 +73,7 @@ Ejemplo:
 ## Sentencia Condicional ``if-else`` 
 
 
-```
+```js
     ...
     if (CONDICION) {
         [BLOQUE DE SENTENCIAS 1] 
@@ -94,7 +95,7 @@ Ejemplo:
  
 Los operadores de comparación nos permiten comparar el valor de dos expresiones:
 
-```
+```js
     EXPR > EXPR
     EXPR >= EXPR
     EXPR < EXPR
