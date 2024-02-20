@@ -24,9 +24,9 @@ de la pantalla). En concreto deberas programar las funciones ``moveForward()``, 
 
 Ya has utilizado funciones desde el comienzo invocándolas y también has escrito codigo para completar su definición (dentro su cuerpo {...}). Pero ya es hora de detenernos en algunos detalles y dejarlos bien en claro para continuar:
 
-* Cuando queremos utilizar una función (ejecutarla) simplemente escribimos su nombre seguido de un par de paréntesis y opcionalmente finalizamos con un punto y coma (``;`), por ejemplo escribimos ``moveForward();`` para invocarla.
+* Cuando queremos utilizar una función (ejecutarla) simplemente escribimos su nombre seguido de un par de paréntesis y opcionalmente finalizamos con un punto y coma (``;``), por ejemplo escribimos ``moveForward();`` para invocarla.
 * Para que una invocación resulte, previamente debemos definir la función en algún lado, escribirla siguiendo algunas reglas sintácticas establecidad en el lenguaje.
-* La definición de una función comienza con la palabra *``function``*, que es seguida del nombre que le demos a la función; luego un par de paréntesis (``()``), entre ellos **puede o no haber uno o más nombres (identificadores)**, que llamaremos parametros de la función; y a continuación de los paréntesis un par de llaves ()que encerrarán todo el cuerpo de la función, todas las instrucciones o sentencias que definen lo que hace la función van entre las llaves.
+* La definición de una función comienza con la palabra *``function``*, que es seguida del nombre que le demos a la función; luego un par de paréntesis (``()``), entre ellos **puede o no haber uno o más nombres (identificadores)**, que llamaremos parametros de la función; y a continuación de los paréntesis un par de llaves (``{}``) que encerrarán todo el cuerpo de la función, todas las instrucciones o sentencias que definen lo que hace la función van entre estas llaves.
 
 ```
    function nombreDeLaFunción( parametro1, parametro2,... , parametro_n) ) {
@@ -36,9 +36,14 @@ Ya has utilizado funciones desde el comienzo invocándolas y también has escrit
 
 ## Version 0.3
 
-Actualmente el cerdo realiza movimientos aleatorios, cada un segundo decide un lugar (punto x y del area de juego) aleatorio al cual saltar. En ningun momento tiene en cuanta si ya esta cerca o no del angry bird, no existe la noción de visivilidad. Quisieramos incorporarle al cerdo un cirto grado de inteligencia, es decir, si está cerca  .... TBC
+Actualmente el cerdo realiza movimientos aleatorios cada un segundo, decide un lugar (un punto **x** **y** del área de juego) al azar al cual saltar y se desplaza hasta allí. En ningún momento el cerdo tiene en cuenta qué tan cerca ha saltado del angry bird, no existe la noción de visibilidad, detección o cercanía. Tan solo puede distingir si lo está tocando o no. Quisiéramos incorporarle al cerdo un grado de inteligencia mayor, es decir, que también bajo alguna medida de distancia predefinida pueda saber si está cerca o no, y si lo está, entonces que comience a saltar cerca de la zona.
 
-***Actividad***: Vamos a ...
+***Actividad***: Se requiere implementar modificaciones en la función de movida del cerdo, para incorporar la noción de detección por distancia de visibilidad y saltos acotados dentro de una zona determinada de manera variable.
+
+> [!NOTE|label:NOTA]
+> Analisis del problema: .....
+
+  angry bird (``birdX`` y ``birdY``), y otras dos para las del cerdo (``pigX`` y ``pigY``). Cualquier cambio en el valor de esas variables se verá reflejado como un cambio de posición del personaje en la pantalla de juego.
 
 ## Version 0.5
 
