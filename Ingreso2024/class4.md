@@ -1,8 +1,113 @@
 #  Estructura Repetitiva en la Resolución de Problemas Algorítmicos
 
 
-Las funciones  que se listan abajo permiten  dibujar en el lienzo la trayectoria de ***El Lápiz del Caminante***. El sistema de coordenadas del ***Caminante*** utiliza píxeles como medida de la  distancia y grados para las rotaciones. ***El caminante*** inicia su recorrido en el centro del lienzo  mirando recto hacia la derecha (0 grados).
+Retomaremos un ejercicio  visto en clases anteriores: Dada una grilla de *n x n* y las siguientes funciones: 
 
+* `izquierda()`: mueve el cursor 1 paso a la izquierda
+* `derecha()`:  mueve el cursor 1 paso a la derecha
+* `arriba()`: mueve el cursor 1 paso hacia arriba
+* `abajo()`: mueve el cursor 1 paso hacia abajo
+* `pintar()`: pinta en color negro la posición actual del cursor
+
+
+El programa que se muestra en el editor de `p5.js` dibuja una línea (hacia la derecha del cursor), de 4 casilleros de longitud:
+
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/sketches/Xv5SeaErt" width="800" height="600"></iframe> 
+
+> [!TIP|label:NOTA]
+> Link para abrir este ejemplo en otra ventana del navegador  [dibujar en la cuadricula](https://editor.p5js.org/compuUNRCIngreso/sketches/Xv5SeaErt)
+
+
+> [!WARNING|label:Preguntas]
+> ¿Notaste que  la secuencia `pintar(); derecha()` se repite 4 veces?
+> ¿Cómo  haríamos para dibujar una línea, hacia la derecha del cursor, de 10 casilleros de longitud? ¿Repetimos 10 veces la secuencia?
+ 
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+## Estructuras Repetitivas
+
+Las estructuras repetitivas se utilizan cuando se quiere ejecutar repetidamente una secuencia de instrucciones un cierto número de veces. En esta clase veremos algunas estructuras repetitivas simples.
+
+### Una estructura repetitiva simple: ``repetir ``
+
+La primera estructura repetitiva que tendremos definida en nuestro lenguaje será el `repetir`. Utilizaremos el `repetir`,  como en este caso, cuando sabemos la cantidad de veces  exacta que queremos repetir nuestra secuencia de instrucciones:
+
+
+ ``` js
+                                           
+ function lineaDerecha() {              function lineaDerecha() { 
+   repetir(4,[pintar, derecha])            repetir(4,pintarDerecha)                                  
+ }                                =     }
+
+                                        function pintarDerecha() { 
+                                           pintar();
+                                           derecha();
+                                        }
+                       
+```
+
+
+> [!NOTE|label:IMPORTANTE]
+>  * Repetir toma como argumento una lista de funciones sin argumentos o bien una función sin argumentos
+>  * Las funciones` pintar, derecha ` se ejecutan 4 veces exactamente en el orden en el que aparecen en la lista!
+
+
+> [!WARNING|label:Pregunta]
+> ¿Cómo lo modificamos para conseguir una línea de 10 casilleros? 
+
+
+
+
+> [!TIP|label:Algunos ejercicios extras]
+> Utilice el `repetir` para definir funciones `lineaIzquierda()`, `lineaAbajo()` y `lineaArriba()` las cuales grafican líneas de 4 casilleros de longitud hacia la izquierda, abajo y arriba de la posición del cursor, respectivamente.  Luego, utilice estas funciones para graficar un cuadrado.  
+
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+### Estructura repetitiva``for-of``
+
+
+Esta estructura también la  usaremos cuando sabemos exactamente el número de repeticiones o el rango sobre el cual queremos iterar:
+
+```js 
+    ...
+
+    for (var i of range(1,5) ){
+        pintar()
+        derecha();
+    }
+    [BLOQUE DE SENTENCIAS SIGUIENTES]
+    ...
+
+```
+![sentencia for .center](img/for-of.png ':size=60%')
+
+**Volvamos al ejercicio anterior y veamos un ejemplo!**
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+<!--Algunas cuestiones a tener en cuenta:
+
+
+* La ``inicializacion``  es ejecutada una única vez: la primera vez que se ejecuta el ``for``
+
+* La ``condicion``: se ejecuta en cada repetición. El ``for`` para de iterar (repetir) cuando ``condicion`` es falsa.
+
+*  ``[BLOQUE DE SENTENCIAS]``,  llamado cuerpo del ``for``,  se ejecuta en cada iteración (Si condicion es verdadera)
+
+* El ``incremento``: Se ejecuta en cada iteración, después del  ``[BLOQUE DE SENTENCIAS]``
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+-->
+
+
+## Más Actividades!
+
+
+Las funciones  que se listan abajo permiten  dibujar en el lienzo la trayectoria de ***El Lápiz del Caminante***. El sistema de coordenadas del ***Caminante*** utiliza píxeles como medida de la  distancia y grados para las rotaciones. ***El caminante*** inicia su recorrido en el ***centro del lienzo  mirando recto hacia la derecha (0 grados)***
+.
 > [!NOTE|label: IMPORTANTE]
 > Los grados  positivos son en el sentido de las agujas del reloj!
 
@@ -43,7 +148,7 @@ Funciones para manipular ***El  Caminante*** sobre el lienzo:
 
 
 > [!TIP]
-> Si haces click sobre el lienzo, en la Consola, verás la posición del click
+> Si haces click sobre el lienzo, verás la posición del ***click*** en la consola!
 
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
@@ -61,31 +166,44 @@ La primera  actividad consiste escribir un programa que dibuje  la siguiente tra
    }  
 -->
 
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/kCc-U1osi"  width="800" height="600"></iframe>
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/sketches/kCc-U1osi"  width="800" height="600">></iframe>
+
+
+
 
 > [!TIP|label:NOTA]
 > Link para abrir este ejercicio en otra ventana del navegador [El Caminante](https://editor.p5js.org/compuUNRCIngreso/sketches/kCc-U1osi)
 
 > [!WARNING]
-> Notames que la misma secuencia de pasos se repite!
+> Si tienes la necesidad de repetir la misma secuencia de instrucciones para resolver el ejercicio, entonces recuerda usar  las estructuras repetitivas!
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-## Estructuras Repetitivas
 
-Las estructuras repetitivas se utilizan cuando se quiere ejecutar un conjunto de instrucciones un cierto número de veces.
+> [!TIP|label:Manos a la obra]
+> Te dejamos algunas actividades para que practiques! 
+> 1. Dibujar un triángulo equilatero: La suma de sus ángulos interiores es 180º (Cada ángulo mide 60º)
+> 2. Dibujar un hexágono (polígono regular de 6 lados):  La suma de sus ángulos interiores es 720º (Cada ángulo mide 120º)
+> 3. ¿Es posible dibujar un círculo? ¿Cómo? En caso afirmativo escriba las instrucciones para ello.
+> 4. Escriba un programa para dibujar la siguiente figura donde los lados de cada triángulo equilatero miden 50 pixeles. Recuerde que puede definir, y usar, nuevas funciones, por ejemplo `dibujarTriangulo()`.
+>
+> ![banderines .center](img/banderines.png ':size=40%')
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+<span style="color:red"> <font size = 6 >Desde Aquí documentación en construcción</font> </span>
 
 
 ### Sentencia ``while``
 
-``` 
+```js
     ...
     while (CONDICION) {
         [BLOQUE DE SENTENCIAS] 
     }
 
     [BLOQUE DE SENTENCIAS SIGUIENTES]
-    ...
+   ` ...
 ```
 
 ![sentencia while .center](img/while.png ':size=50%')
@@ -110,48 +228,6 @@ Algunas cuestiones a tener en cuenta:
 
  * Si tu condición siempre es verdadera entonces tu programa nunca terminará de ejecutarse.
 
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-
-### Sentencia ``for``
-
-<span style="color:red"> <font size = 6 >BORRAR: acá estoy pensando solo en definite iteration</font> </span>
-
-Lo usamos cuando sabemos exactamente el número de repeticiones o el rango sobre el cual queremos iterar:
-
-``` 
-    ...
-    for(inicializacion; condicion; incremento) {
-        [BLOQUE DE SENTENCIAS] 
-    }
-    [BLOQUE DE SENTENCIAS SIGUIENTES]
-    ...
-
-```
-![sentencia for .center](img/for.png ':size=50%')
-
-**Volvamos al ejemplo anterior y veamos un ejemplo!**
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-
-
-Algunas cuestiones a tener en cuenta:
-
-
-* La ``inicializacion``  es ejecutada una única vez: la primera vez que se ejecuta el ``for``
-
-* La ``condicion``: se ejecuta en cada repetición. El ``for`` para de iterar (repetir) cuando ``condicion`` es falsa.
-
-*  ``[BLOQUE DE SENTENCIAS]``,  llamado cuerpo del ``for``,  se ejecuta en cada iteración (Si condicion es verdadera)
-
-* El ``incremento``: Se ejecuta en cada iteración, después del  ``[BLOQUE DE SENTENCIAS]``
-
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-> [!TIP|label:Manos a la obra]
-
-Te dejamos algunas [actividades](https://drive.google.com/file/d/1L5RKzGv-MMXO5FlGanxsvSSu5LbmAy8p/view?usp=drive_link) para que practiques!
-
-<span style="color:red"> <font size = 6 >BORRAR: No revisé las actividades (del último ingreso) poco? mucho?, cambiamos? revisar! resolver! </font> </span>
-
-
-
 

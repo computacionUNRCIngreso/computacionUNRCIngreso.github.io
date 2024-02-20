@@ -1,6 +1,6 @@
 * [Home](/)
 * [Introducción](introduction.md)
-* [Algoritmos y Programas](class1.md)
+* [Algoritmos y Programas](algoritmos.md)
 * [Estructura Condicional Básica](class3.md)
 * [Estructura Repetitiva Básica](class4.md)
 * [Integrando Funciones Para Jugar](class5.md)
