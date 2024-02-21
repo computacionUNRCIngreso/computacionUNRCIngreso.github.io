@@ -8,7 +8,7 @@ El videojuego a desarrollar esta inspirado en la narrativa del famoso [Angry Bir
 
 ## Nuestro videojuego versión 0.1
 
-En esta variante del juego el Rey Cerdo intenta atrapar (aplastando) al Angry Bird, para esto, cada un cierto tiempo determina una posición a la cual trasladarse (de manera aleatoria) y, si el Angry Bird se encuentra justo en un cierto rango de distancia de la posición elegida por el cerdo, entonces el angry bird será atrapado. El jugador podrá mover al Angry Bird por toda el area de juego para tratar de escapar, utilizando las teclas de dirección (&larr; , &uarr; , &darr; , &rarr;).
+En esta variante del juego el Rey Cerdo intenta atrapar (aplastando) al Angry Bird, para esto, cada un cierto tiempo determina una posición a la cual trasladarse (de manera aleatoria) y, si el Angry Bird se encuentra justo en un cierto rango de distancia de la posición elegida por el cerdo, entonces el angry bird será atrapado. El objetivo por el momento es tratar de escapar al cerdo. El jugador podrá mover al Angry Bird por toda el area de juego para tratar de escapar, utilizando las teclas de dirección (&larr; , &uarr; , &darr; , &rarr;).
 
 A medida que vayamos avanzando en esta sección iremos complejizando el juego y agregando más funcionalidades. Por el momento comencemos por lo básico, los movimientos:
 
@@ -17,16 +17,18 @@ A medida que vayamos avanzando en esta sección iremos complejizando el juego y 
 ***Actividad***: La primer tarea será dotar de movilidad a nuestro personaje para que se pueda desplazar (sin salirse de los limites
 de la pantalla). En concreto deberas programar las funciones ``moveForward()``, ``moveBackward()``, ``moveUp()`` y ``moveDown()`` para que cambien la posición del angry bird al ser ejecutadas. La invocación a estas cuatro funciones se dará cuando el jugador presione las teclas de dirección respectivas.
 
+<!-- ¿ meter la idea de requisitos ?-->
+
 > [!NOTE|label:NOTA]
-> Las posiciones de los personajes en el area de juego están representadas por valores almacenados en cuatro variables, dos para las coordenadas x e y del angry bird (``birdX`` y ``birdY``), y otras dos para las del cerdo (``pigX`` y ``pigY``). Cualquier cambio en el valor de esas variables se verá reflejado como un cambio de posición del personaje en la pantalla de juego.
+> Las posiciones de los personajes en el area de juego están representadas por valores almacenados en cuatro variables, dos para las coordenadas *x* e *y* del angry bird (``birdX`` y ``birdY``), y otras dos para las del cerdo (``pigX`` y ``pigY``). Cualquier cambio en el valor de esas variables se verá reflejado como un cambio de posición del personaje en la pantalla de juego.
 
 ###  Refrescando un poco: ¿Cómo se escriben las funciones?
 
-Ya has utilizado funciones desde el comienzo invocándolas y también has escrito codigo para completar su definición (dentro su cuerpo {...}). Pero ya es hora de detenernos en algunos detalles y dejarlos bien en claro para continuar:
+Ya has utilizado funciones desde el comienzo invocándolas y también has escrito codigo para completar su definición (dentro su cuerpo ```{... }```). Pero ya es hora de detenernos en algunos detalles y dejarlos bien en claro para continuar:
 
 * Cuando queremos utilizar una función (ejecutarla) simplemente escribimos su nombre seguido de un par de paréntesis y opcionalmente finalizamos con un punto y coma (``;``), por ejemplo escribimos ``moveForward();`` para invocarla.
 * Para que una invocación resulte, previamente debemos definir la función en algún lado, escribirla siguiendo algunas reglas sintácticas establecidad en el lenguaje.
-* La definición de una función comienza con la palabra *``function``*, que es seguida del nombre que le demos a la función; luego un par de paréntesis (``()``), entre ellos **puede o no haber uno o más nombres (identificadores)**, que llamaremos parametros de la función; y a continuación de los paréntesis un par de llaves (``{}``) que encerrarán todo el cuerpo de la función, todas las instrucciones o sentencias que definen lo que hace la función van entre estas llaves.
+* La definición de una función comienza con la palabra reservada *``function``*, que es seguida del nombre que le demos a la función; luego un par de paréntesis (``()``), entre ellos **puede o no haber uno o más nombres (identificadores)**, que llamaremos parametros de la función; y a continuación de los paréntesis un par de llaves (``{... }``) que encerrarán todo el cuerpo de la función, todas las instrucciones o sentencias que definen lo que hace la función van entre estas llaves.
 
 ```
    function nombreDeLaFunción( parametro1, parametro2,... , parametro_n) ) {
@@ -34,16 +36,20 @@ Ya has utilizado funciones desde el comienzo invocándolas y también has escrit
     }
 ```
 
+>[!NOTE|label:NOTA] Los parámetros definidos entre los paréntesis pueden ser utilizados como variables visibles dentro del cuerpo de la función, que traeran los valores con los que se haya invocado a la función a la hora de usarla.
+
 ## Iteración 2
 
-Actualmente el cerdo realiza movimientos aleatorios cada un segundo, decide un lugar (una posición **(x,y)** del área de juego) al azar al cual saltar y se desplaza hasta allí. En ningún momento el cerdo tiene en cuenta qué tan cerca ha saltado del angry bird, no existe la noción de visibilidad, detección o cercanía. Tan solo puede distingir si lo está tocando o no. Quisiéramos incorporarle al cerdo un grado de inteligencia mayor, es decir, que bajo alguna medida de distancia predefinida pueda saber si ha saltado cerca o no, y si lo está, entonces que comience a saltar en la zona.
+Actualmente el cerdo realiza movimientos aleatorios cada un segundo, decide un lugar (una posición **(x,y)** del área de juego) al azar al cual saltar y se desplaza hasta allí. En ningún momento el cerdo tiene en cuenta qué tan cerca ha saltado del angry bird, no existe la noción de visibilidad, detección o cercanía. Tan solo puede distingir si lo está tocando o no. Quisiéramos incorporarle al cerdo un grado de inteligencia mayor, es decir, que bajo alguna medida de distancia predefinida pueda saber si ha saltado cerca o no, y si lo está, entonces que se comporte como si lo hubiera visto y comience a saltar en la zona.
 
 ***Actividad***: Se requiere implementar modificaciones en la función de movida del cerdo (``movePig()``), para incorporar la noción de detección por distancia de visibilidad y saltos acotados dentro de una zona determinada de manera variable.
 
 > [!NOTE|label:NOTA]
-> Analisis del problema: Si el área demarcada por el cuadrado verdes en torno al cerdo fuese el area de visibilidad que tiene el cerdo, entonces de la siguiente imagen se desprende que el cerdo estaría viendo, o pudiendo saber que el angry bird está dentro de su area de visibilidad.
+> Analisis del problema: Si el área demarcada por el cuadrado verde en torno al cerdo fuese el área de visibilidad que el mismo tiene, entonces, de la siguiente imagen se desprende que el cerdo estaría viendo o detectando al angry bird.
 
 ![sentencia if .center](img/visibleArea.png ':size=40%')
+
+
 
   angry bird (``birdX`` y ``birdY``)
   cerdo (``pigX`` y ``pigY``).
