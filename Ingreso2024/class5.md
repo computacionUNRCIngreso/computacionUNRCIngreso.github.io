@@ -34,18 +34,21 @@ Ya has utilizado funciones desde el comienzo invocándolas y también has escrit
     }
 ```
 
-## Version 0.3
+## Iteración 2
 
-Actualmente el cerdo realiza movimientos aleatorios cada un segundo, decide un lugar (un punto **x** **y** del área de juego) al azar al cual saltar y se desplaza hasta allí. En ningún momento el cerdo tiene en cuenta qué tan cerca ha saltado del angry bird, no existe la noción de visibilidad, detección o cercanía. Tan solo puede distingir si lo está tocando o no. Quisiéramos incorporarle al cerdo un grado de inteligencia mayor, es decir, que también bajo alguna medida de distancia predefinida pueda saber si está cerca o no, y si lo está, entonces que comience a saltar cerca de la zona.
+Actualmente el cerdo realiza movimientos aleatorios cada un segundo, decide un lugar (una posición **(x,y)** del área de juego) al azar al cual saltar y se desplaza hasta allí. En ningún momento el cerdo tiene en cuenta qué tan cerca ha saltado del angry bird, no existe la noción de visibilidad, detección o cercanía. Tan solo puede distingir si lo está tocando o no. Quisiéramos incorporarle al cerdo un grado de inteligencia mayor, es decir, que bajo alguna medida de distancia predefinida pueda saber si ha saltado cerca o no, y si lo está, entonces que comience a saltar en la zona.
 
-***Actividad***: Se requiere implementar modificaciones en la función de movida del cerdo, para incorporar la noción de detección por distancia de visibilidad y saltos acotados dentro de una zona determinada de manera variable.
+***Actividad***: Se requiere implementar modificaciones en la función de movida del cerdo (``movePig()``), para incorporar la noción de detección por distancia de visibilidad y saltos acotados dentro de una zona determinada de manera variable.
 
 > [!NOTE|label:NOTA]
-> Analisis del problema: .....
+> Analisis del problema: Si el área demarcada por el cuadrado verdes en torno al cerdo fuese el area de visibilidad que tiene el cerdo, entonces de la siguiente imagen se desprende que el cerdo estaría viendo, o pudiendo saber que el angry bird está dentro de su area de visibilidad.
 
-  angry bird (``birdX`` y ``birdY``), y otras dos para las del cerdo (``pigX`` y ``pigY``). Cualquier cambio en el valor de esas variables se verá reflejado como un cambio de posición del personaje en la pantalla de juego.
+![sentencia if .center](img/visibleArea.png ':size=40%')
 
-## Version 0.5
+  angry bird (``birdX`` y ``birdY``)
+  cerdo (``pigX`` y ``pigY``).
+
+## Iteración 3
 
 Actualmente el cerdo realiza movimientos .... TBC
 
