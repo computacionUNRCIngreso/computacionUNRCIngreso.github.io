@@ -50,26 +50,25 @@ soluciones mediante la aplicación de *funciones* y *operadores*.
 > Matemáticamente:
 > $$ 
 > abs(n) = \mid n\mid =   \left\{
->                           \begin{matrix} 
->                             n  \: si \: n \geq 0 \\
->                             -n \: \textrm{en otro caso}
->                           \end{matrix}
+>                           \begin{array}{ll} 
+>                             n  & si \: n \geq 0 \\
+>                             -n & \textrm{en otro caso}
+>                           \end{array}
 >                         \right.
 > $$
 > En un programa (en un lenguaje hipotético) se podría definir como:
 > ```
-> abs(n) = n si n > 0 sino -n
+> abs(n) = if n >= 0 n else -n
 > ```
 
-Como otro ejemplo de representación, un punto en un sistema de coordenadas
-cartesianas de dos dimensiones podría hacerse con un par ordenado (o *tupla*) de
-la forma $(x,y)$, donde $x$ representa el valor en el eje horizontal o *abscisa*
-e $y$ el valor en el eje vertical u *ordenada*.
+Como un ejemplo de representación de datos, un punto en un sistema de
+coordenadas cartesianas de dos dimensiones podría hacerse con un par ordenado (o
+*tupla*) de la forma $(x,y)$, donde $x$ representa el valor en el eje horizontal
+o *abscisa* e $y$ el valor en el eje vertical u *ordenada*.
 
 ![Coordenadas cartesianas .center](img/cartesian-coordinate-system.svg ":size=50%")
 
-> Los lenguajes de programación nos permiten definir y manipular datos como los
-> mencionados. En algunos casos con diferentes notaciones.
+> Los lenguajes de programación nos permiten definir y manipular datos.
 
 ----------------------------------------------------------------------------
 
@@ -96,9 +95,9 @@ simbólica* aplicando propiedades de la aritmética.
 
 Un enfoque *computacional* es escribir un *programa* que *busque* la solución.
 Un programa posible (para funciones crecientes) se muestra abajo y se basa en la
-estrategia de ir achicando el intervalo en que se encontrará la raíz.
+estrategia de ir achicando el intervalo de búsqueda en el que puede estar la raíz.
 
-Dado un intervalo $[a, b]$ en el que puede estar la raíz $f$.
+Dado un intervalo $[a, b]$ en el que puede estar la raíz de $f$.
 
 1. Determinar el punto medio del intervalo: $x = (a + b) / 2$
 2. Si $abs(f(x))<0.001$, la raíz es $x$, fin del programa. Sino, seguimos
@@ -114,6 +113,9 @@ Ejecutemos el programa con el intervalo inicial $[a=-1, b=1]$.
 > 5. Paso 1: $x = (0 + 1) / 2 = \frac{1}{2} = 0.5$
 > 6. Paso 2: Ahora $abs(f(0.5)) = 0 < 0.001$, la raíz es $x=0.5$
 
+Una primera observación que podríamos hacer es que este programa encuentra un
+*valor aproximado* de la raíz, no necesariamente el valor exacto.  
+
 > [!WARNING|label:Preguntas]
 > 1. ¿Cuántos pasos haríamos si el intervalo inicial fuera $[0, 1]$?
 > 2. ¿Qué sucede con el programa dado si damos un intervalo que no contiene la
@@ -127,11 +129,9 @@ Ejecutemos el programa con el intervalo inicial $[a=-1, b=1]$.
 > Un *algoritmo* es un programa que siempre termina.
 
 El programa dado arriba no es un *algoritmo* (*¿por qué?*). Sin embargo con una
-pequeña modificación en el paso 1 podríamos convertirlo en algoritmo.
-
-Debemos notar que en cada ciclo (repetición de los pasos 1- 3) vamos achicando
-el intervalo. Una forma de finalizar el programa es terminarlo si el intervalo
-es *considerablemente pequeño*.
+pequeña modificación en el paso 1 podríamos convertirlo en algoritmo. Para que
+siempre termine deberíamos finalizar cuando el intervalo sea *considerablemente
+pequeño* y determinar que no hemos encontrado la raíz.
 
 > ¿Te animas a proponer tal modificación?
 
@@ -147,16 +147,16 @@ Un lenguaje de programación define la *sintaxis* y el *significado (semántica)
 de sus frases.
 
 Existen muchísimos lenguajes de programación, cada uno con características
-particulares. Algunos lenguajes están diseñados para resolver ciertos tipos de
-problemas de manera más natural que otros.
+particulares. Algunos lenguajes están diseñados para resolver o expresar
+algoritmos para ciertos tipos de problemas de manera más natural que otros.
 
 Los lenguajes de programación también definen *abstracciones* sobre la
 definición y manipulación de datos, como también el *flujo de control* de los
-pasos de un programa, como selección (*si-sino*) y repetición.
+pasos de un programa, como selección (*si-sino*) y repetición de operaciones.
 
 > Cuando escribimos el texto de un programa en un lenguaje éste debe ser
-> *convertido* al *lenguaje de máquina*, es decir a las instrucciones concretas del
-> tipo de computadora que usemos.
+> *convertido* al *lenguaje de máquina*, es decir a las instrucciones concretas
+> del tipo de computadora que usemos.
 > 
 > Esta conversión o *traducción* se hace con otros programas específicos a cada
 > lenguaje. Estos programas se conocen como *compiladores* o *intérpretes*.
@@ -170,10 +170,10 @@ detalles y extraer los aspectos mas importantes para su análisis.
 
 Como vimos, los lenguajes de programación nos permiten abstraernos de los
 detalles de la máquina concreta. No necesitamos conocer los detalles de las
-instrucciones de máquina.
+instrucciones de máquina de cada procesador específico ni la composición de su memoria.
 
-Para resolver un problema comúnmente se usa una estrategia de *descomposición*
-en problemas mas simples para luego combinarlos en la solución final.
+Para resolver un problema comúnmente se usa una estrategia de *descomposición*:
+Esto es, partirlo en problemas mas simples para luego combinarlos en la solución final.
 
 Por ejemplo, en el programa de arriba, podríamos dejar el problema de calcular
 el valor absoluto (función `abs(v)`) para más tarde, asumiendo que será un
@@ -205,7 +205,7 @@ Si bien existen *máquinas programables* como un torno mecánico o una impresora
 
 Las computadoras modernas permiten almacenar los datos y las instrucciones de un
 programa en su *memoria* y una *unidad central de procesamiento (cpu)* se
-encarga de ejecutar las instrucciones en secuencia.
+encarga de ejecutar secuencialmente las instrucciones del programa.
 
 ----------------------------------------------------------------------------
 
@@ -226,12 +226,12 @@ encarga de ejecutar las instrucciones en secuencia.
 
 ## Tecnología: Computadoras digitales
 
-La siguiente figura muestra la arquitectura de una computadora digital.
+La siguiente figura muestra una arquitectura simplificada de una computadora digital.
 
 ![hardware .center](img/hardware.png ':size=50%')
 
-Cuando calculamos manualmente usamos papel y lápiz para ir *anotando* o
-*recordando* valores y resultados intermedios. En una computadora, el papel es
+Cuando calculamos manualmente comúnmente usamos papel y lápiz para ir *anotando*
+o *recordando* valores y resultados intermedios. En una computadora, el papel es
 la *memoria*. En la memoria también se almacenan las instrucciones del programa
 a ajecutar.
 
@@ -251,18 +251,18 @@ mundo exterior. Algunos dispositivos comunes son: teclados, mouse, pantallas,
 discos (almacenamiento), cámaras de video, micrófonos, parlantes, etc.
 
 > [!NOTE|label:Nota]
-> ¿Por qué *digitales*? Porque están formados por *circuitos lógicos (o, y, no,
-> ...)* y almacenan y procesan datos numéricos. La memoria contiene sólo
-> números, comúnmente representados en binario. Un dígito binario o *bit* es un
-> valor de $\{0,1\}$.
+> ¿Por qué *digitales*? Porque están formados por *circuitos lógicos* (que hacen
+> las operaciones que vieron en lógica) y almacenan y procesan datos numéricos.
+> La memoria contiene sólo números, comúnmente representados en binario. Un
+> dígito binario o *bit* es un valor del conjunto $\{0,1\}$.
 
 <iframe width="530" height="315" 
 src="https://www.youtube.com/embed/icrl3U0IVqw?si=qhdyxsDjpU8fuGQc" 
 title="El sistema binario" frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-En realidad el sistema binario se basa en los *sistemas numericos posicionales*,
-como el decimal.
+En realidad el sistema binario se basa en los *sistemas numéricos posicionales*,
+como el decimal que todos conocemos.
 
 Estos sistemas se basan en un conjunto de cifras que conforman su *base*. En
 decimal, las cifras son el conjunto $\{0,1,2,3,4,5,6,7,8,9\}$.
@@ -286,13 +286,17 @@ Ejemplos:
    (el 1101 en binario equivale al 13 en decimal)
 
 > [!NOTE|label:Pregunta]
-> ¿Por qué en *binario*? Porque es más simple diseñar un *bit* ya que tiene sólo
-> dos posibles estados o valores. Representar una cifra decimal requiere 10
-> estados posibles, lo cual requiere de dispositivos mucho más complejos.
+> ¿Por qué los sistemas digitales usan *binario*? Porque es más simple diseñar
+> circuitos y memorias ya que un *bit* ya que tiene sólo dos posibles estados o
+> valores. Representar una cifra decimal requiere 10 estados posibles, lo cual
+> requiere de un dispositivo mucho más complejo.
+
+La memoria es un conjunto de *celdas*. Cada *celda* tiene un conjunto de bits
+fijo, comúnmente 8 (un *byte*).
 
 Mas adelante veremos cómo es posible representar con simples bits números
-enteros, aproximaciones de reales, vectores y matrices, imágenes, sonido, etc.
+enteros, aproximaciones de reales, vectores, matrices, imágenes, sonido, etc.
 
-También veremos que podremos hacer animaciones mostrando en forma repetitiva
-diferentes imágenes en la pantalla. Nuestro cerebro interpreta esa sucesión de
-imágenes mostradas rápidamente como algo en movimiento.
+También veremos que podremos hacer animaciones mostrando una sucesión de
+imágenes en la pantalla una cierta velocidad. Nuestro cerebro interpreta esa
+secuencia de imágenes mostradas rápidamente como objetos en movimiento.
