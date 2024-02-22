@@ -42,27 +42,31 @@ Ya has utilizado funciones desde el comienzo invocándolas y también has escrit
 
 Actualmente el cerdo realiza movimientos aleatorios cada un segundo, decide un lugar (una posición **(x,y)** del área de juego) al azar al cual saltar y se desplaza hasta allí. En ningún momento el cerdo tiene en cuenta qué tan cerca ha saltado del angry bird, no existe la noción de visibilidad, detección o cercanía. Tan solo puede distingir si lo está tocando o no. Quisiéramos incorporarle al cerdo un grado de inteligencia mayor, es decir, que bajo alguna medida de distancia predefinida pueda saber si ha saltado cerca o no, y si lo está, entonces que se comporte como si lo hubiera visto y comience a saltar en la zona.
 
-***Actividad***: Se requiere implementar modificaciones en la función de movida del cerdo (``movePig()``), para incorporar la noción de detección por distancia de visibilidad y saltos acotados dentro de una zona determinada de manera variable.
+***Actividad***: Se requiere implementar modificaciones en la función de movida del cerdo (``movePig()``), para incorporar la noción de detección por distancia de visibilidad y saltos acotados dentro de una zona determinada, de manera variable.
 
-> [!NOTE|label:NOTA]
-> Analisis del problema: Si el área demarcada por el cuadrado verde en torno al cerdo fuese el área de visibilidad que el mismo tiene, entonces, de la siguiente imagen se desprende que el cerdo estaría viendo o detectando al angry bird.
+ *"Vamos por partes"* - JTR.
+
+> [!TIP|label:Análisis del problema]
+> Como resolver la detección: Si el área demarcada por el cuadrado verde en torno al cerdo fuese el área de visibilidad que el mismo tiene, entonces, de la siguiente imagen se desprende que el cerdo estaría viendo o detectando al angry bird. Podemos determinar el área a partir de conocer la posición del cerdo (sus variables de coordenadas *x* e *y*) y la distancia de detección, que podríamos mantener también en una variable. Luego podríamos computar si la posición del angry bird está dentro o fuera del area y así determinar si es visto o detectado, o no.
 
 ![sentencia if .center](img/visibleArea.png ':size=40%')
 
+Ya hemos resuelto con anterioridad como determinar si un punto pertenece al área de un cuadrado en el plano cartesiano. En aquella oportunidad ya contábamos con información sobre la posición y dimensiones del cuadrado, aquí deberemos determinar los valores de posición en función de la posición del cerdo y la distancia de visibilidad.
 
+![sentencia if .center](img/visibleAreaValues.png ':size=40%')
 
-  angry bird (``birdX`` y ``birdY``)
+  <!-- angry bird (``birdX`` y ``birdY``)
   cerdo (``pigX`` y ``pigY``).
-
+-->
 ## Iteración 3
 
-Actualmente el cerdo realiza movimientos .... TBC
+ TBC
 
 ***Actividad***: Vamos a ...
 
 ## Version 0.9
 
-Actualmente el cerdo realiza movimientos .... TBC
+TBC
 
 ***Actividad***: Vamos a ...
 
