@@ -18,31 +18,31 @@ Por medio de un *lenguaje o notación* que permite describir las computaciones
   codificadas para un tipo de máquina en particular
 
 * ***Lenguaje de programación***: Provee una máquina abstracta, de alto nivel.
-  Hace los programas portables mediante su traducción a códigos de máquina
-  específicas.
+  Hace los programas portables mediante su traducción (o codificación) a
+  instrucciones de máquina específicas.
 
 > [!NOTE|label:Lenguaje de programación]
-> Define una sintaxis y una semántica (o significado) para:
+> Define una sintaxis y una semántica (significado/representación) para:
 > - Describir valores numéricos (como 1, 3.14, -5), lógicos ($\{true, false\}$),
 >   caracteres ($\{'a','b'\ldots,'z',\ldots\}$), cadenas de caracteres como
 >   `"hola mundo"`, secuencias de datos como `[1,2,3,4,5]` y otros
 > - Definir *variables* y *constantes*: Darles nombres a datos. Ej: 
 >   `const Pi=3.14` y `var x = 0`
 > - Expresiones matemáticas ($a+b$, $(x + y) / z$, $\ldots$)
-> - Expresiones lógicas ($a<b$, $a <= b$, $\ldots$) y sus combinaciones con
->   los operadores $\leq$ (`==`), $\lor$ (`or` o `||`), $\land$ (`and` o `&&`),
+> - Expresiones lógicas ($a==b$, $a<b$, $a<=b$, $\ldots$) y sus combinaciones
+>   con los operadores $\lor$ (`or` o `||`), $\land$ (`and` o `&&`),
 >   $\neq$ (`!=`) y otros
 > - Sentencias de control de flujo de ejecución:
 >   - Secuencias (o bloques) de operaciones. Ej: `{ op1; op2; ... }`
->   - Condicionales como `if (x>0) y=1`  (*hacer y=1 si x es mayor que cero, sino
->     continuar*)
->   - Ciclos o repeticiones (como veremos mas adelante)
-> - Definir e invocar *funciones*
+>   - Condicionales como `if (x>0) y=1 else y=-1`  (*hacer y=1 si x es mayor que
+>     cero, sino hacer y=-1*)
+>   - Ciclos o repeticiones de operaciones
+> - Definir e invocar (usar) *funciones*
 
 -------------------------------------------------------------------------------
 
-1. Dada una grilla de $n \times n$ y un lápiz que comprende y puede ejecutar  las
-  siguientes primitivas u operaciones:
+1. Dada una grilla de $n \times n$ y un lápiz que comprende y puede ejecutar
+  las siguientes primitivas u operaciones (el lápiz sería la CPU):
 
     ![primitivas .center](img/primitivas.png ':size=50%')
 
@@ -64,10 +64,10 @@ Por medio de un *lenguaje o notación* que permite describir las computaciones
 Utilizaremos el editor web [p5.js](p5js.org) que se basa en el lenguaje de
 programación JavaScript. Los programas se ejecutan en nuestro navegador web.
 
-En este problema ya existen las siguientes primitivas (funciones) predefinidas:
+En este programa ya existen las siguientes primitivas (funciones) predefinidas:
 
 * `izquierda()`: mueve el cursor 1 paso a la izquierda
-* `derecha()`: </span> mueve el cursor 1 paso a la derecha
+* `derecha()`: mueve el cursor 1 paso a la derecha
 * `arriba()`: mueve el cursor 1 paso hacia arriba
 * `abajo()`: mueve el cursor 1 paso hacia abajo
 * `pintar()`: pinta en color negro la posición actual del cursor
@@ -82,11 +82,11 @@ En este problema ya existen las siguientes primitivas (funciones) predefinidas:
 > Invocar una función es como *reemplazarla por su cuerpo*.
 > Ejemplo: Si definimos la siguiente función
 > ``` js
-> // Definición               Invocación          equivale a
-> function linea() {          linea()             derecha()
->   derecha()                                     pintar()
->   pintar()                                      derecha()
->   derecha()                                     pintar()
+> // Definición         Invocación   equivale a
+> function linea() {    linea()      derecha()
+>   derecha()                        pintar()
+>   pintar()                         derecha()
+>   derecha()                        pintar()
 >   pintar()
 > }
 > ```
@@ -125,10 +125,11 @@ La notación de arriba significa: $\underbrace{a+a+\ldots+a}_{b \: veces}$
 
 -------------------------------------------------------------------------------
 
-Un Algoritmo que resuelve este problema es el siguiente (en lenguaje natural):**
+Un algoritmo que resuelve este problema es el siguiente (en lenguaje natural):**
 
-1. $a=?$, $b=?$, $resultado \leftarrow 0$, $veces \leftarrow 0$ `a` y `b` son
-   los *datos de entrada* o *inputs* `resultado` y `veces`: *variables auxiliares*
+1. $a=?$, $b=?$, $resultado \leftarrow 0$, $veces \leftarrow 0$
+   - `a` y `b` son los *datos de entrada* o *inputs*
+   - `resultado` y `veces` son *variables auxiliares*
 2. **Si** veces = b **ir** al paso 6 (terminar)
 3. resultado **←** resultado + a
 4. veces **←** veces + 1
@@ -143,7 +144,7 @@ Como vimos, los lenguajes de programación nos permiten abstraernos de los
 detalles de la máquina concreta. Escribamos en JavaScript el programa que
 multiplica dos números.
 
-Necesitamos repetir operaciones mientras se cumpla una condición. Sentencia
+Necesitamos repetir operaciones mientras se cumpla una condición. La sentencia
 `while` (*mientras*) al rescate
 
 ```js
@@ -154,8 +155,8 @@ b               // 3. Aquí ya salimos del ciclo
 ```
 
 > Esta sentencia es un ejemplo de una *abstracción* sintáctica y alternativa
-> para describir ciclos sin usar *saltos* (como *volver al paso 2*, por
-> ejemplo).
+> para describir ciclos sin usar *saltos* (como por ejemplo, *volver al paso
+> 2*).
 
 <iframe src="https://editor.p5js.org/compuUNRCIngreso/sketches/-j2BmBYG5" 
         width="100%" height="900">
@@ -185,7 +186,8 @@ este problema.
 > lenguaje?***
 >
 > 1. **NO: Programar es resolver problemas mediante algoritmos**
-> 2. Un lenguaje de programación sólo permite describir programas
+> 2. Un lenguaje de programación sólo nos da una notación para escribir
+>    programas
 >
 > Para diseñar y escribir una solución (programa) se requiere:
 >   1. Definir cómo representar el problema (estructuras de datos)
@@ -194,4 +196,5 @@ este problema.
 Otros problemas:
 
 - Almacenamiento y procesamiento de grandes volúmenes de datos (bases de datos)
-- Lidiar con la complejidad del problema para lograr programas eficientes y usables
+- Lidiar con la complejidad del problema para lograr programas eficientes (que
+  no requieran tanta memoria y tiempo de procesamiento) para que sean usables
