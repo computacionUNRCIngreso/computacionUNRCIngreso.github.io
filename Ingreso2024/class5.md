@@ -6,7 +6,7 @@ pequeño videojuego.
 El videojuego a desarrollar esta inspirado en la narrativa del famoso [Angry Birds](https://es.wikipedia.org/wiki/Angry_Birds).
 
 
-## Nuestro videojuego versión 0.1
+## Nuestro videojuego - *Versión 0.1*
 
 En esta variante del juego el Rey Cerdo intenta atrapar (aplastando) al Angry Bird, para esto, cada un cierto tiempo determina una posición a la cual trasladarse (de manera aleatoria) y, si el Angry Bird se encuentra justo en un cierto rango de distancia de la posición elegida por el cerdo, entonces el angry bird será atrapado. El objetivo por el momento es tratar de escapar al cerdo. El jugador podrá mover al Angry Bird por toda el area de juego para tratar de escapar, utilizando las teclas de dirección (&larr; , &uarr; , &darr; , &rarr;).
 
@@ -20,7 +20,7 @@ de la pantalla). En concreto deberas programar las funciones ``moveForward()``, 
 <!-- ¿ meter la idea de requisitos ?-->
 
 > [!NOTE|label:NOTA]
-> Las posiciones de los personajes en el area de juego están representadas por valores almacenados en cuatro variables, dos para las coordenadas *x* e *y* del angry bird (``birdX`` y ``birdY``), y otras dos para las del cerdo (``pigX`` y ``pigY``). Cualquier cambio en el valor de esas variables se verá reflejado como un cambio de posición del personaje en la pantalla de juego.
+> Las posiciones de los personajes en el area de juego están representadas por valores almacenados en cuatro variables, dos para las coordenadas *x* e *y* del angry bird (``birdX`` y ``birdY``), y otras dos para las del cerdo (``pigX`` y ``pigY``). Cualquier cambio en el valor de esas variables se verá reflejado como un cambio de posición del personaje en la pantalla de juego. El área de juego tiene una dimensión de 600 puntos horizontal por 400 puntos vertical.
 
 ###  Refrescando un poco: ¿Cómo se escriben las funciones?
 
@@ -38,7 +38,7 @@ Ya has utilizado funciones desde el comienzo invocándolas y también has escrit
 
 >[!NOTE|label:NOTA] Los parámetros definidos entre los paréntesis pueden ser utilizados como variables visibles dentro del cuerpo de la función, que traeran los valores con los que se haya invocado a la función a la hora de usarla.
 
-## Iteración 2
+## Iteración 2 - *Detectando al Angry Bird*
 
 Actualmente el cerdo realiza movimientos aleatorios cada un segundo, decide un lugar (una posición **(x,y)** del área de juego) al azar al cual saltar y se desplaza hasta allí. En ningún momento el cerdo tiene en cuenta qué tan cerca ha saltado del angry bird, no existe la noción de visibilidad, detección o cercanía. Tan solo puede distingir si lo está tocando o no. Quisiéramos incorporarle al cerdo un grado de inteligencia mayor, es decir, que bajo alguna medida de distancia predefinida pueda saber si ha saltado cerca o no, y si lo está, entonces que se comporte como si lo hubiera visto y comience a saltar en la zona.
 
@@ -46,227 +46,54 @@ Actualmente el cerdo realiza movimientos aleatorios cada un segundo, decide un l
 
  *"Vamos por partes"* - JTR.
 
-> [!TIP|label:Análisis del problema]
-> Como resolver la detección: Si el área demarcada por el cuadrado verde en torno al cerdo fuese el área de visibilidad que el mismo tiene, entonces, de la siguiente imagen se desprende que el cerdo estaría viendo o detectando al angry bird. Podemos determinar el área a partir de conocer la posición del cerdo (sus variables de coordenadas *x* e *y*) y la distancia de detección, que podríamos mantener también en una variable. Luego podríamos computar si la posición del angry bird está dentro o fuera del area y así determinar si es visto o detectado, o no.
+> [!TIP|label:Análisis del problema - primera parte]
+> ¿Cómo resolver la detección?: Si la zona demarcada por el cuadrado verde en torno al cerdo fuese el área de visibilidad que el mismo tiene, entonces, de la siguiente imagen se desprende que el cerdo estaría viendo o detectando al angry bird. Aparecen aquí dos *subproblemas* para poder calcular esto, por un lado necesitamos obtener los valores que determinan el cuadrado (qué es de posición dinamica) y por el otro calcular si la posición del angry bird está dentro o fuera del mismo.
 
-![sentencia if .center](img/visibleArea.png ':size=40%')
+![img analisis 1](img/visibleArea.png ':size=40%') ![img analisis 1b](img/visibleArea2.png ':size=40%')
 
-Ya hemos resuelto con anterioridad como determinar si un punto pertenece al área de un cuadrado en el plano cartesiano. En aquella oportunidad ya contábamos con información sobre la posición y dimensiones del cuadrado, aquí deberemos determinar los valores de posición en función de la posición del cerdo y la distancia de visibilidad.
+Con algunas cuentas sencillas podemos determinar dinamicamente los valores del cuadrado, a partir de conocer la posición del cerdo (sus variables de coordenadas *x* e *y*) y la distancia de detección visual (indicada como <span style="color: red;">VD</span> en el siguiente grafico). Una vez obtenidos los valores que describen la locación del cuadrado en el plano cartesiano, ya sabemos de ejercicios anteriores como calcular si un punto (en este caso ![img angry bird](img/birdAvatar.png ':size=2%')) está o no dentro del mismo. 
 
-![sentencia if .center](img/visibleAreaValues.png ':size=40%')
+![img analisis 2 .center](img/visibleAreaValues.png ':size=40%')
+
+> [!NOTE|label:NOTA] En realidad conocemos el punto medio del cuadrado (en este caso ![img pig](img/pigAvatar.png ':size=2%')) y, si observamos la forma en la que está implementada la decición de la captura, podemos ver que no es necesario el calculo explicito del cuadrado...
+
+
+> [!TIP|label:Análisis del problema - segunda parte]
+> ¿Cómo resolvemos las zonas de salto variable?: El cálculo aleatorio para la nueva posición del cerdo se lleva a cabo al comienzo de la función ``movePig()`` y los valores resultantes estan acotados por las variables límites. Actualizando dinamicamente estas variables lograremos ir acotando las zonas de salto en cada iteración. Aparecen aquí dos *subproblemas*, ¿dónde las actualizo? y ¿cómo calcular su valor?
+
+```
+function movePig() {
+    
+    // Calcular la nueva posición a la que moverá el cerdo
+    pigX = randomNumber(limiteInferiorX,limiteSuperiorX);
+    pigY = randomNumber(limiteInferiorY,limiteSuperiorY);
+
+    ...
+
+}
+    
+```
+
+
 
   <!-- angry bird (``birdX`` y ``birdY``)
   cerdo (``pigX`` y ``pigY``).
 -->
 ## Iteración 3
 
- TBC
+ TBD
 
-***Actividad***: Vamos a ...
+***Actividad***: Agreguemos objetivos y ganemos vidas...
 
-## Version 0.9
 
-TBC
 
-***Actividad***: Vamos a ...
 
-<!--
 
-## Algunos conceptos importantes para escribir un programa que resuelva este problema:
 
+full :https://editor.p5js.org/compuUNRCIngreso/full/NbtC4_QIE
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/NbtC4_QIE" width="800" height="600"></iframe>
 
-Si recordamos  al ejemplo de la primera clase [multiplicar dos números](#nuestro-programa-que-multiplica-dos-números-en-javaScript), hemos utilizado variables para recordar valores,
+edit :https://editor.p5js.org/compuUNRCIngreso/sketches/NbtC4_QIE
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/sketches/NbtC4_QIE" width="800" height="600"> ...</iframe>
 
-## ¿Qué son las variables? 
- 
-* Una variabla es la combinación de las siguientes cosas: 
 
-* Un nombre  (o identificador) a elección 
-
-* Una dirección en la memoria de la computadora 
-* Un valor almacenado en esa dirección de la memoria que puede cambiar durante la ejecución del programa
-
-* Un tipo, que especifica cuanto espacio ocupa ese valor en la memoria, y cómo interpretar este valor 
-
-> [!WARNING|label: IMPORTANTE]
->  Para usar una variable, necesitas en primer lugar declarar la variable 
-
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-
-
-## ¿Cómo cambiamos el valor almacenado en una variable?
-
-***Asignación***: Una asignación cambia el valor de una variable. Una asignación es una sentencia de la forma:
-   ```
-    nombre_variable = expresion;
-   ```
-
-Donde  ``nombre_variable`` es el nombre elegido para la variable. La asignación cambia el valor de la variable  ``nombre_variable`` por el valor de  ``expresion``
-
-<span style="color:red">  <font size = 6 >  acá abajo la idea es utilizar este espacio para ejemplos on the fly
-cambiar el valor de las variables, imprimir , etc. Hay una función que retorna un valor
-</font></span>
-
-Ejemplo: 
-
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/l56tAFfey" width="800" height="600"></iframe>
-
-> [!TIP|label: NOTA]
-> Link para abrir este ejermplo en otra ventana del navegador [variables](https://editor.p5js.org/compuUNRCIngreso/full/l56tAFfey)
-
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-
-## Sentencia Condicional ``if``
-
-``` 
-    ...
-    if (CONDICION) {
-        [BLOQUE DE SENTENCIAS] 
-    }
-
-    [BLOQUE DE SENTENCIAS SIGUIENTES]
-    ...
-```
-
-![sentencia if .center](img/if.png ':size=40%')
-
-
-
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-
- 
-## Sentencia Condicional ``if-else`` 
-
-
-```
-    ...
-    if (CONDICION) {
-        [BLOQUE DE SENTENCIAS 1] 
-    }else{
-        [BLOQUE DE SENTENCIAS 2] 
-    }
-
-    [BLOQUE DE SENTENCIAS SIGUIENTES]
-    ...
-
-```
-![sentencia if .center](img/if-else.png ':size=60%')
-
-
-
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-
-##   Operadores de comparación
- 
-Los operadores de comparación nos permiten comparar el valor de dos expresiones:
-
-```
-    EXPR > EXPR
-    EXPR >= EXPR
-    EXPR < EXPR
-    EXPR <= EXPR
-    EXPR == EXPR
-    EXPR != EXPR
-```
-
-Estas expresiones booleanas, o condiciones, pueden ser usadas en el contexto de las sentencias condicionales.
-
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  
-
-##  Ahora si volvamos a tirar el dado...
-
-> [!TIP|label:AYUDA]
-> Algunas funciones de utilidad [fill()](https://p5js.org/es/reference/#/p5/fill) y [circle()](https://p5js.org/es/reference/#/p5/circle) para resolver el problema.
-
- <span style="color:red"> <font size = 6 >acá se usan  funciones con parametros </font> </span>
- 
-
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/Jssw9sFDA" width="800" height="600"></iframe>
-
-> [!TIP|label:NOTA]
-> Link para abrir este ejercicio en otra ventana del navegador [tirar los dados](https://editor.p5js.org/compuUNRCIngreso/full/Jssw9sFDA) 
-
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-
-
-## Actividad 2: Dónde esta el punto (1)?
- 
-
-El Lienzo está dividido en dos secciones por una línea recta horizontal.  Se  proveen variables ``mouseX`` y  ``mouseY`` que almacenan las coordenadas ``(x, y)`` del punto sobre el Lienzo en donde se hace ‘click’. Escribir un programa que decida si se hizo un click por encima o por debajo de la línea. 
-
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/3eExV-33b" width="800" height="600"></iframe>
-
-> [!TIP|label:NOTA]
-> Link para abrir este ejercicio en otra ventana del navegador [Donde esta el punto (1)?](https://editor.p5js.org/compuUNRCIngreso/full/3eExV-33b)
-
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-
-
-## Actividad 3: Dónde esta el punto (2)? 
-
-En este caso, encontrarás el Lienzo divido en cuatro cuadrantes. Nuevamente se proveen las variables que almacenan las coordenadas ``(x, y)`` del punto sobre el Lienzo donde se hizo 'click' (``mouseX`` y  ``mouseY``). 
-
-Escribir un programa que decida  en qué cuadrante se ha hecho click (arriba-derecha, arriba-izquierda, abajo-derecha o abajo- izquierda). 
-
-
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/OnSK_3K-7" width="800" height="600"></iframe>
-
-
-> [!TIP|label:NOTA]
-> Link para abrir este ejercicio en otra ventana del navegador [Donde esta el punto (2)?](https://editor.p5js.org/compuUNRCIngreso/full/OnSK_3K-7)
- 
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-
-##  Actividad 4: Le dí a la figura?
- 
-Cuando ejecutas este programa (botón ``play`` en la esquina superior izquierda), se dibuja un círculo de tamaño aleatorio en el lienzo, las partes (centro y diametro) de este círculo   quedarán almacenadas en las variables: ``xCentro``, ``yCentro`` y ``diametro``. Además, contamos con las variables ``mouseX`` y ``mouseY``,  utilizadas anteriormente,  que almacenan las coordenadas de un 'click'. Esta actividad consiste en escribir un programa que  decida si se hizo 'click' dentro del círculo o fuera de él.
-
-
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/N4XRJQjAK" width="800" height="600"></iframe>
-
-> [!TIP|label:NOTA]
-> Link para abrir este ejercicio en otra ventana del navegador [Le dí a la figura?](https://editor.p5js.org/compuUNRCIngreso/full/N4XRJQjAK) 
-
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-
-
-##  Actividad 5: Le dí a la figura (2)?
- 
-Cuando ejecutas este programa (botón ``play`` en la esquina superior izquierda), se dibuja un cuadrado de tamaño aleatorio en el lienzo, el tamaño de los lados de este cuadrado   quedará almacenada en la variable: ``lado``, y las coordenadas `(x,y)` de la esquina superior izquierda del cuadrado en las variables `xCoord` e `yCoord` respectivamente. Además, contamos con las variables ``mouseX`` y ``mouseY``,  que almacenan las coordenadas de un 'click'. Esta actividad consiste en escribir un programa que  decida si se hizo 'click' dentro del cuadrado o fuera de él.
-
-
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/obPixCPm6"  width="800" height="600">></iframe>
-
-
-> [!TIP|label:NOTA]
-> Link para abrir este ejercicio en otra ventana del navegador [Le dí a la figura?](https://editor.p5js.org/compuUNRCIngreso/sketches/obPixCPm6)
-
-
-##  Actividad 6: Que no se escape Angry Bird!
-
-
-
-Cuando ejecutas este programa (botón ``play`` en la esquina superior izquierda), tendrás a **Angry Bird** en su posición inicial, has click en el lienzo para comenzar.
-
-Cada vez que presionas la tecla `->` **Angry Bird** se mueve unos pasos hacia adelante!. Analicemos el código provisto con detalle. Podrás notar que **Angry Bird** desaparece cuando sobrepasa los límites del lienzo. La tarea consiste en modificar el código provisto para que **Angry Bird** vuelva a comenzar desde su posición inicial cuando este sobrepasa los límites del lienzo. 
-
-
-Algunas variables necesarias para resolver este problema:
-
-* `windowWidth`: almacena el  ancho del lienzo
-* `windowHeight`: almacena la altura del lienzo
-
-* `birdX`: almacena la  coordenada x de la  posición de angry bird en el lienzo
-* `birdY`: almacena la  coordenada y de la  posición de angry bird en el lienzo
-
-
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/K22t_WWgl" . width="800" height="600">></iframe>
-
-
-> [!TIP|label:NOTA]
-> Link para abrir este ejercicio en otra ventana del navegador [Angry Bird en movimiento](https://editor.p5js.org/compuUNRCIngreso/sketches/K22t_WWgl)
- 
-> [!TIP|label:NOTA]
->  Si te animás podes definir la la función **moveBackward()**,  que mueve a **AngryBird** 20 pasos hacia atrás cuando se presiona la tecla **<-**  
-
- -->
