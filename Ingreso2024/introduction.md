@@ -250,7 +250,7 @@ Los dispositivos de entrada-salida permiten que la computadora interactúe con e
 mundo exterior. Algunos dispositivos comunes son: teclados, mouse, pantallas,
 discos (almacenamiento), cámaras de video, micrófonos, parlantes, etc.
 
-> [!NOTE|label:Nota]
+> [!WARNING|label:Preguntas]
 > ¿Por qué *digitales*? Porque están formados por *circuitos lógicos* (que hacen
 > las operaciones que vieron en lógica) y almacenan y procesan datos numéricos.
 > La memoria contiene sólo números, comúnmente representados en binario. Un
@@ -285,7 +285,7 @@ Ejemplos:
 
    (el 1101 en binario equivale al 13 en decimal)
 
-> [!NOTE|label:Pregunta]
+> [!WARNING|label:Preguntas]
 > ¿Por qué los sistemas digitales usan *binario*? Porque es más simple diseñar
 > circuitos y memorias ya que un *bit* ya que tiene sólo dos posibles estados o
 > valores. Representar una cifra decimal requiere 10 estados posibles, lo cual
