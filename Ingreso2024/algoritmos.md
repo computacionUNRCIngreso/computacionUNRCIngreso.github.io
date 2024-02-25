@@ -55,7 +55,7 @@ Por medio de un *lenguaje o notación* que permite describir las computaciones
 
        ![dos-cuadrados .center](img/dos-cuadrados.png ':size=50%')
 
-> [!NOTE|label:Preguntas]
+> [!WARNING|label:Preguntas]
 > 1. ¿Es la solución planteada en el ejercicio anterior la única posible? 
 > 2. ¿Y si deseamos hacer 10 cuadrados?
 
@@ -72,7 +72,7 @@ En este programa ya existen las siguientes primitivas (funciones) predefinidas:
 * `abajo()`: mueve el cursor 1 paso hacia abajo
 * `pintar()`: pinta en color negro la posición actual del cursor
 
-> [!NOTE|label:IMPORTANTE]
+> [!NOTE|label:Funciones]
 > Podemos ver una *función* como un *miniprograma* que realiza alguna acción.
 > Para ejecutar una función se la debe *invocar* mediante su nombre y sus
 > argumentos o parámetros entre paréntesis (como cuando en matemáticas
@@ -93,7 +93,7 @@ En este programa ya existen las siguientes primitivas (funciones) predefinidas:
 
 -------------------------------------------------------------------------------
 
-En este ejercicio el código en `cuadrado.js` *define* la función `dibujar()`, en
+En este ejercicio el código en `ej_dibujar_en_la_cuadricula.js` *define* la función `dibujar()`, en
 la cual deberán escribir la secuencia de acciones (invocar a funciones) para que
 dibuje un cuadrado.
 
