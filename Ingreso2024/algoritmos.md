@@ -174,7 +174,7 @@ b               // 3. Aquí ya salimos del ciclo
 
 -------------------------------------------------------------------------------
 
-### Ejercicio extra para resolver (en casa)
+### Ejercicio extra (para resolver en casa)
 
 Calcular la suma de los números menores a uno dado, digamos $m$. Dar una
 descripción matemática del problema, luego escriba un algoritmo para resolver

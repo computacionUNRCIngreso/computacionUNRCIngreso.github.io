@@ -36,7 +36,7 @@ Una variable es la combinación de las siguientes cosas:
 ***Asignación***: Una asignación cambia el valor de una variable. Una asignación es una sentencia de la forma:
    
    ```js
-    nombre_variable = expresion;
+    nombre_variable = expresion
    ```
 
 Donde  ``nombre_variable`` es el nombre elegido para la variable. La asignación cambia el valor de la variable  ``nombre_variable`` por el valor de  ``expresion``
@@ -132,7 +132,7 @@ La tarea consiste en escribir un programa que decida si se hizo  ***click*** por
 > Notar que cada vez que se hace ***click*** sobre el lienzo, en la esquina inferior derecha se muestran las coordenadas del ***click***! Esto puede ayudarte al inicio para ubicarte en el sistema de coordenadas cartesianas.  
 
 
-> [!TIP|label:IMPORTANTE]
+> [!WARNING|label:Pregunta]
 > Nuestro lienzo esta representado como un ***sistema de coordenadas cartesianas***! ¿Dónde esta representado el punto `(0,0)` en este sistema de coordenadas?
  
 
@@ -196,12 +196,12 @@ Cuando ejecutas este programa (botón  ![ejecutar](img/runbtn.svg)), tendrás a 
 Cada vez que presionas la tecla `->`, ***Angry Bird*** se mueve unos pasos hacia adelante!
  
 
-> [!NOTE|label:IMPORTANTE]
+> [!WARNING|label:ATENCIÓN]
 > Nos detenemos y analizamos el código provisto con detalle. 
 
 
 
-**Angry Bird** desaparece cuando sobrepasa los límites del lienzo! La tarea consiste en modificar el código provisto para que ***Angry Bird*** vuelva a comenzar desde su posición inicial cuando éste sobrepasa los límites del lienzo. 
+***Angry Bird*** desaparece cuando sobrepasa los límites del lienzo! La tarea consiste en modificar el código provisto para que ***Angry Bird*** vuelva a comenzar desde su posición inicial cuando éste sobrepasa los límites del lienzo. 
 
 
 Algunas variables necesarias para resolver este problema:
@@ -219,7 +219,8 @@ Algunas variables necesarias para resolver este problema:
 > [!TIP|label:NOTA]
 > Link para abrir este ejercicio en otra ventana del navegador [Angry Bird en movimiento](https://editor.p5js.org/compuUNRCIngreso/sketches/K22t_WWgl)
  
-> [!TIP|label:Ejercicio]
->  Si te animás podes definir la la función **moveBackward()**,  que mueve a ***AngryBird*** 20 pasos hacia atrás cuando se presiona la tecla `<-`  
+### Ejercicio extra (para resolver en casa)
+
+Si te animás podes definir la la función **moveBackward()**,  que mueve a ***AngryBird*** 20 pasos hacia atrás cuando se presiona la tecla `<-`  
 
  
