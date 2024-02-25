@@ -104,9 +104,9 @@ sistema ejecutará la función `dibujar()`.
         width="800" height="600">
 </iframe>
 
-
-Link para abrir este ejemplo en otra ventana del navegador [dibujar en la
-cuadricula](https://editor.p5js.org/compuUNRCIngreso/sketches/zZbT3F77b)
+> [!TIP|label:NOTA]
+> Link para abrir este ejemplo en otra ventana del navegador [dibujar en la
+> cuadricula](https://editor.p5js.org/compuUNRCIngreso/sketches/zZbT3F77b)
 
 -------------------------------------------------------------------------------
 
@@ -145,7 +145,7 @@ detalles de la máquina concreta. Escribamos en JavaScript el programa que
 multiplica dos números.
 
 Necesitamos repetir operaciones mientras se cumpla una condición. La sentencia
-`while` (*mientras*) al rescate
+`while` (*mientras*) al rescate!
 
 ```js
 while (c) {     // 1. Evaluar c. Si c es verdadero, ejecutar a; sino b
@@ -166,7 +166,7 @@ b               // 3. Aquí ya salimos del ciclo
 > Link para abrir este ejemplo en otra ventana del navegador  [multiplicar dos
 > números](https://editor.p5js.org/compuUNRCIngreso/sketches/-j2BmBYG5)
 
-> [!NOTE|label: NOTA]
+> [!NOTE|label: Variable]
 > Una ***variable*** representa un valor (como en matemáticas) que se puede usar
 > mediante su nombre o identificador. 
 > En un programa, cada variable corresponde a una celda de la memoria la cual
@@ -174,7 +174,7 @@ b               // 3. Aquí ya salimos del ciclo
 
 -------------------------------------------------------------------------------
 
-### Ejercicio para resolver
+### Ejercicio extra para resolver (en casa)
 
 Calcular la suma de los números menores a uno dado, digamos $m$. Dar una
 descripción matemática del problema, luego escriba un algoritmo para resolver
