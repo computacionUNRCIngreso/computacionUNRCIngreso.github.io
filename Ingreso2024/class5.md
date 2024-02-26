@@ -39,7 +39,8 @@ Ya has utilizado funciones desde el comienzo invocándolas y también has escrit
     }
 ```
 
->[!NOTE|label:NOTA] Los parámetros definidos entre los paréntesis pueden ser utilizados como variables visibles dentro del cuerpo de la función, que traerán los valores con los que se haya invocado a la función a la hora de usarla.
+> [!WARNING|label:Importante] 
+> Los parámetros definidos entre los paréntesis pueden ser utilizados como variables visibles dentro del cuerpo de la función, permitiendo que la función utilice los valores pasados al ser invocada.
 
 ## Iteración 2 - *Detectando al Angry Bird*
 
