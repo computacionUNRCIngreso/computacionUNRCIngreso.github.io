@@ -42,9 +42,10 @@ Ya has utilizado funciones desde el comienzo invocándolas y también has escrit
 > [!WARNING|label:Importante] 
 > Los parámetros definidos entre los paréntesis pueden ser utilizados como variables visibles dentro del cuerpo de la función, permitiendo que la función utilice los valores pasados al ser invocada.
 
-## Iteración 2 - *Detectando al Angry Bird*
+## Iteración 2 - *Detectando a Angry Bird*
 
-Actualmente el cerdo realiza movimientos aleatorios cada un segundo, decide un lugar (una posición **(x,y)** del área de juego) al azar al cual saltar y se desplaza hasta allí. En ningún momento el cerdo tiene en cuenta qué tan cerca ha saltado del angry bird, no existe la noción de visibilidad, detección o cercanía. Tan solo puede distingir si lo está tocando o no. Quisiéramos incorporarle al cerdo un grado de inteligencia mayor, es decir, que bajo alguna medida de distancia predefinida pueda saber si ha saltado cerca o no, y si lo está, entonces que se comporte como si lo hubiera visto y comience a saltar en la zona.
+En la situación actual, el cerdo se mueve de manera aleatoria cada un segundo, seleccionando una posición, ***(x,y)***,  al azar en el área de juego para saltar hacia ella. Sin embargo, no considera la proximidad a ***Angry Bird*** en ningún momento, careciendo de visibilidad, detección o noción de cercanía. Su único criterio es si está tocando a  ***Angry Bird*** o no. Para mejorar su comportamiento, deseamos dotar al cerdo de un mayor grado de inteligencia. Esto implica que, basándose en una medida de distancia predefinida, pueda determinar si ha saltado cerca de ***Angry Bird***. En caso afirmativo, debería comportarse como si lo hubiera visto, lo que significa iniciar movimientos en la zona.
+
 
 ***Actividad***: Se requiere implementar modificaciones en la función de movida del cerdo (``movePig()``), para incorporar la noción de detección por distancia de visibilidad y saltos acotados dentro de una zona determinada, de manera variable.
 
