@@ -23,13 +23,15 @@ A medida que avancemos en esta sección iremos añadiendo más complejidad al ju
 > [!TIP|label:Ayuda]
 > Las posiciones de los personajes en el área de juego están representadas por valores almacenados en cuatro variables, dos para las coordenadas *x* e *y* de ***Angry Bird*** (``birdX`` y ``birdY``), y otras dos para las del cerdo (``pigX`` y ``pigY``). Cualquier modificación en el valor de estas variables se traducirá en un cambio de posición del personaje en la pantalla de juego. El área de juego tiene una dimensión de 600 puntos horizontal x 400 puntos vertical.
 
-###  Refrescando un poco: ¿Cómo se escriben las funciones?
+###  Revisemos brevemente: ¿Cómo se escriben las funciones?
 
-Ya has utilizado funciones desde el comienzo invocándolas y también has escrito codigo para completar su definición (dentro su cuerpo ```{... }```). Pero ya es hora de detenernos en algunos detalles y dejarlos bien en claro para continuar:
+Ya has utilizado funciones desde el comienzo invocándolas y también has escrito código para completar su definición (dentro de su cuerpo ```{... }```). Pero ya es hora de detenernos en algunos detalles y dejarlos bien en claro antes de avanzar:
 
-* Cuando queremos utilizar una función (ejecutarla) simplemente escribimos su nombre seguido de un par de paréntesis y opcionalmente finalizamos con un punto y coma (``;``), por ejemplo escribimos ``moveForward();`` para invocarla.
-* Para que una invocación resulte, previamente debemos definir la función en algún lado, escribirla siguiendo algunas reglas sintácticas establecidad en el lenguaje.
-* La definición de una función comienza con la palabra reservada *``function``*, que es seguida del nombre que le demos a la función; luego un par de paréntesis (``()``), entre ellos **puede o no haber uno o más nombres (identificadores)**, que llamaremos parametros de la función; y a continuación de los paréntesis un par de llaves (``{... }``) que encerrarán todo el cuerpo de la función, todas las instrucciones o sentencias que definen lo que hace la función van entre estas llaves.
+* Cuando queremos utilizar una función (ejecutarla o invocarla) escribimos su nombre seguido de un par de paréntesis y opcionalmente finalizamos con un punto y coma (``;``), por ejemplo escribimos ``moveForward();`` para invocarla.
+
+* Para que una invocación resulte, previamente debemos definir la función en algún lado, es decir, escribirla siguiendo algunas reglas sintácticas establecidad en el lenguaje.
+
+* La definición de una función comienza con la palabra reservada ``function``, seguida del nombre que le asignamos a la función. Después de esto, se colocan un par de paréntesis (``()``). Dentro de estos paréntesis **puede o no haber uno o más nombres (identificadores)**, que denominaremos parámetros de la función. Finalmente, a continuación de los paréntesis, se colocan un par de llaves (``{... }``) que encierran el cuerpo de la función, es decir, las instrucciones o sentencias que definen lo que realiza la función.
 
 ```js
    function nombreDeLaFunción( parametro1, parametro2,... , parametro_n) ) {
@@ -37,7 +39,7 @@ Ya has utilizado funciones desde el comienzo invocándolas y también has escrit
     }
 ```
 
->[!NOTE|label:NOTA] Los parámetros definidos entre los paréntesis pueden ser utilizados como variables visibles dentro del cuerpo de la función, que traeran los valores con los que se haya invocado a la función a la hora de usarla.
+>[!NOTE|label:NOTA] Los parámetros definidos entre los paréntesis pueden ser utilizados como variables visibles dentro del cuerpo de la función, que traerán los valores con los que se haya invocado a la función a la hora de usarla.
 
 ## Iteración 2 - *Detectando al Angry Bird*
 
