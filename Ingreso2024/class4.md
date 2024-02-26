@@ -84,6 +84,22 @@ Esta estructura también la  usaremos cuando sabemos exactamente el número de r
 
 **Volvamos al ejercicio anterior y veamos un ejemplo!**
 
+> Notar que en este caso se define (por defecto) un incremento de 1, aunque es posible definir un incremento mayor. Por ejemplo:
+> ```js 
+>    ...
+> 
+>    for (var i of range(1,5,2) ){
+>        pintar()
+>        derecha()
+>    }
+>    [BLOQUE DE SENTENCIAS SIGUIENTES]
+>    ...
+>
+> ```
+> Aquí,  el incremento es `i = i + 2`,  entonces.. ¿Cuantas veces entra al ciclo en este caso? 
+
+
+
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
 
