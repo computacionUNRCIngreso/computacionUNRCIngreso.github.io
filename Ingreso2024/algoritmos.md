@@ -176,7 +176,7 @@ b               // 3. Aquí ya salimos del ciclo
 
 ### Ejercicio extra (para resolver en casa)
 
-Calcular la suma de los números menores a uno dado, digamos $m$. Dar una
+Calcular la suma de los números naturales menores a uno dado, digamos $m$. Dar una
 descripción matemática del problema, luego escriba un algoritmo para resolver
 este problema.
 

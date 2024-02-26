@@ -298,5 +298,5 @@ Mas adelante veremos cómo es posible representar con simples bits números
 enteros, aproximaciones de reales, vectores, matrices, imágenes, sonido, etc.
 
 También veremos que podremos hacer animaciones mostrando una sucesión de
-imágenes en la pantalla una cierta velocidad. Nuestro cerebro interpreta esa
+imágenes en la pantalla a una cierta velocidad. Nuestro cerebro interpreta esa
 secuencia de imágenes mostradas rápidamente como objetos en movimiento.
