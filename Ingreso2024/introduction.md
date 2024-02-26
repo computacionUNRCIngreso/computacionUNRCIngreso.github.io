@@ -287,7 +287,7 @@ Ejemplos:
 
 > [!WARNING|label:Preguntas]
 > ¿Por qué los sistemas digitales usan *binario*? Porque es más simple diseñar
-> circuitos y memorias ya que un *bit* ya que tiene sólo dos posibles estados o
+> circuitos y memorias ya que un *bit* tiene sólo dos posibles estados o
 > valores. Representar una cifra decimal requiere 10 estados posibles, lo cual
 > requiere de un dispositivo mucho más complejo.
 
