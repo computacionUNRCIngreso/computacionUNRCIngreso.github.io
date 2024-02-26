@@ -20,8 +20,8 @@ A medida que avancemos en esta sección iremos añadiendo más complejidad al ju
 
 <!-- ¿ meter la idea de requisitos ?-->
 
-> [!NOTE|label:NOTA]
-> Las posiciones de los personajes en el area de juego están representadas por valores almacenados en cuatro variables, dos para las coordenadas *x* e *y* del angry bird (``birdX`` y ``birdY``), y otras dos para las del cerdo (``pigX`` y ``pigY``). Cualquier cambio en el valor de esas variables se verá reflejado como un cambio de posición del personaje en la pantalla de juego. El área de juego tiene una dimensión de 600 puntos horizontal por 400 puntos vertical.
+> [!TIP|label:Ayuda]
+> Las posiciones de los personajes en el área de juego están representadas por valores almacenados en cuatro variables, dos para las coordenadas *x* e *y* de ***Angry Bird*** (``birdX`` y ``birdY``), y otras dos para las del cerdo (``pigX`` y ``pigY``). Cualquier modificación en el valor de estas variables se traducirá en un cambio de posición del personaje en la pantalla de juego. El área de juego tiene una dimensión de 600 puntos horizontal x 400 puntos vertical.
 
 ###  Refrescando un poco: ¿Cómo se escriben las funciones?
 
@@ -31,7 +31,7 @@ Ya has utilizado funciones desde el comienzo invocándolas y también has escrit
 * Para que una invocación resulte, previamente debemos definir la función en algún lado, escribirla siguiendo algunas reglas sintácticas establecidad en el lenguaje.
 * La definición de una función comienza con la palabra reservada *``function``*, que es seguida del nombre que le demos a la función; luego un par de paréntesis (``()``), entre ellos **puede o no haber uno o más nombres (identificadores)**, que llamaremos parametros de la función; y a continuación de los paréntesis un par de llaves (``{... }``) que encerrarán todo el cuerpo de la función, todas las instrucciones o sentencias que definen lo que hace la función van entre estas llaves.
 
-```
+```js
    function nombreDeLaFunción( parametro1, parametro2,... , parametro_n) ) {
         [BLOQUE DE SENTENCIAS] 
     }
