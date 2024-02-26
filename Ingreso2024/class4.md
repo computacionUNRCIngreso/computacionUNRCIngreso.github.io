@@ -174,7 +174,7 @@ La primera  actividad consiste escribir un programa que dibuje  la siguiente tra
 > [!TIP|label:NOTA]
 > Link para abrir este ejercicio en otra ventana del navegador [El Caminante](https://editor.p5js.org/compuUNRCIngreso/sketches/kCc-U1osi)
 
-> [!WARNING| Importante]
+> [!WARNING|label: Importante]
 > Si tienes la necesidad de repetir la misma secuencia de instrucciones para resolver el ejercicio, entonces recuerda usar  las estructuras repetitivas!
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
@@ -191,10 +191,11 @@ La primera  actividad consiste escribir un programa que dibuje  la siguiente tra
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-<span style="color:red"> <font size = 6 >Desde Aquí documentación en construcción</font> </span>
-
-
 ### Sentencia ``while``
+
+
+Por último, analizaremos la semántica (significado) de la estructura repetitiva `while` que ya hemos mencionado reiteradas veces en este material.
+ 
 
 ```js
     ...
@@ -206,27 +207,26 @@ La primera  actividad consiste escribir un programa que dibuje  la siguiente tra
    ` ...
 ```
 
-![sentencia while .center](img/while.png ':size=50%')
+![sentencia while .center](img/while.png ':size=60%')
 
 Un Ejemplo:
 
 
-<iframe src="https://editor.p5js.org/compuUNRCIngreso/full/kjMtG37Ihy"  width="800" height="600">></iframe>
+<iframe src="https://editor.p5js.org/compuUNRCIngreso/sketches/kjMtG37Ihy"  width="800" height="600">></iframe>
 
 > [!TIP|label:NOTA]
 > Link para abrir este ejercicio en otra ventana del navegador [Ejemplo while](https://editor.p5js.org/compuUNRCIngreso/sketches/kjMtG37Ihy)
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-Algunas cuestiones a tener en cuenta:
+> Algunas cuestiones a tener en cuenta:
+> * Una sentencia ``while`` repite la ejecución de  una secuencia de sentencias (lo que llamamos el cuerpo del while) ***mientras una condición es verdadera***
+> * El ``while`` para de ejecutar cuando la condición es falsa.
+> * La condiición se chequea ***antes*** de que el cuerpo del ``while`` sea executado.
+> * Si la condición de un ``while`` siempre es verdadera entonces el programa nunca terminará de ejecutarse.
 
- * Una sentencia ``while`` repite la ejecución de  una secuencia de sentencias (lo que llamamos el cuerpo del while) ***mientras una condición es verdadera***
 
- * Para de ejecutar cuando la condición es falsa.
 
- * La condiición se chequea ***después*** de que el cuerpo del while es executado y ***antes*** de que este se repita.
-
- * Si tu condición siempre es verdadera entonces tu programa nunca terminará de ejecutarse.
 
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
