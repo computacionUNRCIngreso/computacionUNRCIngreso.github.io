@@ -19,7 +19,7 @@ El programa que se muestra en el editor de `p5.js` dibuja una línea (hacia la d
 
 
 > [!WARNING|label:Preguntas]
-> ¿Notaste que  la secuencia `pintar(); derecha()` se repite 4 veces?
+> ¿Notaste que  la secuencia `pintar() derecha()` se repite 4 veces?
 > ¿Cómo  haríamos para dibujar una línea, hacia la derecha del cursor, de 10 casilleros de longitud? ¿Repetimos 10 veces la secuencia?
  
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
@@ -40,15 +40,15 @@ La primera estructura repetitiva que tendremos definida en nuestro lenguaje ser�
  }                                =     }
 
                                         function pintarDerecha() { 
-                                           pintar();
-                                           derecha();
+                                           pintar()
+                                           derecha()
                                         }
                        
 ```
 
 
-> [!NOTE|label:IMPORTANTE]
->  * Repetir toma como argumento una lista de funciones sin argumentos o bien una función sin argumentos
+> [!WARNING|label:Importante]
+>  * El `repetir` toma como argumento una lista de funciones sin argumentos o bien una función sin argumentos
 >  * Las funciones` pintar, derecha ` se ejecutan 4 veces exactamente en el orden en el que aparecen en la lista!
 
 
@@ -57,9 +57,9 @@ La primera estructura repetitiva que tendremos definida en nuestro lenguaje ser�
 
 
 
+### Ejercicio extra (para resolver en casa)
 
-> [!TIP|label:Algunos ejercicios extras]
-> Utilice el `repetir` para definir funciones `lineaIzquierda()`, `lineaAbajo()` y `lineaArriba()` las cuales grafican líneas de 4 casilleros de longitud hacia la izquierda, abajo y arriba de la posición del cursor, respectivamente.  Luego, utilice estas funciones para graficar un cuadrado.  
+Utilice el `repetir` para definir funciones `lineaIzquierda()`, `lineaAbajo()` y `lineaArriba()` las cuales grafican líneas de 4 casilleros de longitud hacia la izquierda, abajo y arriba de la posición del cursor, respectivamente.  Luego, utilice estas funciones para graficar un cuadrado.  
 
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
@@ -74,7 +74,7 @@ Esta estructura también la  usaremos cuando sabemos exactamente el número de r
 
     for (var i of range(1,5) ){
         pintar()
-        derecha();
+        derecha()
     }
     [BLOQUE DE SENTENCIAS SIGUIENTES]
     ...
@@ -108,7 +108,7 @@ Esta estructura también la  usaremos cuando sabemos exactamente el número de r
 
 Las funciones  que se listan abajo permiten  dibujar en el lienzo la trayectoria de ***El Lápiz del Caminante***. El sistema de coordenadas del ***Caminante*** utiliza píxeles como medida de la  distancia y grados para las rotaciones. ***El caminante*** inicia su recorrido en el ***centro del lienzo  mirando recto hacia la derecha (0 grados)***
 .
-> [!NOTE|label: IMPORTANTE]
+> [!WARNING|label: Importante]
 > Los grados  positivos son en el sentido de las agujas del reloj!
 
 
@@ -147,7 +147,7 @@ Funciones para manipular ***El  Caminante*** sobre el lienzo:
     disponibles.
 
 
-> [!TIP]
+> [!TIP|label: Ayuda]
 > Si haces click sobre el lienzo, verás la posición del ***click*** en la consola!
 
 
@@ -174,7 +174,7 @@ La primera  actividad consiste escribir un programa que dibuje  la siguiente tra
 > [!TIP|label:NOTA]
 > Link para abrir este ejercicio en otra ventana del navegador [El Caminante](https://editor.p5js.org/compuUNRCIngreso/sketches/kCc-U1osi)
 
-> [!WARNING]
+> [!WARNING| Importante]
 > Si tienes la necesidad de repetir la misma secuencia de instrucciones para resolver el ejercicio, entonces recuerda usar  las estructuras repetitivas!
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 

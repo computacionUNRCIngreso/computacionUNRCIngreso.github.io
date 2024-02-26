@@ -25,7 +25,7 @@ Una variable es la combinación de las siguientes cosas:
 * Un valor almacenado en esa dirección de la memoria que puede cambiar durante la ejecución del programa,
 * Un tipo, que especifica cuanto espacio ocupa ese valor en la memoria, y cómo interpretar este valor. 
 
-> [!WARNING|label: IMPORTANTE]
+> [!WARNING|label: Importante]
 >  Para usar una variable necesitas, en primer lugar, declarar la variable! 
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
@@ -110,7 +110,7 @@ Estas expresiones booleanas, o condiciones, pueden ser usadas en el contexto de 
 
 ##  Ahora si volvamos a tirar el dado...
 
-> [!TIP|label:AYUDA]
+> [!TIP|label:Ayuda]
 > Algunas funciones de utilidad [fill()](https://p5js.org/es/reference/#/p5/fill) y [circle()](https://p5js.org/es/reference/#/p5/circle) para resolver el problema.
  
 
@@ -128,7 +128,7 @@ Al pulsar el botón ![ejecutar](img/runbtn.svg) en la ventana del editor se most
 
 La tarea consiste en escribir un programa que decida si se hizo  ***click*** por encima o por debajo de la línea horizontal.
 
-> [!TIP|label:AYUDA]
+> [!TIP|label:Ayuda]
 > Notar que cada vez que se hace ***click*** sobre el lienzo, en la esquina inferior derecha se muestran las coordenadas del ***click***! Esto puede ayudarte al inicio para ubicarte en el sistema de coordenadas cartesianas.  
 
 
@@ -196,7 +196,7 @@ Cuando ejecutas este programa (botón  ![ejecutar](img/runbtn.svg)), tendrás a 
 Cada vez que presionas la tecla `->`, ***Angry Bird*** se mueve unos pasos hacia adelante!
  
 
-> [!WARNING|label:ATENCIÓN]
+> [!WARNING|label:Atención]
 > Nos detenemos y analizamos el código provisto con detalle. 
 
 
