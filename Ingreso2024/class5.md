@@ -8,16 +8,15 @@ El videojuego a desarrollar esta inspirado en la narrativa del famoso [Angry Bir
 
 ## Nuestro videojuego - *Versión 0.1*
 
-En esta variante del juego el Rey Cerdo intenta atrapar (aplastando) al Angry Bird, para esto, cada un cierto tiempo determina una posición a la cual trasladarse (de manera aleatoria) y, si el Angry Bird se encuentra justo en un cierto rango de distancia de la posición elegida por el cerdo, entonces el angry bird será atrapado. El objetivo por el momento es tratar de escapar al cerdo. El jugador podrá mover al Angry Bird por toda el area de juego para evitar ser atrapado, utilizando las teclas de dirección (&larr; , &uarr; , &darr; , &rarr;).
+En esta variante del juego el ***Rey Cerdo*** intenta atrapar (aplastando) a ***Angry Bird***, para esto, cada un cierto tiempo determina una posición a la cual trasladarse (de manera aleatoria) y, si  ***Angry Bird*** se encuentra justo en un cierto rango de distancia de la posición elegida por el cerdo, entonces ***Angry Bird*** será atrapado. El objetivo de ***Angry Bird***,  por el momento, será  escapar del cerdo. El jugador podrá mover a ***Angry Bird*** por toda el área de juego para evitar ser atrapado, utilizando las teclas de dirección (&larr; , &uarr; , &darr; , &rarr;).
 
-A medida que vayamos avanzando en esta sección iremos complejizando el juego y agregando más funcionalidades. Por el momento comencemos por lo básico, los movimientos:
+A medida que avancemos en esta sección iremos añadiendo más complejidad al juego y agregando nuevas funcionalidades. Por ahora, comencemos con lo básico, los movimientos:
 
 <iframe src="https://editor.p5js.org/compuUNRCIngreso/full/2rmPQj_1e" width="800" height="600"></iframe>
 
 ## Iteración 1 - *Dando movimiento a Angry Bird*
 
-***Actividad***: La primer tarea será dotar de movilidad a nuestro personaje para que se pueda desplazar (sin salirse de los limites
-de la pantalla). En concreto deberas programar las funciones ``moveForward()``, ``moveBackward()``, ``moveUp()`` y ``moveDown()`` para que cambien la posición del angry bird al ser ejecutadas. La invocación a estas cuatro funciones se dará cuando el jugador presione las respectivas teclas de dirección.
+***Actividad***: La primer tarea consistirá en permitir que nuestro personaje se mueva para desplazarse por la pantalla sin exceder sus límites. Especificamente, deberás programar las funciones ``moveForward()``, ``moveBackward()``, ``moveUp()`` y ``moveDown()`` para que modifiquen  la posición de ***Angry bird*** al ser ejecutadas. Estas cuatro funciones serán invocadas cuando el jugador presione las teclas de dirección correspondientes.
 
 <!-- ¿ meter la idea de requisitos ?-->
 
