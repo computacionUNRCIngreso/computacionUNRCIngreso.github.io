@@ -269,7 +269,7 @@ decimal, las cifras son el conjunto $\{0,1,2,3,4,5,6,7,8,9\}$.
 
 El valor de un número está dado por 
   
-$$d_{n-1} d_{n-2} \ldots d_0 = \sum_{i=0}^{n-1} d_i^{b^i} $$
+$$d_{n-1} d_{n-2} \ldots d_0 = \sum_{i=0}^{n-1} d_i \times {b^i} $$
 
 Ejemplos: 
 
@@ -281,7 +281,7 @@ Ejemplos:
 
 2. En binario, la base $b=2$ y las cifras, el conjunto $\{0,1\}$
 
-   $$(1101)_2 = 1 \times 2^0 + 0 \times 2^1 + 1 \times 2^2 + 1 \times 2^3 = (13)_10$$
+   $$(1101)_2 = 1 \times 2^0 + 0 \times 2^1 + 1 \times 2^2 + 1 \times 2^3 = (13)_{10}$$
 
    (el 1101 en binario equivale al 13 en decimal)
 
