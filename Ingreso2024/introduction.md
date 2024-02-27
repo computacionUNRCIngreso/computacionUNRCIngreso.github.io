@@ -269,7 +269,7 @@ decimal, las cifras son el conjunto $\{0,1,2,3,4,5,6,7,8,9\}$.
 
 El valor de un número está dado por 
   
-$$d_{n-1} d_{n-2} \ldots d_0 = \sum_{i=0}^{n-1} d_i^{b^i} $$
+$$d_{n-1} d_{n-2} \ldots d_0 = \sum_{i=0}^{n-1} d_i \times {b^i} $$
 
 Ejemplos: 
 
@@ -281,13 +281,13 @@ Ejemplos:
 
 2. En binario, la base $b=2$ y las cifras, el conjunto $\{0,1\}$
 
-   $$(1101)_2 = 1 \times 2^0 + 0 \times 2^1 + 1 \times 2^2 + 1 \times 2^3 = (13)_10$$
+   $$(1101)_2 = 1 \times 2^0 + 0 \times 2^1 + 1 \times 2^2 + 1 \times 2^3 = (13)_{10}$$
 
    (el 1101 en binario equivale al 13 en decimal)
 
 > [!WARNING|label:Preguntas]
 > ¿Por qué los sistemas digitales usan *binario*? Porque es más simple diseñar
-> circuitos y memorias ya que un *bit* ya que tiene sólo dos posibles estados o
+> circuitos y memorias ya que un *bit* tiene sólo dos posibles estados o
 > valores. Representar una cifra decimal requiere 10 estados posibles, lo cual
 > requiere de un dispositivo mucho más complejo.
 

@@ -61,7 +61,7 @@ Por medio de un *lenguaje o notación* que permite describir las computaciones
 
 -------------------------------------------------------------------------------
 
-Utilizaremos el editor web [p5.js](p5js.org) que se basa en el lenguaje de
+Utilizaremos el editor web [p5.js](https://p5js.org/es/) que se basa en el lenguaje de
 programación JavaScript. Los programas se ejecutan en nuestro navegador web.
 
 En este programa ya existen las siguientes primitivas (funciones) predefinidas:
