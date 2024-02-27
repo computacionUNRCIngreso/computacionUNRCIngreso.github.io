@@ -14,20 +14,23 @@ A medida que avancemos en esta sección iremos añadiendo más complejidad al ju
 
 <iframe src="https://editor.p5js.org/compuUNRCIngreso/full/2rmPQj_1e" width="800" height="600"></iframe>
 
+> [!TIP|label:NOTA]
+> Link para abrir este ejercicio en otra ventana del navegador [Nuestro videojuego](https://editor.p5js.org/compuUNRCIngreso/full/2rmPQj_1e)
+
 ## Iteración 1 - *Dando movimiento a Angry Bird*
 
 ***Actividad***: La primer tarea consistirá en permitir que nuestro personaje se mueva para desplazarse por la pantalla sin exceder sus límites. Especificamente, deberás programar las funciones ``moveForward()``, ``moveBackward()``, ``moveUp()`` y ``moveDown()`` para que modifiquen  la posición de ***Angry bird*** al ser ejecutadas. Estas cuatro funciones serán invocadas cuando el jugador presione las teclas de dirección correspondientes.
 
 <!-- ¿ meter la idea de requisitos ?-->
 
-> [!TIP|label:Ayuda]
+> [!NOTE|label:La representación]
 > Las posiciones de los personajes en el área de juego están representadas por valores almacenados en cuatro variables, dos para las coordenadas *x* e *y* de ***Angry Bird*** (``birdX`` y ``birdY``), y otras dos para las del cerdo (``pigX`` y ``pigY``). Cualquier modificación en el valor de estas variables se traducirá en un cambio de posición del personaje en la pantalla de juego. El área de juego tiene una dimensión de 600 puntos horizontal x 400 puntos vertical.
 
 ###  Revisemos brevemente: ¿Cómo se escriben las funciones?
 
 Ya has utilizado funciones desde el comienzo invocándolas y también has escrito código para completar su definición (dentro de su cuerpo ```{... }```). Pero ya es hora de detenernos en algunos detalles y dejarlos bien en claro antes de avanzar:
 
-* Cuando queremos utilizar una función (ejecutarla o invocarla) escribimos su nombre seguido de un par de paréntesis y opcionalmente finalizamos con un punto y coma (``;``), por ejemplo escribimos ``moveForward();`` para invocarla.
+* Cuando queremos utilizar una función (ejecutarla o invocarla) escribimos su nombre seguido de un par de paréntesis y **opcionalmente** finalizamos con un punto y coma (``;``), por ejemplo escribimos ``moveForward();`` para invocarla.
 
 * Para que una invocación resulte, previamente debemos definir la función en algún lado, es decir, escribirla siguiendo algunas reglas sintácticas establecidad en el lenguaje.
 
@@ -52,7 +55,7 @@ En la situación actual, el cerdo se mueve de manera aleatoria cada un segundo, 
  *"Vamos por partes"* - JTR.
 
 > [!TIP|label:Análisis del problema - primera parte]
-> ¿Cómo resolver la detección?: Si la zona demarcada por el cuadrado verde en torno al cerdo fuese el área de visibilidad que el mismo tiene, entonces, de las siguientes imágenes se desprende que el cerdo estaría viendo o detectando al angry bird en la primera situación, pero no en la segunda. Aparecen aquí dos *subproblemas* para poder calcular esto, por un lado necesitamos obtener los valores que determinan el cuadrado (qué es de posición dinamica) y por el otro calcular si la posición del angry bird está dentro o fuera del mismo.
+> ¿Cómo resolver la detección?: Si la zona demarcada por el cuadrado verde en torno al cerdo fuese el área de visibilidad que el mismo tiene, entonces, de las siguientes imágenes se desprende que el cerdo estaría viendo o detectando a ***Angry Bird*** en la primera situación, pero no en la segunda. Aparecen aquí dos *subproblemas* para poder calcular esto, por un lado necesitamos obtener los valores que determinan el cuadrado (qué es de posición dinamica) y por el otro calcular si la posición ***Angry Bird*** está dentro o fuera del mismo.
 
 ![imagen angry bird visible](img/visibleArea.png ':size=40%') ![img angry bird no visible](img/visibleArea2.png ':size=40%')
 
@@ -60,18 +63,18 @@ Con algunas cuentas sencillas podemos determinar dinamicamente los valores del c
 
 ![img analisis 2 .center](img/visibleAreaValues.png ':size=40%')
 
-> [!NOTE|label:NOTA] En realidad siempre conocemos el punto medio del cuadrado (la posición de ![imagen pig](img/pigAvatar.png ':size=2%')) y, si observamos la forma en la que está implementada la decición de la captura, podemos ver que no es necesario el calculo explicito del cuadrado para saber si la posición actual del angry bird esta o no dentro del caudrado...
+> [!NOTE|label:Observación] En realidad siempre conocemos el punto medio del cuadrado (la posición de ![imagen pig](img/pigAvatar.png ':size=2%')) y, si observamos la forma en la que está implementada la decición de la captura, podemos inferir que tampoco es necesario el calculo explicito del cuadrado para saber si la posición actual de ***Angry Bird*** esta o no dentro del cuadrado...
 
 
 > [!TIP|label:Análisis del problema - segunda parte]
 > ¿Cómo resolvemos las zonas de salto variable?: El cálculo aleatorio para la nueva posición del cerdo se lleva a cabo al comienzo de la función ``movePig()`` y los valores resultantes estan acotados por las variables límites. Actualizando dinamicamente estas variables lograremos ir acotando las zonas de salto en cada ejecución de ``movePig()``. Aparecen aquí dos *subproblemas*, ¿dónde las actualizo? y ¿cómo calcular su valor?
 
-```
+```js
 function movePig() {
     
     // Calcular la nueva posición a la que moverá el cerdo
-    pigX = randomNumber(limiteInferiorX,limiteSuperiorX);
-    pigY = randomNumber(limiteInferiorY,limiteSuperiorY);
+    pigX = randomNumber(limiteInferiorX,limiteSuperiorX)
+    pigY = randomNumber(limiteInferiorY,limiteSuperiorY)
 
     ...
 
@@ -79,16 +82,16 @@ function movePig() {
     
 ```
 
-El primer subproblema es de fácil solución: si ya escribimos el código para decidir cuando el cerdo está detectando al angry bird y cuando no, entonces ya sabemos donde actualizaremos las variables. El segundo subproblema consiste en determinar los valores límites que acotarán la nueva zona donde el cerdo hará los saltos aleatorios. Como se supone que su posición actual le ha permitido ver al pajaro, entonces la nueva zona debería ser en torno a la actual posición del angry bird. El siguiente gráfico nos ayuda a pensar como podríamos calcular los limites para la nueva área de saltos del cerdo.
+El primer subproblema es de fácil solución: si ya escribimos el código para decidir cuando el cerdo está detectando a ***Angry Bird*** y cuando no, entonces ya sabemos donde actualizaremos las variables. El segundo subproblema consiste en determinar los valores límites que acotarán la nueva zona donde el cerdo hará los saltos aleatorios. Como se supone que su posición actual le ha permitido ver al pajaro, entonces la nueva zona debería ser en torno a la actual posición de ***Angry Bird***. El siguiente gráfico nos ayuda a pensar como podríamos calcular los limites para la nueva área de saltos del cerdo.
 
 ![imagen proxima area de salto .center](img/nextAreaValues.png ':size=40%')
 
-> [!WARNING|label:CUIDADO] ¿Qué debería pasar con los saltos del cerdo si el angry bird logra escapar de la zona de detección? 
+> [!WARNING|label:CUIDADO] ¿Qué debería pasar con los saltos del cerdo si ***Angry Bird*** logra escapar de la zona de detección? 
 
 
 ## Iteración 3 - *Agregando objetivos y vidas*
 
-Hasta ahora nuestro juego termina si el cerdo logra atraparnos. Quisieramos incorporar el concepto de objetivos y vidas, de modo tal que si angry bird cumple cierto objetivo gana el juego, y que se pueda ir ganando vidas para tratar de sobrevivir más tiempo en el juego. Ahora quisieramos que el cerdo nos reste una vida cada vez que logra atraparnos y el juego se pierda si nos losgra atrapar y ya no nos quedaban más vidas.
+Actualmente nuestro juego termina si el cerdo logra atraparnos. Quisieramos incorporar el concepto de objetivos y vidas, de modo tal que si angry bird cumple cierto objetivo gana el juego, y que se pueda ir ganando vidas para tratar de sobrevivir más tiempo en el juego. Ahora quisieramos que el cerdo nos reste una vida cada vez que logra atraparnos y el juego se pierda si nos losgra atrapar y ya no nos quedaban más vidas.
 
 ***Actividad***: TBD...
 
