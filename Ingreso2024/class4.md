@@ -76,7 +76,7 @@ Esta estructura también la  usaremos cuando sabemos exactamente el número de r
         pintar()
         derecha()
     }
-    [BLOQUE DE SENTENCIAS SIGUIENTES]
+    BLOQUE DE SENTENCIAS SIGUIENTES
     ...
 
 ```
@@ -92,7 +92,7 @@ Esta estructura también la  usaremos cuando sabemos exactamente el número de r
 >        pintar()
 >        derecha()
 >    }
->    [BLOQUE DE SENTENCIAS SIGUIENTES]
+>    BLOQUE DE SENTENCIAS SIGUIENTES
 >    ...
 >
 > ```
@@ -216,10 +216,10 @@ Por último, analizaremos la semántica (significado) de la estructura repetitiv
 ```js
     ...
     while (CONDICION) {
-        [BLOQUE DE SENTENCIAS] 
+        BLOQUE DE SENTENCIAS 
     }
 
-    [BLOQUE DE SENTENCIAS SIGUIENTES]
+    BLOQUE DE SENTENCIAS SIGUIENTES
    ` ...
 ```
 
