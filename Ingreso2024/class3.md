@@ -56,10 +56,10 @@ Ejemplo:
 ```js 
     ...
     if (CONDICION) {
-        [BLOQUE DE SENTENCIAS] 
+        BLOQUE DE SENTENCIAS 
     }
 
-    [BLOQUE DE SENTENCIAS SIGUIENTES]
+    BLOQUE DE SENTENCIAS SIGUIENTES
     ...
 ```
 
@@ -76,12 +76,12 @@ Ejemplo:
 ```js
     ...
     if (CONDICION) {
-        [BLOQUE DE SENTENCIAS 1] 
+        BLOQUE DE SENTENCIAS 1 
     } else{
-        [BLOQUE DE SENTENCIAS 2] 
+        BLOQUE DE SENTENCIAS 2 
     }
 
-    [BLOQUE DE SENTENCIAS SIGUIENTES]
+    BLOQUE DE SENTENCIAS SIGUIENTES
     ...
 
 ```
