@@ -200,7 +200,7 @@ La primera  actividad consiste escribir un programa que dibuje  la siguiente tra
 > Te dejamos algunas actividades para que practiques! 
 > 1. Dibujar un triángulo equilatero: La suma de sus ángulos interiores es 180º (Cada ángulo mide 60º)
 > 2. Dibujar un hexágono (polígono regular de 6 lados):  La suma de sus ángulos interiores es 720º (Cada ángulo mide 120º)
-> 3. ¿Es posible dibujar un círculo? ¿Cómo? En caso afirmativo escriba las instrucciones para ello.
+> 3. ¿Es posible, utilizando solo una estructura repetitiva y las funciones del ***Caminante***, dibujar un círculo? ¿Cómo? En caso afirmativo escriba las instrucciones para ello.
 > 4. Escriba un programa para dibujar la siguiente figura donde los lados de cada triángulo equilatero miden 50 pixeles. Recuerde que puede definir, y usar, nuevas funciones, por ejemplo `dibujarTriangulo()`.
 >
 > ![banderines .center](img/banderines.png ':size=40%')
