@@ -1,6 +1,6 @@
 # Computación
 
-##  Actividades de Ingreso 2024 <!-- {docsify-ignore} -->
+##  Actividades de Ingreso <!-- {docsify-ignore} -->
 
 Este material está dirigido a los/las estudiantes de carreras de computación de
 la [FCEFQyN] de la [UNRC].
