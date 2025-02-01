@@ -31,13 +31,37 @@ Por medio de un *lenguaje o notación* que permite describir las computaciones
 > - Expresiones matemáticas ($a+b$, $(x + y) / z$, $\ldots$)
 > - Expresiones lógicas ($a==b$, $a<b$, $a<=b$, $\ldots$) y sus combinaciones
 >   con los operadores $\lor$ (`or` o `||`), $\land$ (`and` o `&&`),
->   $\neq$ (`!=`) y otros
+>   $\neq$ (`!=`) y otros.
 > - Sentencias de control de flujo de ejecución:
 >   - Secuencias (o bloques) de operaciones. Ej: `{ op1; op2; ... }`
 >   - Condicionales como `if (x>0) y=1 else y=-1`  (*hacer y=1 si x es mayor que
 >     cero, sino hacer y=-1*)
 >   - Ciclos o repeticiones de operaciones
 > - Definir e invocar (usar) *funciones*
+
+> [!NOTE|label: Operaciones Lógicas Basicas]
+> Algunos de los operadores lógicos más utilizados son `and`, `or` y`not`. 
+> - Estos operadores se utilizan frecuentemente en programación y son conocidos como operadores booleanos. 
+>
+>   - `and` ó `&&` ó $\land$
+>     - Devuelve verdadero si ambos elementos son verdaderos.
+> 
+>       ![and.center](img/and2.png ':size=50%')
+>
+>
+>   -  `or` ó `||` ó $\lor$
+>     - Devuelve verdadero si al menos uno de sus elementos es verdadero. Solo es falsa si ambos valores son falsos.
+> 
+>       ![or.center](img/or.png ':size=50%')
+> 
+>
+>   -  `not` ó `!` ó $\neq$
+>     - La negación de un valor de verdad invierte su valor. Si el valor es verdadero, su negación es falsa, y viceversa.
+>
+>       ![or.center](img/not.png ':size=35%')
+> 
+>
+> - Las operaciones lógicas se utilizan en general en la *condiciones* de estructuras de control (como if, else, while) para tomar decisiones basadas en expresiones verdaderas o falsas.
 
 -------------------------------------------------------------------------------
 
