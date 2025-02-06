@@ -14,7 +14,8 @@ Pulsa el botón ![ejecutar](img/runbtn.svg) en la ventana del editor, luego pien
 ## Revisaremos algunos conceptos importantes antes de escribir un programa que resuelva este problema:
 
 
-Si recordamos  al ejemplo de la primera clase [multiplicar dos números](#nuestro-programa-que-multiplica-dos-números-en-javaScript), hemos utilizado variables para recordar valores, pero...
+[Si recordamos  al ejemplo de la primera clase multiplicar dos números(#nuestro-programa-que-multiplica-dos-números-en-javaScript), hemos utilizado variables para recordar valores, pero...]: # 
+Para dar solución a este problema vamos a necesitar recordar valores, las variables pueden ayudarnos pero...
 
 ## ¿Qué son las variables? 
  
@@ -47,7 +48,7 @@ Ejemplo:
 <iframe src="https://editor.p5js.org/compuUNRCIngreso/sketches/l56tAFfey" width="800" height="600"></iframe>
 
 > [!TIP|label: NOTA]
-> Link para abrir este ejermplo en otra ventana del navegador [variables](https://editor.p5js.org/compuUNRCIngreso/sketches/l56tAFfey)
+> Link para abrir este ejemplo en otra ventana del navegador [variables](https://editor.p5js.org/compuUNRCIngreso/sketches/l56tAFfey)
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
@@ -111,7 +112,12 @@ Estas expresiones booleanas, o condiciones, pueden ser usadas en el contexto de 
 ##  Ahora si volvamos a tirar el dado...
 
 > [!TIP|label:Ayuda]
-> Algunas funciones de utilidad [fill()](https://p5js.org/es/reference/#/p5/fill) y [circle()](https://p5js.org/es/reference/#/p5/circle) para resolver el problema.
+> Algunas funciones de utilidad:
+>   - [fill()](https://p5js.org/es/reference/p5/fill/) : Establece el color que se va a utilizar para rellenar las formas.
+>   - [circle()](https://p5js.org/es/reference/p5/circle/): Dibuja un círculo.
+> para resolver el problema.
+>
+> Haciendo click sobre el nombre de las mismas puedes investigar, en su documentación, como se utilizan.
  
 
 <iframe src="https://editor.p5js.org/compuUNRCIngreso/sketches/Jssw9sFDA" width="800" height="600"></iframe>
@@ -157,13 +163,11 @@ Escribir un programa que decida  en qué cuadrante se ha hecho ***click*** (*arr
 
 > [!TIP|label:NOTA]
 > Link para abrir este ejercicio en otra ventana del navegador [Donde esta el punto (2)?](https://editor.p5js.org/compuUNRCIngreso/sketches/OnSK_3K-7)
- 
+   
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
 ##  Actividad 4: Le dí a la figura?
 
-
- 
 Cuando ejecutas este programa (botón  ![ejecutar](img/runbtn.svg)), se dibuja un círculo de tamaño aleatorio en el lienzo. Las partes (*centro* y *diametro*) de este círculo quedarán almacenadas en las variables: ``xCentro``, ``yCentro`` y ``diametro``. Además, contamos con las variables ``mouseX`` y ``mouseY``,  utilizadas anteriormente,  que almacenan las coordenadas de un ***click***. Esta actividad consiste en escribir un programa que  decida si se hizo ***click*** dentro del círculo o fuera de él.
 
 
