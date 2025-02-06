@@ -115,7 +115,6 @@ Estas expresiones booleanas, o condiciones, pueden ser usadas en el contexto de 
 > Algunas funciones de utilidad:
 >   - [fill()](https://p5js.org/es/reference/p5/fill/) : Establece el color que se va a utilizar para rellenar las formas.
 >   - [circle()](https://p5js.org/es/reference/p5/circle/): Dibuja un círculo.
-> para resolver el problema.
 >
 > Haciendo click sobre el nombre de las mismas puedes investigar, en su documentación, como se utilizan.
  
