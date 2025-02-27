@@ -73,8 +73,8 @@ Con algunas cuentas sencillas podemos determinar dinamicamente los valores del c
 function movePig() {
     
     // Calcular la nueva posición a la que moverá el cerdo
-    pigX = randomNumber(limiteInferiorX,limiteSuperiorX)
-    pigY = randomNumber(limiteInferiorY,limiteSuperiorY)
+    pigX = randomNumber(lowerBoundX,upperBoundX)
+    pigY = randomNumber(lowerBoundY,upperBoundY)
 
     ...
 
@@ -91,11 +91,26 @@ El primer subproblema es de fácil solución: si ya escribimos el código para d
 
 ## Iteración 3 - *Agregando objetivos y vidas*
 
-Actualmente nuestro juego termina si el cerdo logra atraparnos. Quisieramos incorporar el concepto de objetivos y vidas, de modo tal que si angry bird cumple cierto objetivo gana el juego, y que se pueda ir ganando vidas para tratar de sobrevivir más tiempo en el juego. Ahora quisieramos que el cerdo nos reste una vida cada vez que logra atraparnos y el juego se pierda si nos losgra atrapar y ya no nos quedaban más vidas.
+Actualmente nuestro juego termina si el cerdo logra atraparnos. Quisiéramos incorporar el concepto de objetivo y vidas, de modo tal que si ***Angry Bird*** cumple cierto objetivo gana el juego, y que se pueda ir ganando vidas para tratar de sobrevivir más tiempo en el juego. De este modo quisiéramos que el cerdo nos reste una vida cada vez que logra atraparnos y el juego se pierda si nos logra atrapar y ya no nos quedaban más vidas. Habrá que capturar huevos para obtener vidas y puntos. Cada vez que ***Angry Bird*** capture un huevo, el mismo debe desaparecer y aparecer en algún otro lugar del área de juego.
 
-***Actividad***: TBD...
+
+***Actividad***: Se requiere implementar la lógica de la captura de un huevo en la función ``checkGetEgg()``. Esta función se ejecuta constantemente, unas sesenta veces por segundo. Parte de las tareas a resolver por la función es la generación de un nuevo huevo en una nueva posición aleatoria. Esto puede abstraerse implementando la función ``newRandomEgg()``.
+
+> [!NOTE|label:Las vidas y los puntos]
+> Notar que en esta versión del juego se han incorporado las variables ``lives`` y ``score``. Las mismas llevarán la cuenta de las vidas y los puntos obtenidos respectivamente.
+
+> [!TIP|label:Ayuda]
+> Se cuenta con un par de funciones para actualizar la información de las vidas de forma gráfica en la pantalla:
+>   - La función ``addLifeToPanel()`` agrega un gráfico de corazón en la parte superior.
+>   - La función ``removeLifeFromPanel()`` quita el último corazón agregado.
+
+***Actividad***: Modificar la lógica del cerdo, para que ahora contemple las vidas del ***Angry Bird*** cuando lo captura. Y por último, implementar la función ``checkIfWon()`` de acuerdo al objetivo que se plantee para ganar el juego. La función ``checkIfWon()`` también se ejecuta constantemente.
 
 <iframe src="https://editor.p5js.org/compuUNRCIngreso/full/Q15VN3vRX" width="800" height="600"></iframe>
+
+> [!TIP|label:NOTA]
+> Link para abrir este ejercicio en otra ventana del navegador [Nuestro videojuego versión 1](https://editor.p5js.org/compuUNRCIngreso/full/Q15VN3vRX)
+
 <!--
 edit :https://editor.p5js.org/compuUNRCIngreso/sketches/NbtC4_QIE
 <iframe src="https://editor.p5js.org/compuUNRCIngreso/sketches/NbtC4_QIE" width="800" height="600"> ...</iframe>
