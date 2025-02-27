@@ -26,7 +26,8 @@ Recuerden que este diagnóstico `no es eliminatorio` y no tienen instancias de r
 >Link para abrir el formulario del examen [Examen Diagnóstico](https://forms.gle/Gxj4SKDxUCuEULB8A)
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-
+* > [!TIP| label: PD:] 
+Si alguno no cuenta con la conectividad necesaria para completar el formulario en su hogar, pueden acercarse de 8 a 18 hr, mañana viernes, a las salas de computación (`Aulas 101,102,103 - Pab 2`) y podrán utilizar alguna computadora del lugar. Solamente avisen a los técnicos para que les indiquen en donde pueden trabajar.
 
 [Volver al Inicio](README.md)
 
