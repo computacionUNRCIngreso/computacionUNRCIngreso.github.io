@@ -1,6 +1,9 @@
 ## Examen Diagnóstico:
+El día  jueves 26 de Febrero todas las comisiones tendrán la última clase de Matemática, por lo que es muy importante que asistan. Ese día no habrá clases de Computación.
 
-* El diagnóstico está compuesto por una serie de preguntas, distribuidas en varias páginas. El formulario estará disponible para completarlo hasta mañana **Viernes 28/02, a las 18 hr**. 
+El mismo jueves, alrededor de las 20:00 hs, les enviaremos el enlace a un formulario de Diagnóstico para que puedan completarlo. 
+
+* El diagnóstico está compuesto por una serie de preguntas, distribuidas en varias páginas. El formulario estará disponible para completarlo hasta el  **Viernes 27/02, a las 23:59 hr**. 
 
 * Luego de ese plazo el formulario no permitirá  más respuestas.
 
@@ -18,16 +21,11 @@ Cuando finalicen el examen deben avanzar hasta la última página y presionar so
 Si necesitan ampliar alguna pregunta para verla más grande, haz 'Ctrl+' con el teclado (o 'Ctrl-' para verla más pequeña)
 
 * > [!TIP| label: ATENCIÓN] 
-Mañana **Viernes 28/02, después de las 18 hrs**, les llegará a sus cuentas de correo de google la `puntuación obtenida` y podrán analizar sus respuestas con respecto a las respuestas esperadas. 
+El día **Sábado 28/02, durante la mañana**, les llegará a sus cuentas de correo de google la `puntuación obtenida` y podrán analizar sus respuestas con respecto a las respuestas esperadas. 
 Recuerden que este diagnóstico `no es eliminatorio` y no tienen instancias de recuperación. 
 > Les sirve como una autoevaluación personal para dar cierre a las actividades de ingreso.
  
 
->Link para abrir el formulario del examen [Examen Diagnóstico](https://forms.gle/Gxj4SKDxUCuEULB8A)
-
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-* > [!TIP| label: PD:] 
-Si alguno no cuenta con la conectividad necesaria para completar el formulario en su hogar, pueden acercarse de 8 a 18 hr, mañana viernes, a las salas de computación (`Aulas 101,102,103 - Pab 2`) y podrán utilizar alguna computadora del lugar. Solamente avisen a los técnicos para que les indiquen en donde pueden trabajar.
 
 [Volver al Inicio](README.md)
 
