@@ -1,7 +1,4 @@
-## Examen Diagnóstico:
-El día  jueves 26 de Febrero todas las comisiones tendrán la última clase de Matemática, por lo que es muy importante que asistan. Ese día no habrá clases de Computación.
-
-El mismo jueves, alrededor de las 20:00 hs, les enviaremos el enlace a un formulario de Diagnóstico para que puedan completarlo. 
+## Examen Diagnóstico: 
 
 * El diagnóstico está compuesto por una serie de preguntas, distribuidas en varias páginas. El formulario estará disponible para completarlo hasta el  **Viernes 27/02, a las 23:59 hr**. 
 
