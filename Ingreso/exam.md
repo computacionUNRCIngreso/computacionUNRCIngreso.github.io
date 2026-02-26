@@ -22,7 +22,7 @@ El día **Sábado 28/02, durante la mañana**, les llegará a sus cuentas de cor
 Recuerden que este diagnóstico `no es eliminatorio` y no tienen instancias de recuperación. 
 > Les sirve como una autoevaluación personal para dar cierre a las actividades de ingreso.
  
-
+>Link para abrir el formulario del examen [Examen Diagnóstico](https://forms.gle/scQk1gCCJhvsB5Uy6)
 
 [Volver al Inicio](README.md)
 
